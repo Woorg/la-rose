@@ -1,0 +1,84 @@
+.menu
+	padding 6px 68px 8px 70px
+	border-radius 0 0 50px 50px
+	box-shadow 0 5px 10px rgba(0, 0, 0, 0.2)
+	background url('%=static=%/general/header-menu.jpg') 50% 100% no-repeat
+	+below($tablet)
+		padding-left 0
+		padding-right 0
+		background none
+		box-shadow none
+	&__burger
+		display none
+		bg($burger-icon)
+		text-indent -9999px
+		+below($tablet)
+			display block
+	&__list
+		position relative
+		display block
+		font-size 18px
+		text-align justify
+		text-align-last justify
+		&:after
+			position absolute
+			left 0
+			content ""
+			display inline-block
+			width 100%
+		+below($tablet)
+			display none
+
+	&__list_active
+		display block
+
+	&__item
+		display inline-block
+		vertical-align top
+		text-align left
+	&__link
+		display block
+		color $text-color
+		font-family $pt-serif-bld
+		font-size 18px
+		line-height 36px
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&__item
+		position relative
+		&:after
+			position absolute
+			top 50%
+			right -22px
+			margin-top -2px
+			content ""
+			width 5px
+			height 5px
+			background $text-color
+			border-radius 50%
+			+below($desktop)
+				display none
+		&:last-child
+			&:after
+				display none
+
+.menu_style-second
+	padding 0 6px 0 20px
+	background none
+	box-shadow none
+	border-radius 0
+	.menu__item
+		margin-right 26px
+		&:after
+			display none
+		&:last-child
+			margin-right 0
+	.menu__link
+		color text-color
+		font-family $pt-sans-bldit
+		font-size 16px
+		line-height 30px
+		text-decoration underline
+		&:hover
+			text-decoration none

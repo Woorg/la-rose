@@ -1,0 +1,54 @@
+.hero
+	position relative
+	z-index 0
+	&__in
+		position relative
+		@extends .in
+		clr()
+	&__left
+		width 970px
+		float left
+	&__right
+		position absolute
+		top 0
+		right 0
+		width 290px
+		z-index 1
+	&__buttons
+		padding-top 80px
+		.button
+			margin-bottom 38px
+			&:last-child
+				margin-right 22px
+	&__slider
+		margin-top 4px
+		margin-left -22px
+
+	&__slider-list
+		position relative
+
+	// &__slider-item
+
+	// &__slider-link
+
+	// &__slider-image
+	// 	img
+
+	.owl-nav
+		width 100%
+	.owl-prev,
+	.owl-next
+		position absolute
+		top 166px
+		content ""
+		text-indent -9999px
+	.owl-prev
+		left -27px
+		bg($slider-arrow-left)
+	.owl-next
+		right 110px
+		bg($slider-arrow-right)
+
+
+
+

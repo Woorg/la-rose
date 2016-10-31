@@ -1,0 +1,24 @@
+mixin side(data)
+	.side
+		.side__block
+			.side-nav
+				.side-nav__title <a href='#link'>Каталог</a>
+				ul.side-nav__list
+					li.side-nav__item
+						a.side-nav__link(href="#link") Букеты
+					li.side-nav__item
+						a.side-nav__link(href="#link") Цветочные композиции
+					li.side-nav__item
+						a.side-nav__link(href="#link") Игрушки из живых цветов
+					li.side-nav__item
+						a.side-nav__link(href="#link") Горшечные растения
+					li.side-nav__item
+						a.side-nav__link(href="#link") Подарки
+		.side__block
+			.side__buttons
+				a.side__button(href="#link") Мы Вконтакте
+				a.side__button(href="#link") Отзывы
+
+		.side__block
+			.side__vk-widget
+				img(src="%=static=%/images/content/vk-widget.jpg", alt="vk widget")

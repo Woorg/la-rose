@@ -1,0 +1,143 @@
+.catalog
+
+	&__row
+		border 1px solid #c5c3bd
+		margin-bottom 33px
+		padding 5px
+.products
+	border 2px solid #c5c3bd
+	font-size 0
+	padding-top 24px
+	padding-bottom 25px
+	&__item
+		padding 0 26px
+		width 292px
+		display inline-block
+		vertical-align top
+	&__item-title
+		margin-bottom 28px
+		max-height 52px
+		overflow hidden
+		font-family $pt-sans-bldit
+		font-size 22px
+		line-height 30px
+		text-align center
+		a
+			text-decoration underline
+			color $text-color
+			&:hover
+				text-decoration none
+	&__item-image
+		position relative
+		margin-bottom 27px
+		height 268px
+		// height 296px
+		a
+			text-decoration none
+		img
+			display block
+			max-width 100%
+			height auto
+	&__item-badge
+		position absolute
+		top -24px
+		right -5px
+		content ""
+		&_new
+			bg($badge-new)
+	&__bottom
+		background url('%=static=%/general/product-bottom-line.png') 50% 0 no-repeat, url('%=static=%/general/product-bottom-line.png') 50% 100% no-repeat
+		// width 233px
+		min-height 64px
+		clr()
+	&__bottom-left
+		background url('%=static=%/general/product-bottom-vertical.png') 100% 0 no-repeat
+		padding 0 5px 0 22px
+		width 50%
+		float left
+	&__bottom-right
+		padding 0 7px 0 12px
+		width 50%
+		float right
+	&__item-price
+		margin-top 4px
+		padding-top 7px
+		padding-bottom 7px
+		color $text-color
+		font-family $pt-sans-bld
+		font-size 22px
+		line-height 24px
+		text-align center
+		span
+			display block
+			font-family $pt-sans-reg
+			font-size 16px
+			line-height 20px
+	&__item-quant
+		padding-top 9px
+		padding-bottom 5px
+	&__item-order
+		position relative
+		padding-left 38px
+		display block
+		color $text-color
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 20px
+		text-decoration underline
+		&:hover
+			text-decoration none
+		&:after
+			position absolute
+			top 0
+			left 12px
+			content ""
+			bg($basket-small-icon)
+	&__quick-order
+		padding-top 12px
+		padding-bottom 8px
+		display block
+		background url('%=static=%/general/product-bottom-line.png') 50% 100% no-repeat
+		color $text-color
+		font-family $pt-sans-bld
+		font-size 16px
+		line-height 20px
+		text-transform uppercase
+		text-decoration none
+		text-align center
+
+	.owl-nav
+		width 100%
+	.owl-next,
+	.owl-prev
+		position absolute
+		top 50%
+		width 42px
+		height 42px
+		border-radius 50%
+		text-indent -9999px
+		z-index 1
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ""
+	.owl-next
+		right -27px
+		margin-top -11px
+		background #EFEDE5 url('../images/general/carousel-border-right.png') 0 0 no-repeat
+		&:after
+			margin-top -10px
+			margin-left -10px
+			bg($carousel-right)
+	.owl-prev
+		left -27px
+		margin-top -11px
+		background #EFEDE5 url('../images/general/carousel-border-left.png') 100% 0 no-repeat
+		&:after
+			margin-top -10px
+			margin-left -10px
+			bg($carousel-left)
+
+
+

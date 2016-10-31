@@ -1,0 +1,76 @@
+.filter
+	border 3px solid rgba(0,0,0,.1)
+	min-height 50px
+	border-radius 10px
+	&__list
+		position relative
+		margin 1px
+		padding 0 54px 0 25px
+		background-color rgba(0,0,0,.1)
+		font-size 16px
+		text-align justify
+		text-align-last justify
+		border-radius 6px
+		&:after
+			position absolute
+			left 0
+			content ""
+			display inline-block
+			vertical-align top
+			width 100%
+	&__item
+		position relative
+		// margin-right 98px
+		margin-right 0
+		display inline-block
+		vertical-align top
+		line-height 1
+		&:last-child
+			margin-right 0
+		&:after
+			position absolute
+			top 50%
+			right -17px
+			content ""
+			margin-top -4px
+			bg($arrow-down)
+
+	&__link
+		padding-top 7px
+		padding-bottom 5px
+		display block
+		font-family $pt-sans-bldit
+		font-size 16px
+		color $text-color
+		line-height 30px
+		text-decoration underline
+		&:hover
+			text-decoration none
+	&__sub
+		position absolute
+		top 100%
+		left 0
+		display none
+		background-color #F3EFEC
+		padding 10px 20px
+		width 220px
+		box-shadow 0 0 0 2px #d8d8d8, 0 0 0 3px white
+		border-radius 7px
+		z-index 10
+	&__sub-item
+		margin-bottom 10px
+	&__sub-link
+		display inline-block
+		font-family $pt-sans-bldit
+		font-size 16px
+		color $text-color
+		line-height 30px
+		text-decoration underline
+		&:hover
+			text-decoration none
+
+	&__item
+		&:hover
+			.filter__sub
+				display block
+

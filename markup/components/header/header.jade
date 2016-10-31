@@ -1,0 +1,64 @@
+include ../menu/menu
+
+
+mixin header(data)
+	header.header
+		.header__body
+			.header__in
+				.header__logo
+					a.logo(href="/")
+						img.logo__image(src="%=static=%images/general/logo.png", alt="La Rose - студия цветов")
+					.header__cities
+						a.header__cities-link(href="#link") Новосибирск
+						a.header__cities-link(href="#link") Барнаул
+				.header__left
+					.header__phones
+						.header-phones
+							.header-phones__top
+								.header-phones__code
+									img(src="%=static=%images/general/phone-code.png", alt="phone code")
+								.header-phones__w
+									.header-phones__phone <span>(383)</span> 292-16-25<i>,</i>
+									.header-phones__phone <span>(383)</span> 222-60-70
+							a.header-phones__button(href="#button") Мы Вам перезвоним
+
+					.header__working-hours
+						.working-hours Работаем 24 часа
+
+					.header__basket
+						.head-basket
+							a.head-basket__button(href="#button")
+								//- <span>В корзине</span> пусто
+								<span>В корзине:</span> 1 шт. на сумму 25950 руб.
+
+
+						a.header__pers-order.button.button_style-1(href="#button") Индивидуальный заказ <span class='header__pers-order-faq'>&#63;</span>
+
+					.header__catalog
+						.head-catalog
+							a.head-catalog__button(href="#catalog") Каталог
+							ul.head-catalog__list
+								li.head-catalog__item
+									a.head-catalog__link(href="#link") Букеты
+								li.head-catalog__item
+									a.head-catalog__link(href="#link") Цветочные композиции
+								li.head-catalog__item
+									a.head-catalog__link(href="#link") Игрушки из живых цветов
+								li.head-catalog__item
+									a.head-catalog__link(href="#link") Горшечные растения
+								li.head-catalog__item
+									a.head-catalog__link(href="#link") Цветы поштучно
+
+					.header__user-auth
+						.head-user-auth
+							a.head-user-auth__icon(href='#auth')
+							ul.head-user-auth__list
+								li.head-user-auth__item
+									a.head-user-auth__link.head-user-auth__link-enter(href="#link") Вход
+								li.head-user-auth__item
+									a.head-user-auth__link.head-user-auth__link-reg(href="#link") Регистрация
+		.header__bottom
+			.header__in
+				+menu()
+
+

@@ -1,0 +1,28 @@
+// Common styles of the project
+
+html, body
+	height 100%
+
+
+.page
+	background url('%=static=%general/bg-top.jpg') 50% 0 no-repeat, url('%=static=%general/bg.jpg') 50% 0 repeat-y
+	background-size 1846px auto
+	background-color #EBE9E4
+	color $text-color
+	font-family $pt-sans-reg
+	font-size 16px
+	font-weight normal
+	line-height 1
+
+.page__w
+	background url('%=static=%general/bg-bottom.jpg') 50% 100% no-repeat
+	overflow hidden
+.page__wrapper
+	min-height 100%
+	margin-bottom -507px
+
+* html .page__wrapper
+	height 100%
+
+.page__buffer
+	height 507px

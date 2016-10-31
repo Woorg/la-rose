@@ -1,0 +1,111 @@
+.main
+	padding-top 30px
+	@extends .in
+	// overflow hidden
+	clr()
+	&__content
+		float right
+		width 880px
+	&__side
+		margin-right 20px
+		float left
+		width 280px
+	&__search-form
+		margin-bottom 30px
+		padding-top 3px
+		width 540px
+	&__filter
+		margin-bottom 30px
+
+
+
+.page-news
+	padding-top 20px
+	padding-bottom 27px
+	&__in
+		@extends .in
+	&__title
+		margin-bottom 40px
+		padding-top 13px
+		padding-bottom 13px
+		background url('../images/general/line-wide.png') 0 0 no-repeat, url('../images/general/line-wide.png') 0 100% no-repeat
+		color $text-color
+		font-family $pt-serif-bld
+		font-size 36px
+		line-height 1
+		text-transform uppercase
+		text-align center
+	&__list
+		clr()
+
+	&__item
+		position relative
+		margin-left 20px
+		margin-bottom 17px
+		padding-left 124px
+		float left
+		width 580px
+		font-size 16px
+		clr()
+		&:first-child
+			margin-left 0
+	&__item-image
+		position absolute
+		top 0
+		left 0
+		margin-right 20px
+		margin-bottom 20px
+		float left
+		width 103px
+		height 96px
+		img
+			display block
+			max-width 100%
+			height auto
+
+	&__item-date
+		position relative
+		margin-bottom 6px
+		display inline-block
+		vertical-align top
+		color #564d3e
+		font-family $pt-sans-bldit
+		font-size 16px
+		line-height 1
+		&:after
+			position absolute
+			top -2px
+			right -45px
+			content ""
+			bg($date-icon)
+	&__item-title
+		margin-bottom 13px
+		font-family $pt-sans-reg
+		a
+			color inherit
+			text-decoration underline
+			&:hover
+				text-decoration none
+	&__item-text
+		font-family $pt-sans-reg
+		line-height 24px
+
+
+
+.page-desc
+	margin-bottom 40px
+	&__in
+		@extends .in
+	&__title
+		margin-bottom 25px
+		padding-top 15px
+		padding-bottom 16px
+		background url('../images/general/line-wide.png') 0 0 no-repeat, url('../images/general/line-wide.png') 0 100% no-repeat
+		color $text-color
+		font-family $pt-sans-bldit
+		font-size 30px
+		line-height 1
+		text-align center
+
+	&__text
+		@extends .wysiwyg

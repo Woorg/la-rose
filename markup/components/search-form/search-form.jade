@@ -1,0 +1,8 @@
+mixin search-form(data)
+	.search-form
+		form.search-form__form(action="#search", method="get")
+			label.search-form__label(for="search-form") Что ищем?
+			.search-form__field
+				input#search-form(type="text", value="", placeholder="")
+			input.search-form__submit(type="submit", value="Поиск")
+

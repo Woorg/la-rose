@@ -1,0 +1,93 @@
+include ../filter/filter
+include ../menu/menu
+
+mixin footer(data)
+	.footer
+		.footer__in
+			.footer__top
+				.footer__left
+					.footer__logo
+						a.logo(href="/")
+							img.logo__image(src="%=static=%images/general/logo.png", alt="La Rose - студия цветов")
+					.footer__left-links
+						a(href="#link") Доставка цветов
+						a(href="#link") Оформление цветами
+					.footer__director-email
+						a.director-email(href="#director-email") Написать письмо директору
+				.footer__right
+					.footer__filter
+						+filter()
+					.footer__nav
+						+menu().menu_style-second
+
+					.footer__row
+						.footer__col.footer__col_first
+							.footer-address
+								.footer-address__title Новосибирск:
+								ul.footer-address__list
+									li.footer-address__item
+										.footer-address__item-address ул. Советская, 55
+										.footer-address__item-phone Тел.: <a href='tel:+83832921625'>(383) 292-16-25</a>
+									li.footer-address__item
+										.footer-address__item-address пл. Карла Маркса, 7
+										.footer-address__item-phone Тел.: <a href='tel:+83833107710'>(383) 310-77-10</a>
+									li.footer-address__item
+										.footer-address__item-address ул. Кирова, 25 в «Бахетле»
+										.footer-address__item-phone Тел.: <a href='tel:+83833101150'>(383) 310-11-50</a>
+									li.footer-address__item
+										.footer-address__item-address ул. Нарымская, 102 в «Бахетле»
+										.footer-address__item-phone Тел.: <a href='tel:+83832136424'>(383) 213-64-24</a>
+									li.footer-address__item
+										.footer-address__item-address ул. Красный проспект, 24
+										.footer-address__item-phone Тел.: <a href='tel:+83832091624'>(383) 209-16-24</a>
+
+						.footer__col.footer__col_second
+							.footer-address
+								.footer-address__title Барнаул:
+								ul.footer-address__list
+									li.footer-address__item
+										.footer-address__item-address ул. Красноармейский проспект, 47а
+										.footer-address__item-phone Тел.: <a href='tel:+83852226756'>(3852) 22-67-56</a>
+
+							.footer-phones
+								.footer-phones__title Интернет-магазин:
+								ul.footer-phones__list
+									li.footer-phones__item
+										a.footer-phones__link(href="mailto:info@la-rose.ru") info@la-rose.ru
+									li.footer-phones__item
+										.footer-phones__item-phone Тел.: <span>(383) 310-22-01</span>
+											.footer-phones__item-time (с 10:00 до 23:00),
+
+									li.footer-phones__item
+										.footer-phones__item-phone <span>(383) 310-22-01</span>
+											.footer-phones__item-time (с 23:00 до 10:00)
+
+
+
+
+						.footer__col.footer__col_third
+
+							.footer-info
+								.footer-info__title Информация покупателям:
+								ul.footer-info__list
+									li.footer-info__item
+										a.footer-info__link(href="#link") Информация покупателям:
+									li.footer-info__item
+										a.footer-info__link(href="#link") Условия возврата товара
+									li.footer-info__item
+										a.footer-info__link(href="#link") Замещение
+									li.footer-info__item
+										a.footer-info__link(href="#link") Условия предоставления услуги
+									li.footer-info__item
+										a.footer-info__link(href="#link") Гарантии качества
+									li.footer-info__item
+										a.footer-info__link(href="#link") Описание политики конфиденциальности
+
+			.footer__bottom
+
+				small.copyright.footer__copyright 2016 &copy;La-Rose - доставка цветов на дом.
+
+				.footer__to-top
+					a.top(href="#top") Перейти наверх
+
+

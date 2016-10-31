@@ -1,0 +1,52 @@
+.spinner
+	position relative
+	width 100px
+	height 22px
+	display inline-block
+	vertical-align top
+	background-color #dcd9d6
+	border-radius 5px
+	text-align center
+	&__input
+		position relative
+		border none
+		padding 0
+		width 36px
+		height 22px
+		color $text-color
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 20px
+		background-color transparent
+		border-radius 5px
+		z-index 1
+		text-align center
+	&__buttons
+		font-size 20px
+		text-align center
+		z-index 0
+	&__button
+		position absolute
+		top 0
+		display block
+		width 33px
+		height 22px
+		cursor pointer
+		user-select none
+		text-decoration underline
+		text-indent -9999px
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ""
+			margin-top -6px
+			margin-left -6px
+	&__button_up
+		right 0
+		&:after
+			bg($spinner-plus)
+	&__button_down
+		left 0
+		&:after
+			bg($spinner-minus)

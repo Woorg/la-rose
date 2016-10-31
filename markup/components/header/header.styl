@@ -1,0 +1,384 @@
+.header
+	position relative
+	z-index 1
+	&__in
+		@extends .in
+		font-size 0
+		clr()
+	&__body
+		position relative
+		.header__in
+			position relative
+			padding-top 13px
+			padding-bottom 16px
+			min-height 148px
+			&:before
+				position absolute
+				right -40px
+				left -40px
+				bottom 0
+				content ""
+				width 1260px
+				height 8px
+				background transparent url('%=static=%/general/line.png') 0 0 repeat-x
+			+below($tablet)
+				padding-top 60px
+	&__logo,
+	&__phones,
+	&__working-hours,
+	&__basket,
+	&__user-auth
+		display inline-block
+		vertical-align top
+	&__logo
+		margin-right r-percent(46,1200)
+		// margin-bottom 20px
+		padding-top 3px
+		width r-percent(261,1200)
+		height 78px
+	&__logo,
+	&__left
+		float left
+	&__left
+		position relative
+		float right
+		width r-percent(880,1200)
+		font-size 0
+		+below($tablet)
+			position absolute
+			top 0
+			left 0
+			right 0
+			width 100%
+			font-size 16px
+			display inline-block
+			vertical-align top
+			text-align justify
+			&:after
+				content ""
+				display inline-block
+				width 100%
+	&__cities
+		margin-top 11px
+		padding-left 3px
+		font-family $pt-serif-bldit
+		line-height 36px
+	&__cities-link
+		margin-left 42px
+		font-size 14px
+		text-decoration underline
+		color $text-color
+		&:hover
+			text-decoration none
+		&:first-child
+			margin-left 0
+	&__phones
+		position relative
+		top 60px
+		padding-top 13px
+		margin-right r-percent(50px,880)
+		width r-percent(225,880)
+
+	&__working-hours
+		padding-top 12px
+		margin-right r-percent(60,880)
+		width r-percent(92,880)
+		+below($desktop)
+			display none
+	&__basket
+		padding-right  r-percent(36,880)
+		margin-top 6px
+		margin-bottom 14px
+		width r-percent(280,880)
+		background url('%=static=%/general/header-basket-border.png') 100% 0 repeat-y
+		+below($desktop)
+			width r-percent(434,880)
+			// padding-right 20px
+		+below($tablet)
+			padding 0
+			width 40px
+			background none
+
+	&__pers-order
+		position relative
+		margin-left 4px
+		+below($desktop)
+			margin-right 20px
+			display block
+		+below($tablet-l)
+			display none
+		+below($tablet)
+			display none
+
+	&__pers-order-faq
+		position absolute
+		top -22px
+		right 11px
+		content ""
+		bg($question-icon)
+		text-indent -9999px
+	&__user-auth
+		padding-top 26px
+		// width r-percent(166,880)
+		width r-percent(166,880)
+
+
+	&__catalog
+		position relative
+		display none
+		+below($tablet)
+			display inline-block
+			vertical-align top
+	&__bottom
+		margin-bottom -10px
+		+below($tablet)
+			position absolute
+			top 0
+			left r-percent(10,1200)
+			width 50px
+
+.logo
+	display block
+
+.header-phones
+	&__top
+		white-space nowrap
+	&__code,
+	&__w
+		display inline-block
+		vertical-align top
+	&__code
+		margin-top 12px
+		margin-right r-percent(18,225)
+		// width r-percent(74,225)
+		width r-percent(74,225)
+		height 46px
+		// background url('%=static=%/general/phone-code.png') no-repeat
+		// background-size cover
+		// text-indent -9999px
+		img
+			max-width 100%
+			height auto
+		+below($desktop)
+			margin-top 0
+	&__w
+		margin-bottom 12px
+	&__phone
+		margin-bottom 11px
+		font-family $pt-serif-bld
+		font-size 26px
+		line-height 1
+		span
+			display none
+		i
+			display none
+		+below($desktop)
+			font-size 20px
+	&__button
+		position relative
+		margin-bottom 16px
+		margin-left 32px
+		display inline-block
+		vertical-align top
+		color $text-color
+		font-family $pt-serif-bldit
+		font-size 14px
+		line-height 1
+		text-decoration underline
+		&:hover
+			text-decoration none
+		&:after
+			position absolute
+			top -9px
+			right -43px
+			content ""
+			bg($phone-icon)
+		+below($tablet-l)
+			margin-left 0
+			display none
+		// +below($tablet-l)
+
+
+.working-hours
+	bg($working-hours)
+	text-indent -9999px
+
+.head-basket
+	&__button
+		position relative
+		padding-top 18px
+		padding-bottom 31px
+		padding-left r-percent(58,280)
+		display block
+		color $text-color
+		font-family $pt-serif-bldit
+		font-size 14px
+		line-height 1
+		text-decoration none
+		+below(880px)
+			padding-top 8px
+		span
+			text-decoration underline
+			line-height 18px
+			+below($tablet)
+				display none
+		+below($tablet)
+			padding 0
+			width 40px
+			height 40px
+			text-indent -9999px
+		&:hover
+			span
+				text-decoration none
+		&:after
+			position absolute
+			top 0
+			left 0
+			content ""
+			bg($basket-icon)
+
+
+.head-catalog
+	&__button
+		border 1px solid $text-color
+		display block
+		border-radius 3px
+		padding 7px 15px 8px
+		color $text-color
+		font-family $pt-sans-bld
+		font-size 14px
+		text-align center
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&__list
+		display none
+	&__list_active
+		display block
+
+	&__item
+		margin-bottom 10px
+	&__link
+		font-family $pt-sans-bldit
+		font-size 14px
+		color $text-color
+		text-decoration underline
+		&:hover
+			text-decoration none
+
+.head-user-auth
+	padding-left r-percent(40, 166)
+	+below($desktop)
+		padding-left 20px
+	&__icon
+		bg($user-icon)
+		display none
+		+below($tablet)
+			display block
+	// &__list
+	&__item
+		margin-bottom 20px
+	&__link
+		position relative
+		color $text-color
+		font-family $pt-serif-bldit
+		font-size 14px
+		line-height 1
+		text-decoration underline
+		&:hover
+			text-decoration none
+	&__link-enter,
+	&__link-reg
+		&:after
+			position absolute
+			top 50%
+			right 0
+			content ""
+	&__link-enter
+		&:after
+			right -40px
+			margin-top -7px
+			bg($enter-icon)
+	&__link-reg
+		&:after
+			right -20px
+			margin-top -6px
+			bg($reg-icon)
+
+.header_fixed
+	position fixed
+	left 0
+	right 0
+	width 100%
+	background #f1eeeb url('../images/general/header-fixed-bg.png') 0 100% repeat-x
+	box-shadow 0 2px 0 #564d3e
+	z-index 2
+	.header__body
+		.header__in
+			padding-top 14px
+			padding-bottom 16px
+			&:after
+				display none
+	.header__logo
+		margin-top 20px
+		margin-right 38px
+		width 216px
+
+	.header__phones
+		margin-top 10px
+		margin-right 30px
+		width 312px
+	.header__cities
+		display none
+
+	.header__working-hours
+		display none
+
+	.header-phones__code
+		display none
+	.header-phones__phone
+		display inline-block
+		font-size 20px
+		span,
+		i
+			display inline-block
+		&:last-child
+			margin-left 5px
+
+	.header-phones__button
+		display none
+
+	.header__user-auth
+		display none
+
+	.header__basket
+		padding-right 0
+		width 584px
+		background none
+		clr()
+	.head-basket
+		width 330px
+		float left
+	.header__pers-order
+		margin-top 10px
+		float right
+
+	.header__bottom
+		margin-top -50px
+		padding-bottom 14px
+		.header__in
+			padding-left 0
+			padding-right 0
+	.menu
+		padding-left 0
+		padding-right 0
+		float right
+		width 927px
+		background none
+		box-shadow none
+	.menu__item
+		&:after
+			display none
+	.menu__link
+		font-family $pt-serif-bldit
+		font-size 16px

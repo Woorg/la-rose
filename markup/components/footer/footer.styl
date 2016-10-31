@@ -1,0 +1,150 @@
+.footer
+	&__in
+		@extends .in
+	&__top
+		position relative
+		padding-top 30px
+		clr()
+		&:before
+			position absolute
+			top 0
+			left -40px
+			right -40px
+			content ""
+			width 1260px
+			height 8px
+			background url('../images/general/footer-line.png') 0 0 repeat-x
+	&__left
+		width 300px
+		float left
+	&__logo
+		margin-bottom 0
+		padding-top 9px
+		width 261px
+		// height 78px
+	&__left-links
+		margin-bottom 8px
+		padding-top 10px
+		color $text-color
+		font-family $pt-sans-bldit
+		font-size 16px
+		line-height 24px
+		a
+			display block
+			color inherit
+			text-decoration none
+			&:hover
+				text-decoration underline
+	&__director-email
+		bg($director-mail)
+		a
+			padding 23px 37px 18px 20px
+			display block
+			color #564d3e
+			font-family $pt-sans-bldit
+			font-size 16px
+			line-height 24px
+			text-decoration none
+			&:hover
+				text-decoration underline
+	&__right
+		float right
+		width 880px
+	&__filter
+		margin-bottom 20px
+	&__nav
+		margin-bottom 19px
+	&__row
+		padding-left 24px
+		clr()
+	&__col
+		margin-right 20px
+		float left
+		&:last-child
+			margin-right 0
+	&__col_first
+		width 256px
+
+	&__col_second
+		width 260px
+
+	&__col_third
+		width 300px
+
+	&__bottom
+		padding-bottom 30px
+		clr()
+	&__to-top
+		float right
+
+	&__copyright
+		float left
+
+.footer-address,
+.footer-phones,
+.footer-info
+	font-family $pt-sans-reg
+	font-size 16px
+	&__title
+		margin-bottom 7px
+		font-family $pt-sans-bld
+		line-height 30px
+	&__item
+		margin-bottom 14px
+
+.footer-address
+	// &__title
+
+	&__list
+		margin-bottom 18px
+
+	// &__item
+
+	&__item-address
+		margin-bottom 6px
+	&__item-phone
+		font-family $pt-sans-bld
+		a
+			color $text-color
+			text-decoration none
+
+
+.footer-phones
+	// &__title
+
+	// &__list
+
+	// &__item
+
+	&__link
+		color $text-color
+		text-decoration underline
+		&:hover
+			text-decoration none
+	&__item-phone
+		span
+			font-family $pt-sans-bld
+	// &__item-time
+
+
+.footer-info
+	// &__title
+
+	// &__list
+
+	// &__item
+
+	&__link
+		color $text-color
+		text-decoration underline
+		&:hover
+			text-decoration none
+
+
+.top
+	display block
+	bg($top)
+	text-indent -9999px
+.copyright
+	margin-top 14px
+	line-height 24px
