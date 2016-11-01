@@ -1,6 +1,8 @@
 // (function () {
 
-	// $(document).ready(function() {
+	$(document).ready(function () {
+		// hero slider
+
 		var heroSlider = $('.hero__slider-list');
 
 		heroSlider.owlCarousel({
@@ -14,7 +16,22 @@
 			dots: false
 		});
 
-	// });
+		var pageDescToggle = $('.page-desc__more'),
+			pageDescText = $('.page-desc__text > p').length,
+			pageDesc = $('.page-desc__text');
 
-	console.log('shome');
+		console.log(pageDescText);
+
+		pageDescToggle.on('click', function () {
+			if(pageDescText > 250) {
+				pageDesc.addClass('page-desc__text_active');
+
+			} else {
+
+			}
+		});
+
+
+	});
+
 // }) ();

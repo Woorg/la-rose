@@ -3,21 +3,40 @@
 	@extends .in
 	// overflow hidden
 	clr()
+	+below($tablet)
+		padding-top 0
 	&__content
 		float right
-		width 880px
+		width r-percent(880,1200)
+		+below($tablet)
+			float none
+			width auto
 	&__side
-		margin-right 20px
+		margin-right r-percent(20, 1200)
 		float left
-		width 280px
+		width r-percent(280,1200)
+		+below($tablet)
+			float none
+			width auto
+
 	&__search-form
 		margin-bottom 30px
 		padding-top 3px
 		width 540px
+		+below($desktop)
+			display none
+
 	&__filter
 		margin-bottom 30px
+		+below($tablet)
+			display none
+	&__breadcrumbs
+		margin-bottom 16px
 
-
+.main_inner
+	padding-top 90px
+	+below($tablet)
+		padding-top 30px
 
 .page-news
 	padding-top 20px
@@ -35,20 +54,29 @@
 		line-height 1
 		text-transform uppercase
 		text-align center
+		a
+			color $text-color
+		+below($tablet)
+			font-size 30px
 	&__list
 		clr()
 
 	&__item
 		position relative
-		margin-left 20px
+		margin-left r-percent( 20, 1200 )
 		margin-bottom 17px
-		padding-left 124px
+		padding-left r-percent(124, 1200)
 		float left
-		width 580px
+		width r-percent( 580,1200 )
 		font-size 16px
 		clr()
 		&:first-child
 			margin-left 0
+
+		+below($tablet)
+			margin-left 0
+			padding-left r-percent(244, 1200)
+			width auto
 	&__item-image
 		position absolute
 		top 0
@@ -56,12 +84,14 @@
 		margin-right 20px
 		margin-bottom 20px
 		float left
-		width 103px
+		width r-percent( 103, 580 )
 		height 96px
 		img
 			display block
 			max-width 100%
 			height auto
+		+below($tablet)
+			min-width r-percent( 103, 1200 )
 
 	&__item-date
 		position relative
@@ -89,11 +119,14 @@
 	&__item-text
 		font-family $pt-sans-reg
 		line-height 24px
-
+		+below($tablet)
+			font-size 14px
 
 
 .page-desc
 	margin-bottom 40px
+	+below($tablet)
+		margin-bottom 20px
 	&__in
 		@extends .in
 	&__title
@@ -106,6 +139,27 @@
 		font-size 30px
 		line-height 1
 		text-align center
-
+		+below($tablet)
+			font-size 26px
 	&__text
 		@extends .wysiwyg
+		+below($tablet)
+			max-height 220px
+			overflow hidden
+	&__text_active
+		max-height 100%
+
+
+	&__more-w
+		display none
+		text-align center
+		+below($tablet)
+			display block
+	&__more
+		display inline-block
+		vertical-align top
+		font-family $pt-sans-bldit
+		font-size 16px
+		color $text-color
+		&:hover
+			text-decoration none

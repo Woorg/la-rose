@@ -4,10 +4,12 @@
 .in
 	margin auto
 	padding-left r-percent(10,1200)
+	// padding-left 10px
 	padding-right r-percent(10,1200)
+	// padding-right 10px
 	width 1200px
 	+below(1180px)
-		width 100%
+		width auto
 
 
 
@@ -55,6 +57,32 @@
 	text-align center
 
 
+.tabs
+	&__nav
+		font-size 0
+		clr()
+	&__nav-item
+		display inline-block
+		vertical-align top
+	&__nav-link
+		padding 10px
+		display block
+		font-family $pt-serif-bld
+		font-size 16px
+	&__nav-item
+		&.active
+			.tabs__nav-link
+				background #f1eeeb
+	&__w
+		clr()
+	&__tab
+		display none
+
+	&__tab
+		&.active
+			display block
+
+
 .wysiwyg
 	font-family $pt-sans-reg
 	color $text-color
@@ -81,6 +109,13 @@
 		&:hover
 			text-decoration underline
 
+	+below($tablet)
+		h2
+			font-size 20px
+		h3
+			font-size 16px
+		p
+			font-size 14px
 
 
 

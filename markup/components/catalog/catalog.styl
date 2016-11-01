@@ -1,22 +1,29 @@
 .catalog
-
 	&__row
 		border 1px solid #c5c3bd
 		margin-bottom 33px
 		padding 5px
+
 .products
 	border 2px solid #c5c3bd
 	font-size 0
 	padding-top 24px
 	padding-bottom 25px
+	+below($tablet)
+		padding-top 10px
+		padding-bottom 10px
 	&__item
 		padding 0 26px
 		width 292px
 		display inline-block
 		vertical-align top
+		+below($tablet-l)
+			width 100%
+		+below($tablet)
+			width 100%
 	&__item-title
-		margin-bottom 28px
-		max-height 52px
+		// max-height 52px
+		height 54px
 		overflow hidden
 		font-family $pt-sans-bldit
 		font-size 22px
@@ -29,12 +36,17 @@
 				text-decoration none
 	&__item-image
 		position relative
+		// margin-top 28px
 		margin-bottom 27px
 		height 268px
 		// height 296px
+		+below($tablet)
+			margin-top 28px
+			height 248px
 		a
 			text-decoration none
 		img
+			margin auto
 			display block
 			max-width 100%
 			height auto
@@ -50,8 +62,11 @@
 		// width 233px
 		min-height 64px
 		clr()
+		+below($tablet)
+			background url('%=static=%/general/product-bottom-line.png') 50% 0 repeat-x, url('%=static=%/general/product-bottom-line.png') 50% 100% repeat-x
+
 	&__bottom-left
-		background url('%=static=%/general/product-bottom-vertical.png') 100% 0 no-repeat
+		background url('%=static=%/general/product-bottom-vertical.png') 100% 50% no-repeat
 		padding 0 5px 0 22px
 		width 50%
 		float left
@@ -59,6 +74,7 @@
 		padding 0 7px 0 12px
 		width 50%
 		float right
+		text-align center
 	&__item-price
 		margin-top 4px
 		padding-top 7px
@@ -74,12 +90,14 @@
 			font-size 16px
 			line-height 20px
 	&__item-quant
+		position relative
 		padding-top 9px
 		padding-bottom 5px
+		z-index 10
 	&__item-order
 		position relative
 		padding-left 38px
-		display block
+		display inline-block
 		color $text-color
 		font-family $pt-sans-reg
 		font-size 16px
@@ -105,6 +123,9 @@
 		text-transform uppercase
 		text-decoration none
 		text-align center
+		+below($tablet)
+			background url('%=static=%/general/product-bottom-line.png') 50% 100% repeat-x
+
 
 	.owl-nav
 		width 100%
@@ -141,3 +162,43 @@
 
 
 
+.products.products_second
+	border none
+	padding-bottom 50px
+	white-space nowrap
+	+below($tablet)
+		padding-bottom 50px
+		white-space normal
+.products_second
+	.products__item
+		margin-right r-percent( 20, 880 )
+		margin-bottom 20px
+		padding-left 0
+		padding-right 0
+		width r-percent( 280, 880 )
+		&:last-child
+			margin-right 0
+		+below($tablet-l)
+			// width 50%
+			&:nth-child(3)
+				margin-right 0
+		+below($tablet)
+			width 100%
+			margin-right 0
+			&:nth-child(3)
+				display none
+
+
+	.products__item-image
+		margin-bottom 15px
+	.products__item-order
+		margin-left 16px
+		padding-left 0
+		&:after
+			left -26px
+	.products__bottom-left
+		padding-left 0
+
+	.products__quick-order
+		+below($tablet)
+			display none

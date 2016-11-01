@@ -1,0 +1,1379 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../components/head/head
+	include ../components/header/header
+	include ../components/search-form/search-form
+	include ../components/filter/filter
+	include ../components/breadcrumbs/breadcrumbs
+
+	include ../components/catalog-second/catalog-second
+	include ../components/spinner/spinner
+	include ../components/side/side
+
+	include ../components/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+		.page__w
+			.page__wrapper
+				+header()
+				main.main.main_inner
+					.main__content
+						.main__search-form
+							+search-form()
+						.main__filter
+							+filter()
+						.main__breadcrumbs
+							+breadcrumbs()
+								ul.breadcrumbs__list
+									li.breadcrumbs__item
+										a.breadcrumbs__link(href="#link-1") Главная
+										| >
+									li.breadcrumbs__item
+										a.breadcrumbs__link(href="#link-2") Каталог
+						.main__catalog
+							+catalog-second()
+								h1.catalog-second__title Каталог
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Букеты</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Игрушки</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Цветочные композиции</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Конфеты</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Игрушки из живых цветов</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Открытки</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Горшечные растения</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Игрушки ручной работы</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Гелевые шары</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>С рождением ребенка</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Цветы поштучно</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Калла</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Гербера</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Ирис</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Роза</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Хризантема</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Орхидея</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Эустома</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Оформление букета</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+								.catalog-second__row
+									.catalog-second__row-top
+										h2.catalog-second__category <a href='#link'>Подарки</a>
+
+										.catalog-second__more-w
+											a.catalog-second__more(href="#more") Посмотреть все
+									.products.products_second
+										.products__item
+											.products__item-title
+												a(href="#link") Яркое счастье
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-4.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 10000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Натюрель
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-5.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new Новинка
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 8650
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+
+													a.products__item-order(href="#link") купить
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+										.products__item
+											.products__item-title
+												a(href="#link") Моменты нежности
+											.products__item-image
+												a(href="#link")
+													img(src="%=static=%/images/content/product-img-6.png", alt="product image")
+												//- .products__item-badge.products__item-badge_new{Новинка}
+											.products__bottom
+												.products__bottom-left
+													.products__item-price
+														| 3000
+														span рублей
+												.products__bottom-right
+													.products__item-quant
+														+spinner().spinner_second
+													a.products__item-order(href="#link") купить
+
+											a.products__quick-order(href="#link") БЫСТРЫЙ ЗАКАЗ
+
+
+
+					.main__side
+						+side()
+
+				.page-desc
+					.page-desc__in
+
+						.page-desc__text
+
+							p Интернет-магазин студии “La Rose” предлагает нашим клиентам купить комнатные цветы в горшках. Наша команда флористов поможет выбрать и осуществить доставку покупателю любого горшечного цветка – предпочитаете для офиса, дома или в подарок.
+
+							p Заботливая хозяйка непременно желает создать в доме уютную обстановку с помощью разнообразных комнатных цветов, получая удовольствие заказать и купить горшечные цветы в нашем интернет магазине комнатных цветов.
+
+							p Консультанты магазина помогут также советами по уходу за растениями и цветами, купленными в нашем интернет магазине.
+
+							p Обставить офис или подарить хороший подарок из горшочных цветов – вы сможете всегда купить недорого в интернет-магазине студии “La Rose”.
+
+							p Стремиться и заботиться об удобстве своих клиентов и экономить время при доставке комнатных цветов – менеджеры магазина всегда готовы принять заявку купить любой комнатный цветок и обеспечить доставку цветов в горшках вовремя. Разнообразие растений и цветов всегда обновляется и пополняется впечатляющим ассортиментом, представленных в каталоге нашего интернет магазина.
+
+							p Такой практичный и недорогой подарок из комнатных цветов обычно радует тем, что он украшает интерьер надолго.
+
+
+							h2 Низкие цены на горшечные цветы
+
+							p Желающим купить комнатный цветок непосредственно в магазине мы открыты круглосуточно. На страницах интернет магазина горшечных цветов предоставлена информация об адресах, где есть продажа комнатных цветов на любой вкус.
+
+							p Любой праздник, торжество, событие хочется украсить неотъемлемым реквизитом, что порадует глаз и подымет настроение – букетом живых цветов.
+
+							p Наша студия предлагает оформить праздник с помощью шикарных или простых букетов на любой вкус.
+
+							p Мы создаем для своих клиентов возможность заказать живые цветы в нашей студии. Магазин рассчитан на любого покупателя, с любыми предпочтениями, пожеланиями и вкусами, чтобы купить любой понравившейся живой цветок.
+
+							p Итак, каталог цветов в нашем магазине настолько разнообразен, что позволяет любому желающему, подобрать подходящий букет – пусть он будет оригинальным, необычным, классическим.
+
+							p Развиваясь и совершенствуя сервис, мы разнообразили ассортимент цветов в магазине – подобрать желаемое каждому клиенту удается нам под силу и с легкостью!
+
+							p Каталог по продаже цветов в нашем магазине осуществляется разными способами – желаете ли вы приобрести букеты на месте, посетив магазин живых цветов лично, или, сэкономив время – обратиться к нашим услугам, чтобы даже купить живые цветы онлайн. Флористы салона и эффективно работающий персонал, с любовью и уважением к каждому обеспечит доставку живых цветов в любой дом, офис и точку города.
+
+							ul
+								li Оперативную доставку цветов в назначенное время в нужное место
+								li Выполнение вашего заказа даже в самые загруженные праздничные дни
+								li Своевременное информирование о выполнении заказа
+								li Флористы нашего магазина цветов учтут все пожелания при составлении цветочной композиции, подскажут, что означает цвет, вид и название растений. Кроме композиций из свежих цветов вы можете купить горшечные цветы, как символ значимости многолетней дружбы, преданности, уважения, а также оригинальные игрушки из живых цветов.
+
+
+						.page-desc__more-w
+							a.page-desc__more(href='#link') Показать
+
+
+				.page__buffer
+
+			.page__footer
+				+footer()
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

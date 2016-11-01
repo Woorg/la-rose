@@ -15,13 +15,19 @@
 			height 8px
 			background url('../images/general/footer-line.png') 0 0 repeat-x
 	&__left
-		width 300px
+		width r-percent(300, 1200)
 		float left
+		+below($tablet-l)
+			margin-bottom 20px
+			width auto
+			float none
 	&__logo
 		margin-bottom 0
 		padding-top 9px
-		width 261px
+		width r-percent(261,300)
 		// height 78px
+		+below($tablet-l)
+			margin 0
 	&__left-links
 		margin-bottom 8px
 		padding-top 10px
@@ -29,6 +35,10 @@
 		font-family $pt-sans-bldit
 		font-size 16px
 		line-height 24px
+		+below($tablet)
+			margin 0
+			width 260px
+			text-align left
 		a
 			display block
 			color inherit
@@ -47,30 +57,51 @@
 			text-decoration none
 			&:hover
 				text-decoration underline
+		+below($tablet)
+			margin 0
 	&__right
 		float right
-		width 880px
+		width r-percent(890, 1200)
+		+below($tablet-l)
+			float none
+			width auto
 	&__filter
 		margin-bottom 20px
+		.filter__list
+			+below($tablet-l)
+				margin 0
 	&__nav
 		margin-bottom 19px
+		+below($desktop)
+			display none
+		+below($tablet)
+			display none
 	&__row
 		padding-left 24px
 		clr()
+		+below($tablet-l)
+			padding-left 0
 	&__col
-		margin-right 20px
+		margin-right r-percent(20, 880)
 		float left
 		&:last-child
 			margin-right 0
+		+below($tablet-l)
+			margin-right 0
+			float none
 	&__col_first
-		width 256px
-
+		width r-percent(256, 880)
+		+below($tablet)
+			width auto
 	&__col_second
-		width 260px
-
+		width r-percent(260, 880)
+		+below($tablet)
+			width auto
 	&__col_third
-		width 300px
-
+		width r-percent(300, 880)
+		+below($tablet)
+			width auto
+			white-space nowrap
 	&__bottom
 		padding-bottom 30px
 		clr()
@@ -85,6 +116,7 @@
 .footer-info
 	font-family $pt-sans-reg
 	font-size 16px
+	text-align left
 	&__title
 		margin-bottom 7px
 		font-family $pt-sans-bld

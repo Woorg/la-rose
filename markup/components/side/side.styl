@@ -5,8 +5,12 @@
 		margin-bottom 0px
 		background url('../images/general/side-line.png') 0 0 no-repeat, url('../images/general/side-line.png') 0 100% no-repeat
 		font-size 0
+		white-space nowrap
+		+below($tablet)
+			background url('../images/general/side-line.png') 0 0 repeat-x, url('../images/general/side-line.png') 0 100% repeat-x
+
 	&__button
-		padding 18px 33px 15px 18px
+		padding 18px r-percent(18, 280) 15px r-percent(18, 280)
 		display inline-block
 		vertical-align top
 		color #564d3e
@@ -16,10 +20,21 @@
 		text-decoration none
 		&:first-child
 			background url('../images/general/product-bottom-vertical.png') 100% 50% no-repeat
+			+below($tablet)
+				background url('../images/general/product-bottom-vertical.png') 100% 50% repeat-y
+
+		+below($tablet)
+			width 50%
 	&__vk-widget
-		padding 20px 13px 20px 10px
+		padding 20px r-percent(13,280) 20px r-percent(10,280)
 		background url('../images/general/side-line.png') 0 100% no-repeat
+		+below($tablet)
+			background-repeat repeat-x
+		img
+			max-width 100%
 .side-nav
+	+below($tablet)
+		display none
 	&__title
 		margin-bottom 8px
 		color $text-color

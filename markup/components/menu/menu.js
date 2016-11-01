@@ -1,10 +1,8 @@
-(function () {
-	$(document).ready(function () {
-		var menuList = $('.menu__list');
-		var menuBurger = $('.menu__burger');
+$(document).ready(function () {
+	var menuList = $('.menu__list-w');
+	var menuTrigger = $('.header__menu-trigger');
 
-		menuBurger.on('click', function () {
-			menuList.toggle('.menu__list_active');
-		});
+	menuTrigger.on('click', function () {
+		menuList.toggleClass('menu__list-w_active');
 	});
-})
+});

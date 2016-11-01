@@ -6,14 +6,19 @@
 		@extends .in
 		clr()
 	&__left
-		width 970px
+		width r-percent(970,1200)
 		float left
+		+below($tablet-l)
+			float none
+			width auto
 	&__right
 		position absolute
 		top 0
 		right 0
 		width 290px
 		z-index 1
+		+below($tablet-l)
+			display none
 	&__buttons
 		padding-top 80px
 		.button
@@ -21,9 +26,12 @@
 			&:last-child
 				margin-right 22px
 	&__slider
-		margin-top 4px
+		margin-top 39px
 		margin-left -22px
-
+		min-height 120px
+		+below($tablet-l)
+			margin-top 0
+			margin-left 0
 	&__slider-list
 		position relative
 
@@ -31,24 +39,38 @@
 
 	// &__slider-link
 
-	// &__slider-image
-	// 	img
-
+	&__slider-image
+		+below($tablet)
+			min-height 120px
+	.owl-stage-outer
+		z-index 10
 	.owl-nav
-		width 100%
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		zoom 0
 	.owl-prev,
 	.owl-next
 		position absolute
-		top 166px
+		top 50%
+		margin-top -16px
 		content ""
 		text-indent -9999px
+		z-index 10
 	.owl-prev
 		left -27px
 		bg($slider-arrow-left)
+		+below($tablet-l)
+			left 0
+			// margin-top -45px
 	.owl-next
 		right 110px
 		bg($slider-arrow-right)
-
+		+below($tablet-l)
+			right 0
+			// margin-top -45px
 
 
 

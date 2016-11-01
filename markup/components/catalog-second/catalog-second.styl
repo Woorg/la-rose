@@ -1,0 +1,62 @@
+.catalog-second
+	&__title
+		margin-bottom 50px
+		color $text-color
+		font-family $pt-sans-bldit
+		font-size 30px
+	&__row
+		position relative
+		+below($tablet)
+			padding-bottom 10px
+
+	&__row-top
+		clr()
+
+	&__category
+		margin-bottom 40px
+		color $text-color
+		font-family $pt-sans-bldit
+		font-size 20px
+		a
+			color inherit
+			text-decoration underline
+			&:hover
+				text-decoration none
+	&__more-w
+		+below($tablet)
+			position absolute
+			bottom 10px
+			left 0
+			right 0
+			padding-left 20px
+			padding-right 20px
+			text-align center
+	&__more
+		position relative
+		margin-right 50px
+		float right
+		display inline-block
+		vertical-align top
+		color $text-color
+		font-family $pt-sans-bldit
+		font-size 16px
+		line-height 1
+		text-decoration underline
+		&:hover
+			text-decoration none
+		&:after
+			position absolute
+			top 0
+			right -46px
+			content ""
+			bg($date-icon)
+		+below($tablet)
+			border 1px solid $text-color
+			margin-right 0
+			padding 20px 10px
+			float none
+			display block
+			font-size 18px
+			border-radius 50px 50px 50px 50px
+			&:after
+				display none

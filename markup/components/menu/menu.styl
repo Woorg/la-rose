@@ -1,9 +1,10 @@
 .menu
-	padding 6px 68px 8px 70px
+	padding 6px r-percent(60,1200) 8px r-percent(60, 1200)
 	border-radius 0 0 50px 50px
 	box-shadow 0 5px 10px rgba(0, 0, 0, 0.2)
 	background url('%=static=%/general/header-menu.jpg') 50% 100% no-repeat
 	+below($tablet)
+		padding-top 0
 		padding-left 0
 		padding-right 0
 		background none
@@ -14,28 +15,60 @@
 		text-indent -9999px
 		+below($tablet)
 			display block
+	&__buttons
+		display none
+		+below($tablet)
+			display block
+	&__button
+		border 1px solid $text-color
+		margin-bottom 10px
+		padding 10px
+		display block
+		color $text-color
+		font-family $pt-sans-bld
+		font-size 16px
+		border-radius 3px
+		text-align center
+		text-decoration none
+		&:hover
+			text-decoration underline
 	&__list
 		position relative
 		display block
 		font-size 18px
 		text-align justify
 		text-align-last justify
+		+below($tablet)
+			margin-bottom 20px
+			text-align left
+			text-align-last left
 		&:after
 			position absolute
 			left 0
 			content ""
 			display inline-block
 			width 100%
+			+below($tablet)
+				display none
+	&__list-w
 		+below($tablet)
+			padding 20px 10px
 			display none
 
-	&__list_active
+	&__list-w_active
+		position absolute
+		z-index 2
+		top 60px
+		left 0
+		right 0
 		display block
-
+		background #f1eeeb
 	&__item
 		display inline-block
 		vertical-align top
 		text-align left
+		+below($tablet)
+			display block
 	&__link
 		display block
 		color $text-color
@@ -45,6 +78,11 @@
 		text-decoration none
 		&:hover
 			text-decoration underline
+		+below($tablet-l)
+			font-size 16px
+		+below($tablet)
+			font-family $pt-sans-bld
+			font-size 18px
 	&__item
 		position relative
 		&:after
@@ -64,10 +102,12 @@
 				display none
 
 .menu_style-second
-	padding 0 6px 0 20px
+	padding 0 12px 0 22px
 	background none
 	box-shadow none
 	border-radius 0
+	white-space nowrap
+
 	.menu__item
 		margin-right 26px
 		&:after
