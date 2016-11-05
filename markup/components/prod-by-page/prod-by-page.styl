@@ -1,0 +1,52 @@
+.prod-by-page
+	border 3px solid rgba(0,0,0,.1)
+	border-radius 10px
+	+below($tablet)
+		border 3px solid transparent
+	&__w
+		position relative
+		margin 1px
+		padding 0 r-percent(30,400) 0 r-percent(60,400)
+		width 100%
+		background-color rgba(0,0,0,.1)
+		border-radius 6px
+		white-space nowrap
+		clr()
+	&__title
+		margin-right 44px
+		display inline-block
+		vertical-align top
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 34px
+	&__list
+		margin-top 1px
+		margin-bottom 1px
+		display inline-block
+		vertical-align top
+		float right
+		font-size 0
+	&__item
+		margin-left 4px
+		display inline-block
+		vertical-align top
+		&:first-child
+			margin-left 0
+	&__link
+		padding 8px 6px
+		display block
+		color $text-color
+		font-family $pt-sans-reg
+		font-size 16px
+		background-color #c6c6c6
+		text-align center
+		text-decoration none
+		border 1px solid #e5e5e5
+		border-radius 50%
+		transition background .3s ease
+	&__item
+		&:hover,
+		&_active
+			.prod-by-page__link
+				background #fff
+

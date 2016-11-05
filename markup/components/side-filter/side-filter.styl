@@ -1,0 +1,157 @@
+.side-filter
+	+below($tablet)
+		margin-bottom 50px
+	&__top
+		margin-bottom 10px
+		display none
+		+below($tablet)
+			display block
+	&__top-title
+		position relative
+		padding-top 10px
+		padding-bottom 10px
+		display block
+		font-family $pt-sans-bldit
+		font-size 18px
+		color $text-color
+		text-decoration underline
+
+		&:after
+			position absolute
+			top 50%
+			right 0
+			content ""
+			margin-top -4px
+			bg($arrow-down)
+		&:hover
+			text-decoration none
+
+	&__body
+		+below($tablet)
+			display none
+
+	&__body_active
+		display block
+	&__row
+		padding-top 22px
+		padding-bottom 26px
+		background url('../images/general/dots.png') 100% 0 repeat-x
+	&__title
+		margin-bottom 24px
+		color #5d523b
+		font-family $pt-serif-bld
+		font-size 14px
+		line-height 16px
+	&__price
+		+below($tablet)
+			background none
+
+	&__list
+		font-size 0
+	&__item
+		margin-bottom 4px
+		display inline-block
+		vertical-align top
+		width 50%
+		&:nth-child(2n)
+			width 50%
+	// &__checkbox
+	&__buttons
+		margin-bottom 100px
+		font-size 0
+		+below($tablet)
+			margin-bottom 0
+	&__button
+		margin-right 6px
+		margin-left 6px
+		@extends .button
+		width 40%
+		color #5e5241
+		font-family $pt-sans-bldit
+		font-size 15px
+		line-height 16px
+		text-decoration none
+		text-align center
+		span
+			padding 8px 0px
+			text-decoration underline
+		&:hover
+			span
+				text-decoration none
+
+		&:last-child
+			margin-right 0
+			float right
+
+
+
+.price-slider
+	&__slider
+		position relative
+		margin-bottom 8px
+		height 5px
+		background-color #675959
+	&__price-w
+		margin-bottom 15px
+		clr()
+	&__price-from
+		float left
+	&__price-to
+		float right
+	&__price-from,
+	&__price-to
+		color #000
+		font-family $pt-serif-reg
+		font-size 11px
+		line-height 16px
+	&__input-w
+		clr()
+	&__input-from,
+	&__input-to
+		float left
+	&__input-from
+		position relative
+		margin-right 20px
+		&:after
+			position absolute
+			content ""
+			top 50%
+			right -14px
+			margin-top -1px
+			width 10px
+			height 3px
+			background #c0c0c0
+	&__input
+		border 2px solid #d5d1ca
+		padding 8px 10px
+		width 74px
+		height 28px
+		background-color #f0eeea
+		color #5d523b
+		font-family $pt-serif-reg
+		font-size 15px
+		line-height 1
+		border-radius 4px
+
+
+
+	.ui-slider-handle
+		position absolute
+		top -4px
+		margin-left -6px
+		display block
+		width 14px
+		height 14px
+		background-color #fff
+		border 4px solid #da6590
+		border-radius 50%
+		cursor pointer
+		+below($tablet)
+			top -8px
+			width 18px
+			height 18px
+	.ui-slider-range
+		position relative
+		margin-bottom 10px
+		height 5px
+		background #675959

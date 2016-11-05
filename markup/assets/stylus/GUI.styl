@@ -1,17 +1,14 @@
 // GUI stylies of the project
 
-
 .in
 	margin auto
-	padding-left r-percent(10,1200)
-	// padding-left 10px
-	padding-right r-percent(10,1200)
-	// padding-right 10px
+	// padding-left r-percent(10,1180)
+	padding-left 10px
+	// padding-right r-percent(10,1180)
+	padding-right 10px
 	width 1200px
 	+below(1180px)
 		width auto
-
-
 
 .button
 	border none
@@ -20,18 +17,11 @@
 	background #E6E4DF
 	background rgba(230, 229, 223, 0.7)
 	color $text-color
-	box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,
-				2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,
-				7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad,
-				4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec,
-				10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,
-				6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,
-				12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
+	box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad, 4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec, 6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb, 12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
 
 
 .button_style-1
-	// padding 8px 45px 6px 45px
-	padding 0px 38px 0px 38px
+	padding 0 38px 0 38px
 	font-family $pt-sans-bldit
 	font-size 16px
 	line-height 32px
@@ -56,6 +46,10 @@
 	text-decoration none
 	text-align center
 
+.button_style-pagination
+	@extends .button
+
+// tabs
 
 .tabs
 	&__nav
@@ -81,6 +75,56 @@
 	&__tab
 		&.active
 			display block
+.tabs_style-second
+	.tabs__nav
+		margin-bottom -2px
+	.tabs__nav-item
+		margin-right 3px
+		&.active
+			.tabs__nav-link
+				background-color #CAC3BD
+				color #212121
+		&:last-child
+			margin-right 0
+	.tabs__nav-link
+		border 2px solid #c7c2bc
+		padding 14px 12px 11px
+		color #555
+		font-family $pt-sans-bldit
+		font-size 18px
+		text-decoration none
+		border-radius 8px 8px 0 0
+	.tabs__w
+		border 2px solid #c7c2bc
+		padding 20px 22px
+
+
+
+
+.checkbox
+	position relative
+	padding-left 18px
+	&__input
+		position absolute
+		top 0
+		left 0
+		width 14px
+		height 14px
+		border 1px solid #a5a5a5
+		border-radius 1px 2px 2px 1px
+	label
+		display block
+		color #655439
+		font-family $pt-serif-reg
+		font-size 14px
+		line-height 16px
+		cursor pointer
+		text-overflow ellipsis
+		overflow hidden
+		white-space nowrap
+.checkbox_style-second
+	label
+		font-family $pt-sans-it
 
 
 .wysiwyg
@@ -91,31 +135,63 @@
 		margin-bottom 20px
 		font-family $pt-sans-bldit
 		font-size 24px
+		+below($tablet)
+			font-size 20px
 	h3
 		margin-bottom 10px
 		font-family $pt-sans-bld
 		font-size 16px
+		+below($tablet)
+			font-size 16px
 	p
 		margin-bottom 20px
 		font-size 16px
-
+		+below($tablet)
+			font-size 14px
 	ul
 		margin-bottom 20px
 		li
 			margin-bottom 0
-
 	a
 		color $text-color
 		&:hover
 			text-decoration underline
 
-	+below($tablet)
-		h2
-			font-size 20px
-		h3
+.wwg
+	font-family $pt-sans-it
+	font-size 15px
+	color #7b6854
+	line-height 20px
+	h2
+		margin-bottom 20px
+		font-family $pt-sans-bldit
+		font-size 20px
+		+below($tablet)
+			font-size 18px
+	h3
+		margin-bottom 10px
+		font-family $pt-sans-bldit
+		font-size 16px
+		+below($tablet)
 			font-size 16px
-		p
+	p
+		margin-bottom 20px
+		font-size 15px
+		+below($tablet)
 			font-size 14px
-
+	ul
+		margin-bottom 20px
+		margin-left 18px
+		list-style initial
+		li
+			margin-bottom 0
+	a
+		color $text-color
+		&:hover
+			text-decoration underline
+	i
+		font-size 14px
+	b
+		font-size 17px
 
 

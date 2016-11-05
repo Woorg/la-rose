@@ -1,16 +1,21 @@
 .side
 	&__block
 		margin-bottom 0px
+	&__block_dotted
+		padding-top 20px
+		padding-bottom 20px
+		background url('../images/general/dots.png') 100% 100% repeat-x
 	&__buttons
 		margin-bottom 0px
-		background url('../images/general/side-line.png') 0 0 no-repeat, url('../images/general/side-line.png') 0 100% no-repeat
+		padding-top 6px
+		padding-bottom 6px
+		background url('../images/general/dots.png') 100% 0 repeat-x, url('../images/general/dots.png') 100% 100% repeat-x
 		font-size 0
 		white-space nowrap
 		+below($tablet)
-			background url('../images/general/side-line.png') 0 0 repeat-x, url('../images/general/side-line.png') 0 100% repeat-x
-
+			display none
 	&__button
-		padding 18px r-percent(18, 280) 15px r-percent(18, 280)
+		padding 16px r-percent(18, 280) 13px r-percent(18, 280)
 		display inline-block
 		vertical-align top
 		color #564d3e
@@ -19,19 +24,17 @@
 		line-height 30px
 		text-decoration none
 		&:first-child
-			background url('../images/general/product-bottom-vertical.png') 100% 50% no-repeat
-			+below($tablet)
-				background url('../images/general/product-bottom-vertical.png') 100% 50% repeat-y
+			background url('../images/general/dots-vert.png') 100% 0% repeat-y
 
 		+below($tablet)
 			width 50%
 	&__vk-widget
 		padding 20px r-percent(13,280) 20px r-percent(10,280)
-		background url('../images/general/side-line.png') 0 100% no-repeat
-		+below($tablet)
-			background-repeat repeat-x
+		background url('../images/general/dots.png') 100% 100% repeat-x
 		img
 			max-width 100%
+		+below($tablet)
+			display none
 .side-nav
 	+below($tablet)
 		display none
@@ -50,7 +53,7 @@
 		margin-bottom 32px
 		margin-left 26px
 	&__item
-		margin-bottom 0px
+		margin-bottom 0
 	&__link
 		color $text-color
 		font-family $pt-sans-bldit
@@ -59,3 +62,26 @@
 		text-decoration underline
 		&:hover
 			text-decoration none
+
+.side-nav_style-second,
+.side-nav_style-third,
+.side-nav_style-fourth
+	padding-top 60px
+	.side-nav__title
+		margin-bottom 28px
+		font-family $pt-sans-bldit
+		font-size 16px
+	.side-nav__list
+		margin-bottom 40px
+
+.side-nav_style-third
+	padding-top 10px
+
+
+.side-nav_style-fourth
+	padding-top 10px
+	.side-nav__title
+		color $text-color
+		font-family $pt-serif-bldit
+		font-size 22px
+		line-height 30px

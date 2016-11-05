@@ -30,14 +30,14 @@
 		display inline-block
 		vertical-align top
 	&__logo
-		margin-right r-percent(46,1200)
+		margin-right r-percent(38,1180)
 		// margin-bottom 20px
 		padding-top 3px
-		width r-percent(261,1200)
+		width r-percent(261,1180)
 		height 78px
 		+below($tablet)
-			width r-percent(550,1200)
-			min-width r-percent(500,1200)
+			width r-percent(550,1180)
+			min-width r-percent(500,1180)
 	&__logo,
 	&__left
 		float left
@@ -45,14 +45,15 @@
 		position static
 		z-index 1
 		float right
-		width r-percent(880,1200)
+		width r-percent(880,1180)
 		font-size 0
 		+below($tablet)
 			position absolute
 			top 0
-			// left r-percent(90,1200)
+			// left r-percent(90,1180)
 			left 0
 			right 0
+			padding 0 5px
 			float none
 			width auto
 			font-size 16px
@@ -64,7 +65,7 @@
 				display inline-block
 				width 100%
 	&__menu-trigger
-		margin 20px 0px 20px 0px
+		margin 20px 0 20px 0
 		display none
 		bg($burger-icon)
 		text-indent -9999px
@@ -106,8 +107,8 @@
 			right 10px
 			margin-right 0
 			padding-top 0
-			width r-percent(600,1200)
-			min-width r-percent(400,1200)
+			width r-percent(600,1180)
+			min-width r-percent(400,1180)
 	&__working-hours
 		padding-top 12px
 		margin-right r-percent(60,880)
@@ -125,7 +126,7 @@
 			// padding-right 20px
 		+below($tablet)
 			margin-top 10px
-			margin-left r-percent(20,1200)
+			margin-left r-percent(20,1180)
 			padding 0
 			width 40px
 			background none
@@ -161,12 +162,12 @@
 		display none
 		+below($tablet)
 			margin-top 10px
-			width r-percent(500, 1200)
+			width r-percent(500, 1180)
 			display inline-block
 			vertical-align top
 	&__search
 		margin-right -6px
-		padding 10px 0px 10px 0
+		padding 10px 0 10px 0
 		display none
 		+below($tablet)
 			width 30px
@@ -197,7 +198,7 @@
 		.menu
 			padding-top 6px
 			+below($tablet-l)
-				padding 2px r-percent(30,1200) 8px r-percent(30, 1200)
+				padding 2px r-percent(30,1180) 8px r-percent(30, 1180)
 				white-space nowrap
 
 .logo
@@ -227,7 +228,7 @@
 			margin-top 6px
 		+below($tablet)
 			margin-top 8px
-			margin-right r-percent(8,1200)
+			margin-right r-percent(8,1180)
 	&__w
 		margin-bottom 12px
 		+below($mobile-l)
@@ -480,13 +481,7 @@
 		font-family $pt-sans-bldit
 		font-size 16px
 		color $text-color
-		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,
-			2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,
-			7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad,
-			4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec,
-			10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,
-			6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,
-			12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
+		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad, 4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
 
 
 
@@ -522,13 +517,7 @@
 		right 15px
 		z-index 10
 		display none
-		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,
-				2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,
-				7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad,
-				4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec,
-				10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,
-				6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,
-				12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
+		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad,4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec,10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
 		+below($tablet)
 			display block
 	// .tabs__w
@@ -559,8 +548,7 @@
 	&__input_active
 		position absolute
 		top 10px
-		right r-percent( 110, 1200 )
-		// left r-percent( 60, 1200 )
+		right r-percent( 110, 1180 )
 		width 80%
 		display inline-block
 		opacity 1
@@ -571,10 +559,6 @@
 		bg($search-icon)
 		text-indent -9999px
 
-
-
-
-
 .header_fixed
 	position fixed
 	left 0
@@ -584,12 +568,16 @@
 	z-index 11
 	.header__in
 		padding-top 14px
+		padding-right 5px
 		padding-bottom 16px
+		padding-left 5px
 		min-height 130px
 		&:before
 			display none
 		&:after
 			display none
+		+below($desktop)
+			min-height 150px
 		+below($tablet-l)
 			padding-top 14px
 			min-height 150px
@@ -600,8 +588,8 @@
 			min-height 130px
 	.header__logo
 		margin-top 20px
-		margin-right r-percent(0,1200)
-		width r-percent(216,1200)
+		margin-right r-percent(0,1180)
+		width r-percent(216,1180)
 		+below($tablet)
 			margin-top 0
 			min-width 40%
@@ -609,7 +597,7 @@
 		+below($mobile-l)
 			min-width 50%
 	.header__left
-		width r-percent(954,1200)
+		width r-percent(954,1180)
 		clr()
 		+below($tablet)
 			width auto
@@ -618,8 +606,6 @@
 				content ""
 				display inline-block
 				width 100%
-
-
 
 	.header__phones
 		margin-top 10px
@@ -703,9 +689,6 @@
 		float right
 		+below($desktop)
 			display none
-	// .header__menu-trigger
-	// 	+below($desktop)
-	// 		display none
 	.header__menu
 		margin-top -50px
 		padding-bottom 14px
@@ -717,7 +700,7 @@
 		padding-left 0
 		padding-right 0
 		float right
-		width r-percent(927,1200)
+		width r-percent(927,1180)
 		background none
 		box-shadow none
 		+below($desktop)

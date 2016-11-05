@@ -20,11 +20,16 @@
 		+below($tablet-l)
 			display none
 	&__buttons
-		padding-top 80px
+		padding-top 120px
 		.button
 			margin-bottom 38px
 			&:last-child
 				margin-right 22px
+		+below($desktop)
+			padding-top 110px
+		+below($tablet-l)
+			padding-top 80px
+
 	&__slider
 		margin-top 39px
 		margin-left -22px
@@ -35,9 +40,6 @@
 	&__slider-list
 		position relative
 
-	// &__slider-item
-
-	// &__slider-link
 
 	&__slider-image
 		+below($tablet)
@@ -64,13 +66,11 @@
 		bg($slider-arrow-left)
 		+below($tablet-l)
 			left 0
-			// margin-top -45px
 	.owl-next
 		right 110px
 		bg($slider-arrow-right)
 		+below($tablet-l)
 			right 0
-			// margin-top -45px
 
 
 

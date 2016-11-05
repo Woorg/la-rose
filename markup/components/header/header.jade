@@ -1,8 +1,7 @@
 include ../menu/menu
 
-
 mixin header(data)
-	header.header.header_fixed
+	header.header
 		.header__in
 			.header__logo
 				a.logo(href="/")
@@ -109,7 +108,7 @@ mixin header(data)
 
 				.header__search
 					.header-search
-						form.header-search__form(action="")
+						form.header-search__form(action="#")
 							input.header-search__input(type="text", value="", placeholder="Что ищем?")
 							a.header-search__button(href='#search') Поиск
 
@@ -143,5 +142,3 @@ mixin header(data)
 
 		//- .header__bottom
 			//- .header__in
-
-

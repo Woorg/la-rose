@@ -1,0 +1,108 @@
+.form
+	margin-top 60px
+	width 815px
+	font-family $pt-sans-it
+	font-size 14px
+	+below($desktop)
+		width auto
+	&__form
+		margin-left 12px
+		+below($tablet)
+			margin-left 0
+	&__body
+		margin-bottom 50px
+		padding 26px 0 14px
+		background #E6E4DF
+		background rgba(230, 229, 223, 0.7)
+		color $text-color
+		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad,	4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec, 6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb, 12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
+	&__w
+		margin auto
+		width 498px
+		+below($tablet)
+			padding 0 10px
+			width auto
+	&__row
+		margin-bottom 11px
+	&__textarea
+		min-height 158px
+	&__input,
+	&__textarea
+		border 2px solid #d5d1ca
+		padding 6px 8px 3px
+		width 100%
+		background-color #f0eeea
+		color #786854
+		font-family $pt-sans-it
+		font-size 14px
+		line-height 16px
+		+placeholder()
+			color #786854
+	&__bottom
+		text-align right
+	&__submit
+		@extends .button
+		padding-left 24px
+		padding-right 38px
+		color #564d3e
+		font-family $pt-sans-bldit
+		font-size 14px
+		line-height 30px
+		text-decoration none
+		&:hover
+			text-decoration underline
+		+below($tablet)
+			display block
+			width 100%
+
+.form_personal-order
+	.form__captcha
+		margin-bottom 26px
+		font-size 0
+		clr()
+	.form__captcha-img,
+	.form__captcha-text,
+	.form__captcha-input
+		display inline-block
+		vertical-align top
+	.form__captcha-img
+		margin-right 6px
+		width 180px
+		height 40px
+		img
+			max-width 100%
+			height auto
+		+below(545px)
+			margin-bottom 11px
+	.form__captcha-text
+		width 84px
+		font-size 14px
+		color #9d9486
+		+below(545px)
+			width auto
+	.form__captcha-input
+		float right
+		width 196px
+		+below(545px)
+			float none
+			width 100%
+	.form__note
+		margin-left 22px
+		color #f00
+
+.form_feedback
+	margin-top 50px
+	.form__body
+		padding-top 16px
+	.form__submit
+		padding-right 20px
+		padding-left 20px
+		font-family $pt-serif-bldit
+		text-align center
+	.form__title
+		margin-bottom 20px
+		color #5c5039
+		font-family $pt-serif-bldit
+		font-size 15px
+		line-height 1
+

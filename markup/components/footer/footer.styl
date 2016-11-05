@@ -18,8 +18,9 @@
 		width r-percent(300, 1200)
 		float left
 		+below($tablet-l)
+			margin auto
 			margin-bottom 20px
-			width auto
+			width 90%
 			float none
 	&__logo
 		margin-bottom 0
@@ -63,13 +64,25 @@
 		float right
 		width r-percent(890, 1200)
 		+below($tablet-l)
+			margin auto
 			float none
-			width auto
+			width 90%
 	&__filter
 		margin-bottom 20px
 		.filter__list
 			+below($tablet-l)
 				margin 0
+			+below($tablet)
+				width auto
+		+below($tablet)
+			.filter__item
+				&:hover
+					.filter__sub
+						display block
+				&:nth-child(2n)
+					.filter__sub
+						left auto
+						right -56px
 	&__nav
 		margin-bottom 19px
 		+below($desktop)
@@ -86,27 +99,40 @@
 		float left
 		&:last-child
 			margin-right 0
-		+below($tablet-l)
-			margin-right 0
-			float none
 	&__col_first
 		width r-percent(256, 880)
-		+below($tablet)
-			width auto
 	&__col_second
 		width r-percent(260, 880)
 		+below($tablet)
-			width auto
+			margin-right 0
 	&__col_third
 		width r-percent(300, 880)
 		+below($tablet)
 			width auto
 			white-space nowrap
+			float none
+			clear both
+	&__col
+		+below($tablet)
+			// margin-right 0
+			width 48%
+			// float none
+		+below($mobile-l)
+			width auto
 	&__bottom
 		padding-bottom 30px
+		+below($tablet-l)
+			margin auto
+			width 90%
 		clr()
 	&__to-top
-		float right
+		position fixed
+		right 54px
+		bottom 110px
+		display none
+		+below($desktop)
+			display none
+			visibility hidden
 
 	&__copyright
 		float left

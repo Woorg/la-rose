@@ -1,0 +1,210 @@
+.products
+	border 2px solid #c5c3bd
+	font-size 0
+	padding-top 24px
+	padding-bottom 25px
+	+below($tablet)
+		padding-top 10px
+		padding-bottom 10px
+	&__item
+		padding 0 26px
+		width 292px
+		display inline-block
+		vertical-align top
+		+below($tablet-l)
+			width 100%
+		+below($tablet)
+			width 100%
+	&__item-title
+		// max-height 52px
+		height 54px
+		overflow hidden
+		font-family $pt-sans-bldit
+		font-size 22px
+		line-height 30px
+		text-align center
+		a
+			text-decoration underline
+			color $text-color
+			&:hover
+				text-decoration none
+	&__item-image
+		position relative
+		// margin-top 28px
+		margin-bottom 27px
+		height 268px
+		// height 296px
+		+below($tablet)
+			margin-top 28px
+			height 248px
+		a
+			text-decoration none
+		img
+			margin auto
+			display block
+			max-width 100%
+			height auto
+	&__item-badge
+		position absolute
+		top -24px
+		right -5px
+		content ""
+		&_new
+			bg($badge-new)
+	&__bottom
+		padding-top 6px
+		padding-bottom 6px
+		background url('%=static=%/general/dots.png') 100% 0 repeat-x, url('%=static=%/general/dots.png') 100% 100% repeat-x
+		// width 233px
+		min-height 64px
+		clr()
+
+	&__bottom-left
+		background url('%=static=%/general/dots-vert.png') 100% 50% repeat-y
+		padding 0 5px 0 22px
+		width 50%
+		float left
+	&__bottom-right
+		padding 0 7px 0 12px
+		width 50%
+		float right
+		text-align center
+	&__item-price
+		padding-top 7px
+		padding-bottom 7px
+		color $text-color
+		font-family $pt-sans-bld
+		font-size 22px
+		line-height 24px
+		text-align center
+		span
+			display block
+			font-family $pt-sans-reg
+			font-size 16px
+			line-height 20px
+	&__item-quant
+		position relative
+		padding-top 9px
+		padding-bottom 5px
+		z-index 10
+	&__item-order
+		position relative
+		padding-left 38px
+		display inline-block
+		color $text-color
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 20px
+		text-decoration underline
+		&:hover
+			text-decoration none
+		&:after
+			position absolute
+			top 0
+			left 12px
+			content ""
+			bg($basket-small-icon)
+	&__quick-order
+		padding-top 10px
+		padding-bottom 10px
+		display block
+		background url('%=static=%/general/dots.png') 50% 100% repeat-x
+		color $text-color
+		font-family $pt-sans-bld
+		font-size 16px
+		line-height 20px
+		text-transform uppercase
+		text-decoration none
+		text-align center
+
+
+	.owl-nav
+		width 100%
+	.owl-next,
+	.owl-prev
+		position absolute
+		top 50%
+		width 42px
+		height 42px
+		border-radius 50%
+		text-indent -9999px
+		z-index 1
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ""
+	.owl-next
+		right -27px
+		margin-top -11px
+		background #EFEDE5 url('../images/general/carousel-border-right.png') 0 0 no-repeat
+		&:after
+			margin-top -10px
+			margin-left -10px
+			bg($carousel-right)
+	.owl-prev
+		left -27px
+		margin-top -11px
+		background #EFEDE5 url('../images/general/carousel-border-left.png') 100% 0 no-repeat
+		&:after
+			margin-top -10px
+			margin-left -10px
+			bg($carousel-left)
+
+
+.products.products_style-second,
+.products.products_style-third
+	border none
+	padding-bottom 50px
+	white-space nowrap
+	+below($tablet)
+		padding-bottom 50px
+		white-space normal
+
+.products.products_style-third
+	white-space normal
+
+.products_style-second,
+.products_style-third
+	.products__item
+		margin-right r-percent( 20, 880 )
+		margin-bottom 20px
+		padding-left 0
+		padding-right 0
+		width r-percent( 280, 880 )
+		&:last-child
+			margin-right 0
+		+below($tablet-l)
+			// width 50%
+			&:nth-child(3)
+				margin-right 0
+		+below($tablet)
+			width 100%
+			margin-right 0
+			&:nth-child(3)
+				display none
+
+
+	.products__item-image
+		margin-bottom 15px
+	.products__item-order
+		margin-left 16px
+		padding-left 0
+		&:after
+			left -26px
+	.products__bottom-left
+		padding-left 0
+
+	.products__quick-order
+		+below($tablet)
+			display none
+
+
+.products_style-third
+	.products__item
+		&:nth-child(3n)
+			margin-right 0
+
+		+below($tablet)
+			width 100%
+			margin-right 0

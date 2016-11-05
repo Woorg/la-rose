@@ -1,0 +1,134 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../components/head/head
+	include ../components/header/header
+	include ../components/search-form/search-form
+	include ../components/filter/filter
+	include ../components/breadcrumbs/breadcrumbs
+	include ../components/prod-by-page/prod-by-page
+	include ../components/products/products
+	include ../components/pagination/pagination
+
+	include ../components/spinner/spinner
+	include ../components/side/side
+	include ../components/side-filter/side-filter
+
+	include ../components/footer/footer
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+		.page__w
+			.page__wrapper
+				+header()
+				main.main.main_inner.main_category
+						.main__top
+							.main__search-form
+								+search-form()
+							.main__filter
+								+filter()
+							.main__breadcrumbs
+								+breadcrumbs()
+									ul.breadcrumbs__list
+										li.breadcrumbs__item
+											a.breadcrumbs__link(href="#link-1") Главная
+											| >
+										li.breadcrumbs__item
+											a.breadcrumbs__link(href="#link-2") Каталог букетов
+
+							h1.main__title Каталог букетов
+
+						.main__catalog
+
+							.main__side
+								.side
+									.side__block
+										.side-nav.side-nav_style-second
+											.side-nav__title <a href='#link'>Каталог</a>
+											ul.side-nav__list
+												li.side-nav__item
+													a.side-nav__link(href="#link") Букеты
+												li.side-nav__item
+													a.side-nav__link(href="#link") Цветочные композиции
+												li.side-nav__item
+													a.side-nav__link(href="#link") Игрушки из живых цветов
+												li.side-nav__item
+													a.side-nav__link(href="#link") Горшечные растения
+												li.side-nav__item
+													a.side-nav__link(href="#link") Подарки
+
+									.side__block
+										+side-filter()
+									.side__block
+										.side__buttons
+											a.side__button(href="#link") Мы Вконтакте
+											a.side__button(href="#link") Отзывы
+
+									.side__block
+										.side__vk-widget
+											img(src="%=static=%/images/content/vk-widget.jpg", alt="vk widget")
+
+
+							.main__products
+								.main__prod-by-page
+									+prod-by-page()
+
+								+products()
+
+								.main__pagination
+									+pagination()
+
+						.page-desc
+
+							.page-desc__text.page-desc__text_style-second
+
+								h2 Букеты цветов в Интернет-магазине “La Rose”
+
+								p
+									i Желающих дарить необычные, стильные, дизайнерские букеты с каждым годом становится все больше, и мы полностью поддерживаем эту идею! Приглашаем вас ознакомиться с удивительными букетами и цветочными композициями в нашем каталоге. Вы можете заказать готовый букет с доставкой из каталога, собрать самостоятельно композицию в конструкторе букетов или оставить заявку на индивидуальный заказ.
+
+								p
+									i В удобном каталоге вы можете выбрать букет для конкретного повода: хвойные композиции на Новый год, композиции, декорированные тыквами для Хэллоуина, выдержанные в единой цветовой гамме Бизнес-букеты, дизайнерские букеты молодоженам на свадьбу и многие другие.
+
+								h2 Советы для составления индивидуального букета
+
+
+								p Опишите то, как вы видите Ваш идеальный букет:
+
+								ul
+									li Желаемые в букете цветы
+									li Нежелаемые цветы
+									li Монобукет
+									li Букет из полевых цветов
+									li Романтично-пастельный букет
+									li Яркий букет
+									li Должна ли быть в вашем букете зелень в качестве украшения
+									li Желаемая стоимость
+
+								p
+									b Доверьтесь нашим флористам и закажите эксклюзивный букет с доставкой. Несколько уточняющих вопросов, и в ваших руках будет благоухать удивительная композиция.
+
+								p
+									b Ограничены в бюджете? Воспользуйтесь удобной шкалой ценообразования в нашем интернет-магазине, и увидите, что даже за небольшую сумму можно купить живописное цветочное чудо.
+
+
+								h2 Букетов цветов с доставкой
+
+								p Поднимайте чаще настроение вашим близким интересными сочетаниями цветов не только в календарные праздники, а и вовсе без повода – закажите доставку букета цветов на дом к воскресному завтраку, сделайте небольшой комплимент отличившемуся сотруднику или порадуйте себя композицией, созданной нашими чуткими флористами. Доставка букетов в Новосибирске и Барнауле осуществляется круглосуточно – в точно назначенный час курьер доставит букет прямо в руки дорогому Вам человеку. Будьте неожиданными вместе с нами!
+
+							.page-desc__more-w
+								a.page-desc__more(href='#link') Показать
+
+
+				.page__buffer
+
+			.page__footer
+				+footer()
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

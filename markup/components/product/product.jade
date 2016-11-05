@@ -1,0 +1,76 @@
+include ../spinner/spinner
+include ../relative/relative
+
+
+mixin product(data)
+	.product
+		.product__row
+			.product__image
+				.product-image-big.owl-carousel
+					a.product-image-big__link(href="assets/images/content/product-big-img.jpg")
+						img.product-image-big__image(src="assets/images/content/product-big-img.jpg", alt="product big image")
+					a.product-image-big__link(href="assets/images/content/product-big-img.jpg")
+						img.product-image-big__image(src="assets/images/content/product-big-img.jpg", alt="product big image")
+				.product-image-thumb.owl-carousel
+					a.product-image-thumb__link(href="#link")
+						img.product-image-thumb__image(src="assets/images/content/product-thumb-1.jpg", alt="product thumb 1")
+					a.product-image-thumb__link(href="#link")
+						img.product-image-thumb__image(src="assets/images/content/product-thumb-2.jpg", alt="product thumb 2")
+
+			.product__right
+				.product__desc
+					p Бесподобный букет, выполненный в нежных персиковых тонах. В состав данного букета входят такие цветы как, амариллис цвета персик, нежная роза, белоснежная эустома и зелень эвкалипта. Дарите улыбки своим музам!
+				.product__price-wrap
+					.product__price-left
+						.product__price
+							| 3000
+							span рублей
+					.product__price-right
+						.product__quant
+							+spinner()
+						a.product__order(href="#order") купить
+
+				ul.product__specs
+					li.product__specs-row
+						.product__specs-title Повод:
+						.product__specs-val
+							.product__occasion
+								a.product__occasion-link(href="#occasion-1") 1 сентября,
+								a.product__occasion-link(href="#occasion-2") 8 Марта,
+								a.product__occasion-link(href="#occasion-3") День рождения,
+								a.product__occasion-link(href="#occasion-4") День Святого Валентина,
+								a.product__occasion-link(href="#occasion-5") Люблю тебя,
+								a.product__occasion-link(href="#occasion-6") Свадьба
+					li.product__specs-row
+						.product__specs-title Артикул:
+						.product__specs-val B_1197
+					li.product__specs-row
+						.product__specs-title Диаметр:
+						.product__specs-val  30 см
+					li.product__specs-row
+						.product__specs-title Высота:
+						.product__specs-val 30 см
+
+				.product__info
+					.product__info-title Информация покупателям:
+
+					ul.product__info-list
+						li.product__info-item
+							a.product__info-link(href="#info-link-1") Условия возврата товара
+						li.product__info-item
+							a.product__info-link(href="#info-link-2") Замещение
+						li.product__info-item
+							a.product__info-link(href="#info-link-3") Условия предоставления услуги
+						li.product__info-item
+							a.product__info-link(href="#info-link-4") Гарантии качества
+						li.product__info-item
+							a.product__info-link(href="#info-link-5") Описание политики конфиденциальности
+
+		.product__row
+			.product__presents
+				+relative()
+
+			.product__relative
+				+relative-second()
+
+

@@ -1,0 +1,152 @@
+include ../spinner/spinner
+
+include ../relative/relative
+
+
+mixin basket(data)
+	.basket
+		p.basket__empty-text Ваша корзина пуста
+
+		p.basket__add-more Добавить к заказу открытку или подарок?
+
+
+mixin basket-order(data)
+
+	.basket
+		.basket__table
+
+			.basket__table-row.basket__table-head
+				.basket__table-col.basket__table-col_img
+				.basket__table-col.basket__table-col_title Название
+				.basket__table-col.basket__table-col_quant Количество
+				.basket__table-col.basket__table-col_price Цена
+				.basket__table-col.basket__table-col_amount Сумма
+				.basket__table-col.basket__table-col_delete
+			.basket__table-row.basket__table-body
+				.basket__table-col.basket__table-col_img
+					.basket__table-image
+						a(href="#link")
+							img(src="assets/images/content/cart-img-1.png", alt="image")
+
+				.basket__table-col.basket__table-col_title(data-title='Название')
+					a.basket__table-product(href="#link") Пери
+				.basket__table-col.basket__table-col_quant(data-title='Количество')
+					span.basket__table-quant
+						+spinner()
+
+				.basket__table-col.basket__table-col_price(data-title='Цена')
+					span.basket__table-price 2 200 руб.
+				.basket__table-col.basket__table-col_amount(data-title='Сумма')
+					span.basket__table-amount 2200
+				.basket__table-col.basket__table-col_delete
+					a.basket__table-delete(href='#delete') Убрать из корзины
+			.basket__table-row.basket__table-body
+				.basket__table-col.basket__table-col_img
+					.basket__table-image
+						a(href="#link")
+							img(src="assets/images/content/cart-img-1.png", alt="image")
+
+				.basket__table-col.basket__table-col_title(data-title='Название')
+					a.basket__table-product(href="#link") Пери
+				.basket__table-col.basket__table-col_quant(data-title='Количество')
+					span.basket__table-quant
+						+spinner()
+
+				.basket__table-col.basket__table-col_price(data-title='Цена')
+					span.basket__table-price 2 200 руб.
+				.basket__table-col.basket__table-col_amount(data-title='Сумма')
+					span.basket__table-amount 2200
+				.basket__table-col.basket__table-col_delete
+					a.basket__table-delete(href='#delete') Убрать из корзины
+
+		.basket__count
+			.basket__count-amount Итого: 2 200 руб.
+			.basket__count-delivery Стоимость доставки: 550 руб.
+			.basket__count-total Итоговая стоимость: 2 750 руб.
+
+		.basket__comment-checkbox
+			.checkbox.checkbox_style-second
+				input.checkbox__input#checkbox-input-5(type="checkbox", value="#-5")
+				//- label(for="checkbox-input-5")
+				a(href="#link" ) Я ознакомлен и согласен с Условиями предоставления услуг
+
+		.basket__buttons
+			a.basket__button(href="#button") Редактировать заказ
+			a.basket__button(href="#button") Оплатить заказ
+
+		.basket__comment
+			.basket__comment-title Комментарий к заказу
+			.basket__comment-form
+				.basket__textarea
+					textarea(name="#") Текст комментария
+
+
+
+
+mixin basket-full(data)
+
+	.basket
+		.basket__table
+
+			.basket__table-row.basket__table-head
+				.basket__table-col.basket__table-col_img
+				.basket__table-col.basket__table-col_title Название
+				.basket__table-col.basket__table-col_quant Количество
+				.basket__table-col.basket__table-col_price Цена
+				.basket__table-col.basket__table-col_amount Сумма
+				.basket__table-col.basket__table-col_delete
+			.basket__table-row.basket__table-body
+				.basket__table-col.basket__table-col_img
+					.basket__table-image
+						a(href="#link")
+							img(src="assets/images/content/cart-img-1.png", alt="image")
+
+				.basket__table-col.basket__table-col_title(data-title='Название')
+					a.basket__table-product(href="#link") Пери
+				.basket__table-col.basket__table-col_quant(data-title='Количество')
+					span.basket__table-quant
+						+spinner()
+
+				.basket__table-col.basket__table-col_price(data-title='Цена')
+					span.basket__table-price 2 200 руб.
+				.basket__table-col.basket__table-col_amount(data-title='Сумма')
+					span.basket__table-amount 2200
+				.basket__table-col.basket__table-col_delete
+					a.basket__table-delete(href='#delete') Убрать из корзины
+			.basket__table-row.basket__table-body
+				.basket__table-col.basket__table-col_img
+					.basket__table-image
+						a(href="#link")
+							img(src="assets/images/content/cart-img-1.png", alt="image")
+
+				.basket__table-col.basket__table-col_title(data-title='Название')
+					a.basket__table-product(href="#link") Пери
+				.basket__table-col.basket__table-col_quant(data-title='Количество')
+					span.basket__table-quant
+						+spinner()
+
+				.basket__table-col.basket__table-col_price(data-title='Цена')
+					span.basket__table-price 2 200 руб.
+				.basket__table-col.basket__table-col_amount(data-title='Сумма')
+					span.basket__table-amount 2200
+				.basket__table-col.basket__table-col_delete
+					a.basket__table-delete(href='#delete') Убрать из корзины
+
+		.basket__count
+			.basket__count-amount Итого: 2 200 руб.
+
+
+		.basket__buttons
+			a.basket__button(href="#button") Оформить заказ
+
+
+		+relative-fourth()
+
+
+
+
+
+
+
+
+

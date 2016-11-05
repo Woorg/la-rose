@@ -3,10 +3,9 @@
 html, body
 	height 100%
 
-
 .page
-	background url('%=static=%general/bg-top.jpg') 50% 0 no-repeat, url('%=static=%general/bg.jpg') 50% 0 repeat-y
-	background-size 1846px auto
+	background url('%=static=%general/bg.jpg') 50% 0 repeat-y
+	// background-size 1846px 1100px
 	background-color #EBE9E4
 	color $text-color
 	font-family $pt-sans-reg
@@ -16,15 +15,18 @@ html, body
 
 .page__w
 	background url('%=static=%general/bg-bottom.jpg') 50% 100% no-repeat
-	overflow hidden
-.page__wrapper
-	min-height 100%
-	margin-bottom -507px
+	// background-size 1846px 1100px
+
 	overflow hidden
 
+.page__wrapper
+	background url('%=static=%general/bg-top-2.jpg') 50% 0 no-repeat
+	min-height 100%
+	margin-bottom -518px
+	overflow hidden
 
 * html .page__wrapper
 	height 100%
 
 .page__buffer
-	height 507px
+	height 518px

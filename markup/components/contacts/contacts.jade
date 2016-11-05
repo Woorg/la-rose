@@ -1,0 +1,141 @@
+include ../forms/forms
+
+mixin contacts(data)
+	.contacts
+		.tabs.tabs_style-second
+			ul.tabs__nav
+				li.tabs__nav-item.active(data-class='first')
+					a.tabs__nav-link(href="#link") Новосибирск
+				li.tabs__nav-item(data-class='second')
+					a.tabs__nav-link(href="#link") Барнаул
+			.tabs__w
+				.tabs__tab.tabs__tab_first.active
+
+					ul.contacts
+						li.contacts__shop
+							ul.contacts__list
+								li.contacts__address-data Адрес: <span>Красный проспект, 24</span>
+								li.contacts__address-data Время работы: <span>с 08:00 до 22:00</span>
+								li.contacts__address-data Телефон: <span>(383) 209-16-24</span>, <span>(383) 239-62-02</span>
+								li.contacts__address-data
+									.contacts__map
+										a.contacts__map-top(href="#link") Карта проезда
+
+										.contacts__map-object
+											.map#map
+						li.contacts__shop
+							ul.contacts__list
+								li.contacts__address-data Адрес: <span>Красный проспект, 24</span>
+								li.contacts__address-data Время работы: <span>с 08:00 до 22:00</span>
+								li.contacts__address-data Телефон: <span>(383) 209-16-24</span>, <span>(383) 239-62-02</span>
+								li.contacts__address-data
+									.contacts__map
+										a.contacts__map-top(href="#link") Карта проезда
+
+										.contacts__map-object
+											.map#map-2
+						li.contacts__shop
+							ul.contacts__list
+								li.contacts__address-data Адрес: <span>Красный проспект, 24</span>
+								li.contacts__address-data Время работы: <span>с 08:00 до 22:00</span>
+								li.contacts__address-data Телефон: <span>(383) 209-16-24</span>, <span>(383) 239-62-02</span>
+								li.contacts__address-data
+									.contacts__map
+										a.contacts__map-top(href="#link") Карта проезда
+
+										.contacts__map-object
+											.map#map-3
+						li.contacts__shop
+							ul.contacts__list
+								li.contacts__address-data Адрес: <span>Красный проспект, 24</span>
+								li.contacts__address-data Время работы: <span>с 08:00 до 22:00</span>
+								li.contacts__address-data Телефон: <span>(383) 209-16-24</span>, <span>(383) 239-62-02</span>
+								li.contacts__address-data
+									.contacts__map
+										a.contacts__map-top(href="#link") Карта проезда
+
+										.contacts__map-object
+											.map#map-4
+						li.contacts__shop
+							ul.contacts__list
+								li.contacts__address-data Адрес: <span>Красный проспект, 24</span>
+								li.contacts__address-data Время работы: <span>с 08:00 до 22:00</span>
+								li.contacts__address-data Телефон: <span>(383) 209-16-24</span>, <span>(383) 239-62-02</span>
+								li.contacts__address-data
+									.contacts__map
+										a.contacts__map-top(href="#link") Карта проезда
+
+										.contacts__map-object
+											.map#map-5
+
+				.tabs__tab.tabs__tab_second
+
+					ul.contacts
+						li.contacts__shop
+							ul.contacts__list
+								li.contacts__address-data Адрес: <span>Красный проспект, 24</span>
+								li.contacts__address-data Время работы: <span>с 08:00 до 22:00</span>
+								li.contacts__address-data Телефон: <span>(383) 209-16-24</span>, <span>(383) 239-62-02</span>
+								li.contacts__address-data
+									.contacts__map
+										a.contacts__map-top(href="#link") Карта проезда
+
+										.contacts__map-object
+											.map#map-6
+						li.contacts__shop
+							ul.contacts__list
+								li.contacts__address-data Адрес: <span>Красный проспект, 24</span>
+								li.contacts__address-data Время работы: <span>с 08:00 до 22:00</span>
+								li.contacts__address-data Телефон: <span>(383) 209-16-24</span>, <span>(383) 239-62-02</span>
+								li.contacts__address-data
+									.contacts__map
+										a.contacts__map-top(href="#link") Карта проезда
+
+										.contacts__map-object
+											.map#map-7
+						li.contacts__shop
+							ul.contacts__list
+								li.contacts__address-data Адрес: <span>Красный проспект, 24</span>
+								li.contacts__address-data Время работы: <span>с 08:00 до 22:00</span>
+								li.contacts__address-data Телефон: <span>(383) 209-16-24</span>, <span>(383) 239-62-02</span>
+								li.contacts__address-data
+									.contacts__map
+										a.contacts__map-top(href="#link") Карта проезда
+
+										.contacts__map-object
+											.map#map-8
+
+
+		.contacts__text
+			p e-mail: <a href='mailto:info@la-rose.ru'>info@la-rose.ru</a>
+
+			h2 Интернет-магазин:
+
+			p (383) 310-22-01 с 10:00 до 22:00
+
+			p (383) 292-16-25 c 22:00 до 10:00
+
+			p e-mail: shop@la-rose.ru
+
+			h3 Наши реквизиты:
+
+			ul
+				li ООО "Акварель"
+				li Юр. адрес: 630099, г. Новосибирск, ул. Советская, 55
+				li Фактич. адрес: 630099, г. Новосибирск, ул. Советская, 55
+				li ИНН/КПП 5407463280/540701001
+				li ОГРН 1115476036928
+				li р/с 40702810344070001150 в Центральном отделении № 139 Сбербанка России ОАО
+				li к/с 30101810500000000641
+				li БИК 045004641
+
+		.contacts__sert
+			a(href="assets/images/content/sert.jpg")
+				img(src="assets/images/content/sert.jpg", alt="sert")
+
+		.contacts__text
+			p
+				b С уважением, <br/>коллектив студии цветов «La Rose».
+
+		+feedback-form()
+

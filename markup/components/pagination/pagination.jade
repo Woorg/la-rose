@@ -1,0 +1,23 @@
+mixin pagination(data)
+	.pagination
+		ul.pagination__list
+			li.pagination__item.pagination__item_first
+				a.pagination__link(href="#-1") В начало
+			li.pagination__item.pagination__item_prev.pagination__item_disable
+				a.pagination__link(href="#-2") Предыдущие
+			li.pagination__item.pagination__item_active
+				a.pagination__link(href="#-3") 1
+			li.pagination__item
+				a.pagination__link(href="#-4") 2
+			li.pagination__item
+				a.pagination__link(href="#-5") 3
+			li.pagination__item
+				a.pagination__link(href="#-6") 4
+			li.pagination__item
+				a.pagination__link(href="#-7") 5
+			li.pagination__item
+				a.pagination__link(href="#-7") 6
+			li.pagination__item.pagination__item_next
+				a.pagination__link(href="#-8") Следующие
+			li.pagination__item.pagination__item_last
+				a.pagination__link(href="#-9") В конец

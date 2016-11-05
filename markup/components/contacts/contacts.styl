@@ -1,0 +1,96 @@
+.contacts
+	&__shop
+		padding-top 26px
+		color #212121
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 24px
+		&:first-child
+			padding-top 0
+	&__address-data
+		span
+			font-family $pt-sans-bldit
+	&__map
+		margin-top 10px
+	&__map_active
+		padding-bottom 18px
+		background url('../images/general/dots.png') 100% 100% repeat-x
+	&__map-top
+		position relative
+		padding-top 10px
+		padding-bottom 13px
+		display block
+		background url('../images/general/dots.png') 100% 0 repeat-x, url('../images/general/dots.png') 100% 100% repeat-x
+		color #222
+		font-family $pt-sans-bld
+		text-decoration none
+		&:after
+			position absolute
+			top 50%
+			right 8px
+			content ""
+			margin-top -8px
+			width 0
+			height 0
+			border-style solid
+			border-width 9px 8.5px 0 8.5px
+			border-color #664e30 transparent transparent transparent
+
+	&__map-top_active
+		background url('../images/general/dots.png') 100% 0 repeat-x
+	&__map-object
+		position relative
+		border 2px solid #c7c2bc
+		padding-top 50%
+		display none
+		width 100%
+
+	.map
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		// min-height 100px
+	&__map-object_active
+		display block
+
+	&__text
+		color #5c5039
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 18px
+		h2
+			margin-bottom 26px
+			font-family $pt-sans-bldit
+			font-size 17px
+			line-height 20px
+		h3
+			margin-bottom 26px
+			font-family $pt-sans-bldit
+			font-size 20px
+			line-height 22px
+		p
+			margin-top 10px
+			margin-bottom 28px
+
+		ul
+			margin-bottom 16px
+		li
+			margin-bottom 2px
+
+		a
+			color inherit
+			text-decoration underline
+			&:hover
+				text-decoration none
+
+		b
+			color #5c5039
+			font-family $pt-sans-bldit
+
+	&__sert
+		margin-bottom 10px
+		img
+			max-width 100%
+			height auto

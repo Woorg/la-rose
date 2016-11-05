@@ -1,0 +1,47 @@
+.pagination
+	&__list
+		font-size 0
+	&__item
+		margin-right 30px
+		display inline-block
+		vertical-align middle
+		+below($tablet)
+			margin-right 15px
+	&__item_first
+		.pagination__link
+			bg($pagination-first)
+			text-indent -9999px
+	&__item_last
+		.pagination__link
+			bg($pagination-last)
+			text-indent -9999px
+	&__item_next
+		.pagination__link
+			bg($pagination-next)
+			text-indent -9999px
+	&__item_prev
+		.pagination__link
+			bg($pagination-prev)
+			text-indent -999px
+	&__item_disable
+		display none
+	&__item_active
+		.pagination__link
+			padding 0 10px
+			@extends .button_style-pagination
+			&:hover
+				text-decoration none
+			+below($tablet)
+				padding 0 5px
+	&__link
+		padding 0
+		display block
+		font-family $pt-serif-bld
+		font-size 26px
+		color $text-color
+		line-height 30px
+		text-decoration none
+		&:hover
+			text-decoration underline
+
+

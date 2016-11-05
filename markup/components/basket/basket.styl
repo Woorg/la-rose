@@ -1,0 +1,265 @@
+.basket
+	width r-percent(812,880)
+	clr()
+	+below($tablet)
+		width auto
+	&__empty-text,
+	&__add-more
+		color #5c5039
+		font-family $pt-sans-bldit
+		font-size 16px
+	&__empty-text
+		margin-bottom 25px
+		color #fe1818
+	&__add-more
+		margin-bottom 60px
+	&__table
+		margin-bottom 34px
+		display table
+		width 100%
+		background-color rgba(213, 209, 202, 0.3)
+		border 2px solid #d5d1ca
+		border-collapse collapse
+		text-align left
+		color #5c5039
+		+below($tablet)
+			margin-top 0
+			background none
+			border none
+	&__table-row
+		display table-row
+	&__table-head
+		background-color #d5d1ca
+		background rgba(216,210,203,.4)
+		color #7c6b58
+		font-family $pt-sans-bldit
+		font-size 16px
+		.basket__table-col
+			padding-top 13px
+			padding-bottom 8px
+		+below($tablet)
+			.basket__table-col_img
+				min-height 130px
+	&__table-col
+		display table-cell
+		vertical-align middle
+		// +below($tablet)
+	&__table-col_img
+		width r-percent(160,812)
+		+below($tablet)
+			width auto
+	&__table-col_title
+		padding-right 10px
+		width r-percent(150,812)
+		+below($tablet)
+			width auto
+	&__table-col_quant
+		width r-percent(184,812)
+		+below($tablet)
+			width auto
+	&__table-col_price
+		width r-percent(170,812)
+		+below($tablet)
+			width auto
+	&__table-col_amount
+		width r-percent(96,812)
+		+below($tablet)
+			width auto
+	&__table-col_delete
+		width r-percent(48,812)
+		text-align center
+		+below($tablet)
+			width auto
+	&__table-body
+		.basket__table-col
+			padding-top 15px
+			padding-bottom 13px
+		+below($tablet)
+			.basket__table-col
+				padding-top 13px
+				padding-right 10px
+				padding-bottom 8px
+				padding-left 10px
+			.basket__table-image
+				text-align left
+		+below($tablet)
+			margin-bottom 5px
+			background-color rgba(213, 209, 202, 0.3)
+			border 2px solid #d5d1ca
+
+	.basket__table-head,
+	.basket__table-body,
+	.basket__table-col
+		+below($tablet)
+			display table
+			width 100%
+			border-collapse separate
+	.basket__table-head
+		.basket__table-col
+			+below($tablet)
+				position absolute
+				top -9999px
+				left -9999px
+	.basket__table-body
+		.basket__table-col[data-title]
+			+below($tablet)
+				&:before
+					content attr(data-title) " "
+					font-family $pt-sans-bldit
+					font-size 16px
+	.basket__table-body
+		.basket__table-col
+			+below($tablet)
+				&:before
+					white-space nowrap
+					width 50%
+					display table-cell
+					text-align left
+					font-weight bold
+				&:first-child
+					width 100%
+
+	&__table-image
+		text-align center
+	&__table-product
+		font-family $pt-sans-bldit
+		font-size 16px
+		text-decoration underline
+		color inherit
+		&:hover
+			text-decoration none
+	// &__table-quant
+
+	// &__table-price
+
+	// &__table-amount
+
+	&__table-delete
+		display inline-block
+		vertical-align middle
+		bg($close)
+		text-indent -9999px
+		+below($tablet)
+			width auto
+			height auto
+			background none
+			text-indent 0
+			color #786854
+			font-family $pt-sans-bldit
+			font-size 16px
+			line-height 30px
+			&:hover
+				text-decoration none
+	&__bottom
+		clr()
+
+	&__count
+		margin-bottom 35px
+		color #61553f
+		font-family $pt-sans-bldit
+		font-size 16px
+		text-align right
+	&__count-amount,
+	&__count-delivery,
+	&__count-total
+		margin-bottom 25px
+	&__comment
+		margin-top -100px
+		width 336px
+		float left
+		+below(1100px)
+			margin-top 30px
+			float right
+		+below($tablet)
+			width 98%
+		+below($mobile-l)
+			margin-top 0
+			display none
+			float none
+	&__comment-title
+		margin-bottom 26px
+		color #5c5039
+		font-family $pt-sans-it
+		font-size 16px
+	&__comment-form
+		padding 17px 28px
+		background #E6E4DF
+		background rgba(230, 229, 223, 0.7)
+		color $text-color
+		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad, 4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec, 6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb, 12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
+
+	&__textarea
+		min-height 118px
+		background-color #f0eeea
+		border 2px solid #d5d1ca
+		textarea
+			border none
+			padding 8px
+			width 100%
+			min-height 118px
+			background transparent
+			color #786854
+			font-family $pt-sans-it
+			font-size 14px
+			line-height 16px
+	&__comment-checkbox
+		margin-bottom 30px
+		// margin-top -46px
+		float right
+		// width r-percent(440,812)
+		overflow hidden
+
+		.checkbox
+			padding-left 0
+		input
+			position static
+			margin-right 4px
+		a
+			display inline-block
+			vertical-align bottom
+			color #5c5039
+			font-family $pt-sans-it
+			font-size 14px
+			line-height 16px
+			text-decoration underline
+			&:hover
+				text-decoration none
+			+below($tablet)
+				display inline
+	&__buttons
+		// margin-top -80px
+		clear both
+		float right
+		+below($tablet)
+			float none
+			text-align center
+	&__button
+		margin-left 52px
+		@extends .button
+		padding-left 5px
+		padding-right 5px
+		color #786854
+		font-family $pt-sans-bldit
+		font-size 16px
+		line-height 30px
+		text-decoration none
+		&:hover
+			text-decoration underline
+		&:first-child
+			margin-left 0
+		+below($tablet)
+			margin-left 30px
+		+below($mobile-l)
+			margin 0
+			padding 0
+			display block
+			margin-bottom 34px
+
+	.relative
+		padding-top 40px
+		+below($tablet)
+			padding-top 20px
+		+below($mobile-l)
+			padding-top 0
+			.relative__title
+				font-size 17px

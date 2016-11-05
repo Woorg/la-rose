@@ -1,0 +1,240 @@
+.product
+	padding-left 7px
+	width r-percent(825,880)
+	clr()
+	+below($tablet-l)
+		padding-left 0
+		width auto
+	&__row
+		clr()
+	&__image
+		float left
+		width r-percent(320,825)
+		+below($tablet)
+			width auto
+			float none
+	&__right
+		padding-top 20px
+		float right
+		width r-percent(460, 825)
+		+below($tablet)
+			width auto
+	&__desc
+		color $text-color-2
+		font-family $pt-sans-reg
+		font-size 15px
+		line-height 20px
+		p
+			margin-bottom 18px
+	&__price-wrap
+		margin-bottom 60px
+		padding-top 8px
+		padding-bottom 6px
+		width 240px
+		background url('../images/general/dots.png') 100% 0 repeat-x , url('../images/general/dots.png') 100% 100% repeat-x
+		font-size 0
+		+below($tablet)
+			margin-bottom 30px
+			width auto
+	&__price-left,
+	&__price-right
+		display inline-block
+		vertical-align top
+	&__price-left
+		padding-right 35px
+		padding-left 27px
+		width 110px
+		background url('../images/general/dots-vert.png') 100% 50% repeat-y
+		text-align center
+		+below($tablet)
+			width 50%
+	&__price-left
+		padding 8px 10px 12px
+	&__price-right
+		padding 8px 10px 4px 15px
+		width 110px
+		text-align center
+		+below($tablet)
+			width 50%
+	&__price
+		display inline-block
+		vertical-align top
+		color #5d523b
+		font-family $pt-sans-bld
+		line-height 16px
+		font-size 26px
+		span
+			padding-top 4px
+			display block
+			font-size 15px
+			font-family $pt-sans-reg
+	&__quant
+		margin-bottom 5px
+	&__order
+		position relative
+		margin-left 22px
+		color #5d523b
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 1
+		text-decoration underline
+		&:after
+			position absolute
+			top 50%
+			left -22px
+			content ""
+			margin-top -9px
+			bg($basket-small-icon)
+		&:hover
+			text-decoration none
+	&__specs
+		position relative
+		margin-bottom 6px
+		padding-bottom 12px
+		&:after
+			position absolute
+			bottom 0
+			left 0
+			content ""
+			width 240px
+			height 2px
+			background url('../images/general/dots.png') 100% 100% repeat-x
+			+below($tablet)
+				width 100%
+	&__specs-row
+		margin-bottom 10px
+		font-size 0
+		&:last-child
+			margin-bottom 0
+	&__specs-title,
+	&__specs-val
+		display inline-block
+		vertical-align top
+	&__specs-title
+		width 126px
+		color #5d523b
+		font-family $pt-sans-bldit
+		font-size 16px
+		line-height 24px
+		text-align left
+		+below($tablet)
+			width 50%
+	&__specs-val
+		width 292px
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 17px
+		text-align left
+		+below($tablet)
+			width 50%
+	&__occasion
+		margin-right -30px
+		+below($tablet)
+			margin-right 0
+	&__occasion-link
+		padding-right 3px
+		display inline-block
+		vertical-align top
+		color #5d523b
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 17px
+		text-decoration underline
+		&:hover
+			text-decoration none
+
+	&__info
+		position relative
+		margin-bottom 2px
+		padding-bottom 35px
+		width 260px
+		&:after
+			position absolute
+			bottom 0
+			left 0
+			content ""
+			width 240px
+			height 2px
+			background url('../images/general/dots.png') 100% 100% repeat-x
+			+below($tablet)
+				width 100%
+		+below($tablet)
+			margin-bottom 10px
+			width auto
+	&__info-title
+		margin-bottom 2px
+		color #5d523b
+		font-family $pt-sans-bld
+		font-size 16px
+		line-height 24px
+
+	&__info-list
+		margin-left 20px
+		font-family $pt-sans-reg
+		font-size 16px
+		line-height 24px
+		list-style initial
+		list-style-position outside
+
+	&__info-item
+		margin-bottom 0
+	&__info-link
+		color #5d523b
+		text-decoration underline
+		&:hover
+			text-decoration none
+	&__presents
+		margin-bottom 35px
+	&__relative
+		margin-bottom 35px
+
+.product-image-big
+	margin-bottom 15px
+	// width 320px
+	width 100%
+	height 365px
+	background-color #fff
+	border 2px solid #ccc
+	&__link
+		display block
+		width 100%
+		height 365px
+		text-decoration none
+		text-align center
+		&:after
+			content ""
+			display inline-block
+			vertical-align middle
+			height 100%
+	img.product-image-big__image
+		display inline-block
+		vertical-align middle
+		max-width 100%
+		height auto
+
+.product-image-thumb
+	width 100%
+	&__link
+		// margin-right 16px
+		display block
+		width 100%
+		height 154px
+		background-color #fff
+		border 2px solid #ccc
+		text-align center
+		&:last-child
+			margin-right 0
+		&:after
+			content ""
+			display inline-block
+			vertical-align middle
+			height 100%
+
+	img.product-image-thumb__image
+		display inline-block
+		vertical-align middle
+		max-width 100%
+		height auto
+
+	.owl-nav.disabled
+		display none
