@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 	var $mapToggler = $('.contacts__map-top'),
 		$mapContainer = $('.contacts__map-object');
@@ -18,5 +18,9 @@ $(document).ready(function() {
 		type: 'image'
 	});
 
-
 });
+
+
+
+
+

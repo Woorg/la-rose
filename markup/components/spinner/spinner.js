@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(function() {
+
 	var amountSpinner = $('.spinner__input');
 	var amountSpinnerUp = $('.spinner__button_up');
 	var amountSpinnerDown = $('.spinner__button_down');
@@ -16,7 +17,11 @@ $(document).ready(function () {
 	amountSpinnerDown.click(function () {
 		$(this).parent().siblings('.ui-spinner').children('.spinner__input').spinner('stepDown');
 	});
+
+
 });
+
+
 
 
 

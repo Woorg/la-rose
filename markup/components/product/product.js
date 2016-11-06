@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 	// product image slider
 
@@ -55,4 +55,8 @@ $(document).ready(function() {
 		}
 	});
 
+
 });
+
+
+

@@ -69,10 +69,37 @@
 		+below($tablet)
 			float none
 
+	&__row
+		// margin-bottom 30px
+		clr()
+
+	.main__delivery-form
+		width r-percent(454, 815)
+		float left
+		+below($desktop)
+			width auto
+			float none
+	.main__calendar
+		margin-bottom 50px
+		width 330px
+		float right
+		+below($desktop)
+			float none
+			clear both
+			display none
+		// +below($tablet-l)
+		// width auto
+		+below($mobile-l)
+			width auto
+
 .main_inner
 	padding-top 80px
 	+below($tablet)
 		padding-top 30px
+	.main__content
+		padding-right 65px
+		+below($desktop)
+			padding-right 0
 .main_category
 	.main__top
 		margin-left r-percent(300, 1180)

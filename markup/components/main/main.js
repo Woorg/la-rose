@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function() {
 
 	var pageDescToggle = $('.page-desc__more'),
 		pageDescText = $('.page-desc__text p').length,
@@ -19,3 +19,7 @@ $(document).ready(function () {
 
 
 });
+
+
+
+

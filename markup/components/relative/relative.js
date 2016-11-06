@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 	var $presents = $('.relative_style-first .relative__list'),
 		sliderOptions = {
@@ -69,4 +69,10 @@ $(document).ready(function() {
 
 	});
 
+
+
 });
+
+
+
+

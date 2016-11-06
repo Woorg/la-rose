@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(function() {
+
 	$('.tabs__nav-link').on('click', function (e) {
 		e.preventDefault();
 		var tabsItem = $(this).closest('.tabs__nav-item'),
@@ -12,4 +13,8 @@ $(document).ready(function() {
 			.removeClass('active');
 
 	});
+
+
 });
+
+

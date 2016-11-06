@@ -1,5 +1,5 @@
 .basket
-	width r-percent(812,880)
+	// width r-percent(812,880)
 	clr()
 	+below($tablet)
 		width auto
@@ -108,6 +108,9 @@
 					font-family $pt-sans-bldit
 					font-size 16px
 	.basket__table-body
+		+below($tablet)
+			position relative
+			padding-top 60px
 		.basket__table-col
 			+below($tablet)
 				&:before
@@ -118,6 +121,33 @@
 					font-weight bold
 				&:first-child
 					width 100%
+				&:nth-child(1)
+					width 50%
+					float left
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4),
+				&:nth-child(5)
+					width 50%
+					float right
+					text-align right
+				&:nth-child(2)
+					position absolute
+					top 0
+					left 0
+					width 88%
+					text-align left
+					&:before
+						display none
+				&:nth-child(6)
+					position absolute
+					top 0
+					right 0
+					padding-left 0
+					padding-right 0
+					width 8%
+			+below($mobile-l)
+				font-size 13px
 
 	&__table-image
 		text-align center
@@ -140,14 +170,14 @@
 		bg($close)
 		text-indent -9999px
 		+below($tablet)
-			width auto
-			height auto
-			background none
-			text-indent 0
-			color #786854
-			font-family $pt-sans-bldit
-			font-size 16px
-			line-height 30px
+			// width auto
+			// height auto
+			// background none
+			// text-indent 0
+			// color #786854
+			// font-family $pt-sans-bldit
+			// font-size 16px
+			// line-height 30px
 			&:hover
 				text-decoration none
 	&__bottom
@@ -228,6 +258,8 @@
 				display inline
 	&__buttons
 		// margin-top -80px
+		padding-right 12px
+		padding-left 12px
 		clear both
 		float right
 		+below($tablet)
@@ -248,7 +280,7 @@
 		&:first-child
 			margin-left 0
 		+below($tablet)
-			margin-left 30px
+			margin-left 50px
 		+below($mobile-l)
 			margin 0
 			padding 0

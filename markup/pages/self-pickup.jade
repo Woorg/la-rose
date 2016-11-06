@@ -39,13 +39,16 @@ html(class="no-js", lang="ru")
 						h1.main__title.main__title_style-second Оформление заказа
 
 						.main__row
-							+personal-data-form()
-
+							+personal-data-form_second()
 						.main__row
 							.main__delivery-form
-								+delivery-form()
+								+delivery-form_second()
 							.main__calendar
 								+calendar()
+						.main__row
+							.form__bottom
+								a.form__button.form__button_back(href="#link") Вернуться в корзину
+								input.form__button.form__submit(type="submit", value="Следующий шаг")
 						.main__row
 							+recipient-form()
 

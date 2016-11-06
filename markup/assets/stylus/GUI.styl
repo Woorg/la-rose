@@ -14,7 +14,6 @@
 	border none
 	display inline-block
 	vertical-align top
-	background #E6E4DF
 	background rgba(230, 229, 223, 0.7)
 	color $text-color
 	box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad, 4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec, 6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb, 12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
@@ -98,8 +97,7 @@
 		border 2px solid #c7c2bc
 		padding 20px 22px
 
-
-
+// checkbox
 
 .checkbox
 	position relative
@@ -125,6 +123,29 @@
 .checkbox_style-second
 	label
 		font-family $pt-sans-it
+
+.checkbox_style-third
+	input
+		top -1px
+	label
+		font-family $pt-sans-it
+		color #786854
+		white-space normal
+
+// radio
+
+.radio
+	&__label
+		color #786854
+		font-family $pt-sans-it
+		font-size 14px
+		line-height 16px
+		cursor pointer
+	&__radio
+		margin-right 6px
+		display inline-block
+		vertical-align middle
+
 
 
 .wysiwyg

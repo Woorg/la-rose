@@ -8,7 +8,7 @@ mixin side-filter(data)
 				.side-filter__title Цена, руб
 
 				.price-slider
-					.price-slider__slider
+					.price-slider__slider(data-min="800" data-max="26600")
 
 					.price-slider__price-w
 						.price-slider__price-from
@@ -22,106 +22,105 @@ mixin side-filter(data)
 							input.price-slider__input(type="text", value="26600" id='price-to')
 
 			.side-filter__row
-				.side-filter
-					.side-filter__title Цветы
+				.side-filter__title Цветы
 
-					ul.side-filter__list
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-1(type="checkbox", value="#-1")
-								label(for="checkbox-input-1") Агапантус
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-2(type="checkbox", value="#-2")
-								label(for="checkbox-input-2") Альстромерия
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-3(type="checkbox", value="#-3")
-								label(for="checkbox-input-3") Амариллис
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-4(type="checkbox", value="#-4")
-								label(for="checkbox-input-4") Астер
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-5(type="checkbox", value="#-5")
-								label(for="checkbox-input-5") Астра
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-6(type="checkbox", value="#-6")
-								label(for="checkbox-input-6") Экзотические цветы
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-7(type="checkbox", value="#-7")
-								label(for="checkbox-input-7") Эустома
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-8(type="checkbox", value="#-8")
-								label(for="checkbox-input-8") Фикус
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-9(type="checkbox", value="#-9")
-								label(for="checkbox-input-9") Гербера
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-10(type="checkbox", value="#-10")
-								label(for="checkbox-input-10") Гиацинт
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-11(type="checkbox", value="#-11")
-								label(for="checkbox-input-11") Гортензия
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-12(type="checkbox", value="#-12")
-								label(for="checkbox-input-12") Гвоздика
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-13(type="checkbox", value="#-13")
-								label(for="checkbox-input-13") Ирис
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-14(type="checkbox", value="#-14")
-								label(for="checkbox-input-14") Калла
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-15(type="checkbox", value="#-15")
-								label(for="checkbox-input-15") Хризантема
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-16(type="checkbox", value="#-16")
-								label(for="checkbox-input-16") Лилия
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-17(type="checkbox", value="#-17")
-								label(for="checkbox-input-17") Лотос
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-18(type="checkbox", value="#-18")
-								label(for="checkbox-input-18") Нарцисс
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-19(type="checkbox", value="#-19")
-								label(for="checkbox-input-19") Орхидея
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-20(type="checkbox", value="#-20")
-								label(for="checkbox-input-20") Пион
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-21(type="checkbox", value="#-21")
-								label(for="checkbox-input-21") Подсолнух
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-22(type="checkbox", value="#-22")
-								label(for="checkbox-input-22") Ранункулюс
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-23(type="checkbox", value="#-23")
-								label(for="checkbox-input-23") Ромашка
-						li.side-filter__item.side-filter__checkbox
-							.checkbox
-								input.checkbox__input#checkbox-input-24(type="checkbox", value="#-24")
-								label(for="checkbox-input-24") Тюльпан
+				ul.side-filter__list
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-1(type="checkbox", value="#-1")
+							label(for="checkbox-input-1") Агапантус
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-2(type="checkbox", value="#-2")
+							label(for="checkbox-input-2") Альстромерия
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-3(type="checkbox", value="#-3")
+							label(for="checkbox-input-3") Амариллис
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-4(type="checkbox", value="#-4")
+							label(for="checkbox-input-4") Астер
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-5(type="checkbox", value="#-5")
+							label(for="checkbox-input-5") Астра
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-6(type="checkbox", value="#-6")
+							label(for="checkbox-input-6") Экзотические цветы
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-7(type="checkbox", value="#-7")
+							label(for="checkbox-input-7") Эустома
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-8(type="checkbox", value="#-8")
+							label(for="checkbox-input-8") Фикус
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-9(type="checkbox", value="#-9")
+							label(for="checkbox-input-9") Гербера
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-10(type="checkbox", value="#-10")
+							label(for="checkbox-input-10") Гиацинт
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-11(type="checkbox", value="#-11")
+							label(for="checkbox-input-11") Гортензия
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-12(type="checkbox", value="#-12")
+							label(for="checkbox-input-12") Гвоздика
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-13(type="checkbox", value="#-13")
+							label(for="checkbox-input-13") Ирис
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-14(type="checkbox", value="#-14")
+							label(for="checkbox-input-14") Калла
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-15(type="checkbox", value="#-15")
+							label(for="checkbox-input-15") Хризантема
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-16(type="checkbox", value="#-16")
+							label(for="checkbox-input-16") Лилия
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-17(type="checkbox", value="#-17")
+							label(for="checkbox-input-17") Лотос
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-18(type="checkbox", value="#-18")
+							label(for="checkbox-input-18") Нарцисс
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-19(type="checkbox", value="#-19")
+							label(for="checkbox-input-19") Орхидея
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-20(type="checkbox", value="#-20")
+							label(for="checkbox-input-20") Пион
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-21(type="checkbox", value="#-21")
+							label(for="checkbox-input-21") Подсолнух
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-22(type="checkbox", value="#-22")
+							label(for="checkbox-input-22") Ранункулюс
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-23(type="checkbox", value="#-23")
+							label(for="checkbox-input-23") Ромашка
+					li.side-filter__item.side-filter__checkbox
+						.checkbox
+							input.checkbox__input#checkbox-input-24(type="checkbox", value="#-24")
+							label(for="checkbox-input-24") Тюльпан
 
 
 			.side-filter__row

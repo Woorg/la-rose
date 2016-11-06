@@ -21,10 +21,9 @@ mixin personal-order-form(data)
 			.form__bottom
 				input.form__submit(type="submit", value="Добавить в корзину")
 
-
 mixin feedback-form(data)
 	.form.form_feedback
-		.form__form
+		form.form__form(method='post' action='#')
 			.form__body
 				.form__w
 					.form__title Форма обратной связи
@@ -39,3 +38,350 @@ mixin feedback-form(data)
 
 			.form__bottom
 				input.form__submit(type="submit", value="Отправить")
+
+mixin personal-data-form()
+	.form.form_personal-data.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__title Личные данные
+				.form__w
+					.form__row
+						input.form__input(type="text", value="", placeholder="Ф.И.О*")
+					.form__row
+						input.form__input(type="text", value="", placeholder="Мобильный телефон*")
+					.form__row.form__row-checkbox
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#-5")
+								span Отправьте мне SMS-отчет о выполнении заказа
+					.form__row
+						input.form__input(type="text", value="", placeholder="E-mail*")
+
+			.form__bottom
+				a.form__button.form__button_back(href="#link") Вернуться в корзину
+				input.form__button.form__submit(type="submit", value="Следующий шаг")
+
+mixin personal-data-form_second()
+	.form.form_personal-data.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__title Личные данные
+				.form__w
+					.form__row
+						input.form__input(type="text", value="", placeholder="Ф.И.О*")
+					.form__row
+						input.form__input(type="text", value="", placeholder="Мобильный телефон*")
+					.form__row.form__row-checkbox
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#-5")
+								span Отправьте мне SMS-отчет о выполнении заказа
+					.form__row
+						input.form__input(type="text", value="", placeholder="E-mail*")
+
+
+mixin delivery-form()
+	.form.form_delivery.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__title Доставка
+				.form__w
+					.form__row.form__row_radio.form__row-delivery-type
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="delivery", value="courier" checked)
+								span.radio__label-text Доставка курьером
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="delivery", value="self")
+								span.radio__label-text Самовывоз из салона La Rose
+					.form__delivery-courier.form__delivery-courier_active
+						.form__row
+							.form__select
+								select.select(name="#")
+									option(value="city-1") Выберите город/район
+									option(value="city-2") Город 1
+									option(value="city-3") Город 2
+									option(value="city-4") Город 3
+									option(value="city-5") Город 4
+									option(value="city-6") Город 5
+									option(value="city-7") Город 6
+									option(value="city-8") Город 7
+									option(value="city-9") Город 8
+									option(value="city-10") Город 9
+						.form__row
+							input.form__input(type="text", value="", placeholder="Улица*")
+						.form__row.form__row-home
+							input.form__input(type="text", value="", placeholder="Дом №*")
+							input.form__input(type="text", value="", placeholder="Подьезд №")
+						.form__row.form__row-home-2
+							input.form__input(type="text", value="", placeholder="Этаж №")
+							input.form__input(type="text", value="", placeholder="Код домофона")
+						.form__row
+							input.form__input(type="text", value="", placeholder="Квартира (офис)*")
+						.form__row
+							input.form__input(type="text", value="", placeholder="")
+
+					.form__delivery-self
+						.form__row
+							.form__select
+								select.select(name="#")
+									option(value="city-1") Выберите город/район
+									option(value="city-2") Город 1
+									option(value="city-3") Город 2
+									option(value="city-4") Город 3
+									option(value="city-5") Город 4
+									option(value="city-6") Город 5
+									option(value="city-7") Город 6
+									option(value="city-8") Город 7
+									option(value="city-9") Город 8
+									option(value="city-10") Город 9
+						.form__row
+							input.form__input#delivery-self-input(type="text", name="#", value="", placeholder="11.10. 2016*")
+					.form__row
+						.form__row-title Время:
+
+					.form__row.form__row_radio-bottom
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 08:00 до 10:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 10:00 до 12:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 12:00 до 14:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 14:00 до 18:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 18:00 до 20:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 20:00 до 00:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 00:00 до 02:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 02:00 до 08:00
+
+mixin delivery-form_second()
+	.form.form_delivery.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__title Доставка
+				.form__w
+					.form__row.form__row_radio.form__row-delivery-type
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="delivery", value="courier" )
+								span.radio__label-text Доставка курьером
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="delivery", value="self" checked)
+								span.radio__label-text Самовывоз из салона La Rose
+					.form__delivery-courier
+						.form__row
+							.form__select
+								select.select(name="#")
+									option(value="city-1") Выберите город/район
+									option(value="city-2") Город 1
+									option(value="city-3") Город 2
+									option(value="city-4") Город 3
+									option(value="city-5") Город 4
+									option(value="city-6") Город 5
+									option(value="city-7") Город 6
+									option(value="city-8") Город 7
+									option(value="city-9") Город 8
+									option(value="city-10") Город 9
+						.form__row
+							input.form__input(type="text", value="", placeholder="Улица*")
+						.form__row.form__row-home
+							input.form__input(type="text", value="", placeholder="Дом №*")
+							input.form__input(type="text", value="", placeholder="Подьезд №")
+						.form__row.form__row-home-2
+							input.form__input(type="text", value="", placeholder="Этаж №")
+							input.form__input(type="text", value="", placeholder="Код домофона")
+						.form__row
+							input.form__input(type="text", value="", placeholder="Квартира (офис)*")
+						.form__row
+							input.form__input(type="text", value="", placeholder="")
+
+					.form__delivery-self.form__delivery-self_active
+						.form__row
+							.form__select
+								select.select(name="#")
+									option(value="city-1") Выберите город/район
+									option(value="city-2") Город 1
+									option(value="city-3") Город 2
+									option(value="city-4") Город 3
+									option(value="city-5") Город 4
+									option(value="city-6") Город 5
+									option(value="city-7") Город 6
+									option(value="city-8") Город 7
+									option(value="city-9") Город 8
+									option(value="city-10") Город 9
+						.form__row
+							input.form__input#delivery-self-input(type="text", value="", placeholder="11.10. 2016*")
+					.form__row
+						.form__row-title Время:
+
+					.form__row.form__row_radio-bottom
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 08:00 до 10:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 10:00 до 12:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 12:00 до 14:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 14:00 до 18:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 18:00 до 20:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 20:00 до 00:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 00:00 до 02:00
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text с 02:00 до 08:00
+
+
+
+mixin recipient-form()
+	.form.form_recipient.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__title Получатель
+				.form__w
+					.form__row
+						input.form__input(type="text", value="", placeholder="Ф.И.О Получателя*")
+					.form__row
+						input.form__input(type="text", value="", placeholder="Телефон 1")
+					.form__row
+						input.form__input(type="text", value="", placeholder="Телефон 2")
+					.form__row.form__row-checkbox
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Предварительно связаться с получателем для уточнения деталей доставки
+					.form__row.form__row-checkbox
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Не звонить получателю (сделать сюрприз)
+					.form__row.form__row-checkbox
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Не говорить от кого
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Можно назвать имя Заказчика
+					.form__row
+						input.form__input(type="text", value="", placeholder="Email получателя")
+
+mixin recipient-form_second()
+	.form.form_recipient.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__title Получатель
+				.form__w
+					.form__row.form__row-checkbox
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Заказчик является получателем
+					.form__row
+						input.form__input(type="text", value="", placeholder="Ф.И.О Получателя*")
+					.form__row
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Звонить получателю
+					.form__row
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Не звонить получателю (сделать сюрприз)
+
+					.form__row
+						input.form__input(type="text", value="", placeholder="Телефон 1")
+					.form__row.form__row-checkbox
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Не говорить от кого
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Можно назвать имя Заказчика
+					.form__row
+						input.form__input(type="text", value="", placeholder="Email получателя")
+
+			.form__bottom
+				a.form__button.form__button_back(href="#link") Вернуться на шаг назад
+				input.form__button.form__submit(type="submit", value="Следующий шаг")
+
+mixin payment-form()
+	.form.form_payment.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__title Способы оплаты
+				.form__w
+					.form__row.form__row_radio
+						.form__radio.radio.form__radio_visa
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Visa/Mastercord
+					.form__row.form__row_radio
+						.form__radio.radio.form__radio_webmoney
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Webmoney
+					.form__row.form__row_radio
+						.form__radio.radio.form__radio_yandex
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Яндекс.Деньги
+					.form__row.form__row_radio
+						.form__radio.radio.form__radio_cash
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Наличные курьеру
+					.form__row.form__row_radio
+						.form__radio.radio.form__radio_deposit
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Для организаций Банковских переводов
+					.form__row.form__row_radio
+						.form__radio.radio.form__radio_salon
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Оплата в салоне La-Rose
+

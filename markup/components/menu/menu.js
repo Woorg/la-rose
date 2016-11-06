@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(function() {
+
 	var menuList = $('.menu__list-w'),
 		menuTrigger = $('.header__menu-trigger');
 
@@ -13,4 +14,10 @@ $(document).ready(function () {
 			}
 		});
 	});
+
+
 });
+
+
+
+
