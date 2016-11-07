@@ -21,7 +21,7 @@
 		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad,	4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec, 6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb, 12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
 	&__w
 		margin auto
-		width 498px
+		max-width 498px
 		+below($tablet)
 			padding 0 10px
 			width auto
@@ -40,8 +40,10 @@
 		font-size 14px
 		line-height 16px
 		+placeholder()
-			color #786854
-	.form__select
+			color #9c9284
+	&__file
+		color #786854
+	&__select
 		border 2px solid #d5d1ca
 		width 100%
 		background-color #f0eeea
@@ -56,11 +58,10 @@
 		font-size 14px
 		line-height 16px
 		cursor pointer
-
 	&__bottom
 		margin-bottom 50px
-		margin-right 15px
-		margin-left 15px
+		// margin-right 15px
+		// margin-left 15px
 		text-align right
 	&__submit,
 	&__button_back
@@ -85,6 +86,47 @@
 		+below($tablet)
 			margin-left 0
 			margin-bottom 30px
+
+	&__captcha
+		margin-bottom 26px
+		font-size 0
+		clr()
+	&__captcha-img,
+	&__captcha-text,
+	&__captcha-input
+		display inline-block
+		vertical-align top
+	&__captcha-img
+		margin-right 6px
+		width 180px
+		height 40px
+		img
+			max-width 100%
+			height auto
+		+below(545px)
+			margin-bottom 11px
+	&__captcha-text
+		width 84px
+		font-size 14px
+		color #9d9486
+		+below(545px)
+			width auto
+	&__captcha-input
+		float right
+		width 196px
+		+below(545px)
+			float none
+			width 100%
+	&__row-title
+		display inline-block
+		vertical-align top
+		font-family $pt-sans-it
+		font-size 14px
+		color #9c948c
+	&__row-title_style-second
+		margin-bottom 5px
+		display block
+
 
 .form_personal-order
 	margin-left 0
@@ -273,7 +315,8 @@
 			&:last-child
 				margin-bottom 0
 .form_payment
-	width 434px
+	// width 434px
+	width auto
 	+below($tablet)
 		width auto
 	.form__body
@@ -283,6 +326,7 @@
 			padding-right 16px
 			padding-left 16px
 	.form__w
+		margin 0
 		width auto
 	.form__title
 		margin-left 0
@@ -311,3 +355,40 @@
 		display inline-block
 		vertical-align middle
 
+.form_review
+	.form__top
+		font-size 0
+	.form__row
+		margin-bottom 20px
+	.form__row_top
+		margin-bottom 11px
+	.form__row-title
+		display inline-block
+		vertical-align top
+		font-family $pt-sans-it
+		font-size 14px
+		color #9c948c
+		+below($tablet)
+			margin-bottom 11px
+	.form__row-title_style-second
+		display block
+
+	.form__radio-w
+		margin-left 40px
+		display inline-block
+		vertical-align top
+		+below($tablet)
+			margin-left 0
+
+	.form__radio
+		margin-right 10px
+
+
+.form_settings
+	.form__w
+		padding-left 20px
+		padding-right 20px
+		width auto
+
+	.form__title
+		margin-left 0

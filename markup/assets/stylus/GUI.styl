@@ -45,9 +45,45 @@
 	text-decoration none
 	text-align center
 
+.button_style-4
+	@extends .button
+	// margin-left 40px
+	margin-bottom 40px
+	padding 6px 24px 6px 24px
+	width 44%
+	font-family $pt-sans-bldit
+	font-size 16px
+	line-height 18px
+	text-decoration none
+	text-align center
+	white-space normal
+	+below($desktop)
+		padding-left 14px
+		padding-right 14px
+	+below($tablet-l)
+		width 46%
+	+below($tablet)
+		width 44%
+	+below($mobile)
+		padding-left 0
+		padding-right 0
+
+.button_back
+	float left
+.button_basket
+	float right
+.button_next
+	float right
+.button_save
+	display block
+	width auto
 .button_style-pagination
 	@extends .button
 
+.buttons-w
+	padding-left 12px
+	padding-right 12px
+	clr()
 // tabs
 
 .tabs

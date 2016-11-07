@@ -1,9 +1,9 @@
 mixin head(data)
 	meta(charset="utf-8")
 	meta(http-equiv="x-ua-compatible", content="ie=edge")
-	title #{data.title}
-	meta(content="", name="description")
-	meta(content="", name="keywords")
+	title= pageTitle || ''
+	meta(name='description' content=pageDescription || '')
+	meta(name='keywords' content=pageKeywords || '')
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
 	meta(content="telephone=no", name="format-detection")
 	meta(name="HandheldFriendly", content="true")

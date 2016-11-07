@@ -69,10 +69,18 @@
 		display none
 		background-color #F3EFEC
 		padding 10px 20px
-		width 220px
+		width 320px
 		box-shadow 0 0 0 2px #d8d8d8, 0 0 0 3px white
 		border-radius 7px
 		z-index 10
+		+below($tablet)
+			width 220px
+			display none
+	&__sub-list
+		display inline-block
+		vertical-align top
+		+below($tablet)
+			display block
 	&__sub-item
 		margin-bottom 10px
 	&__sub-link
@@ -84,12 +92,14 @@
 		text-decoration underline
 		&:hover
 			text-decoration none
-
 	&__item
 		&:hover
 			.filter__sub
 				display block
+				+below($tablet)
+					display none
 			&:last-child
 				.filter__sub
 					left auto
-					right -56px
+					left -140px
+

@@ -49,6 +49,8 @@
 	&__title_style-second
 		margin-right 0
 		margin-bottom 22px
+		+below($mobile-l)
+			font-size 26px
 	&__text
 		p
 			margin-bottom 26px
@@ -65,7 +67,12 @@
 		+below($tablet-l)
 			display none
 	&__pagination
-		float right
+		margin-top 30px
+		margin-bottom 30px
+		text-align right
+		ul
+			display inline-block
+			vertical-align top
 		+below($tablet)
 			float none
 
@@ -91,6 +98,22 @@
 		// width auto
 		+below($mobile-l)
 			width auto
+	.main__form
+		+below($tablet)
+			margin-left 12px
+			margin-right 12px
+	.main__col_first
+		margin-right 24px
+		width r-percent(400,815)
+		+below($tablet-l)
+			margin-right 0
+	.main__col_second
+		width r-percent(330,815)
+	.main__col
+		float left
+		+below($tablet-l)
+			float none
+			width auto
 
 .main_inner
 	padding-top 80px
@@ -100,6 +123,17 @@
 		padding-right 65px
 		+below($desktop)
 			padding-right 0
+.main_settings
+	.main__content
+		position relative
+		padding-top 30px
+		+below($tablet)
+			padding-top 70px
+			.main__row_buttons
+				position absolute
+				top 0
+				left 0
+				right 0
 .main_category
 	.main__top
 		margin-left r-percent(300, 1180)
@@ -119,6 +153,7 @@
 		+below($tablet)
 			float none
 			width auto
+
 
 .page-news
 	padding-top 20px

@@ -1,0 +1,59 @@
+.vacancies
+	font-family $pt-sans-reg
+	font-size 16px
+	color #222
+	&__list
+		margin-bottom 48px
+	&__item-top
+		position relative
+		padding-top 13px
+		padding-bottom 11px
+		display block
+		background url('../images/general/dots.png') 100% 0 repeat-x, url('../images/general/dots.png') 100% 100% repeat-x
+		color #222
+		font-family $pt-sans-it
+		font-size 16px
+		line-height 20px
+		text-decoration none
+		&:after
+			position absolute
+			top 50%
+			right 20px
+			content ""
+			margin-top -6px
+			width 0
+			height 0
+			border-style solid
+			border-width 9px 8.5px 0 8.5px
+			border-color #664e30 transparent transparent transparent
+	&__item-top_active
+		&:after
+			position absolute
+			top 50%
+			right 20px
+			content ""
+			margin-top -8px
+			width 0
+			height 0
+			border-style solid
+			border-width 8.5px 0 8.5px 9px
+			border-color transparent transparent transparent #664e30
+	&__item
+		&:last-child
+			.vacancies__item-top
+				margin-top -3px
+	&__item-body
+		padding-top 40px
+		display none
+		p,
+		ul,
+		li
+			margin-bottom 20px
+			line-height 20px
+
+	&__item-body_active
+		display block
+
+
+
+

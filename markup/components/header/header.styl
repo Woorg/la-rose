@@ -368,12 +368,12 @@
 	&__item
 		margin-bottom 10px
 	&__link
-		font-family $pt-sans-bldit
+		font-family $pt-serif-bldit
 		font-size 18px
 		color $text-color
-		text-decoration underline
+		text-decoration none
 		&:hover
-			text-decoration none
+			text-decoration underline
 
 .head-user-auth
 	padding-left r-percent(40, 166)
@@ -390,6 +390,7 @@
 		+below($tablet)
 			display none
 	&__item
+		position relative
 		margin-bottom 20px
 	&__link
 		position relative
@@ -485,14 +486,84 @@
 		color $text-color
 		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad, 4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
 
+	&__form-title
+		margin-bottom 20px
+		color #564d3e
+		font-family $pt-sans-bldit
+		font-size 22px
+		line-height 1
+		text-align center
 
+	&__popup
+		position absolute
+		top -4px
+		right 14px
+		z-index 1
+		padding 22px
+		display none
+		width 340px
+		background url('../images/general/header-popup-bg.jpg') 0 0 repeat-y
+		box-shadow 0 0 19px 1px rgba(0, 0, 0, 0.3)
+		+below($tablet)
+			display none
+		.head-user-auth__popup-close
+			position absolute
+			top 0
+			right -25px
+			display block
+			bg($close)
+			text-indent -9999px
 
+		.head-user-auth__form-body
+			margin-bottom 40px
+			padding 18px 18px 12px
+			background #F1EEEB
+			box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad, 4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
+		.head-user-auth__captcha-text
+			padding-right 30px
+		.head-user-auth__form-submit
+			position static
+			bottom auto
+			padding-top 0
+			padding-bottom 0
+		.head-user-auth__submit
+			padding-top 5px
+			padding-bottom 5px
 
+	&__popup-list
+		padding-top 5px
+		padding-bottom 0
+		color #5c5039
+		font-family $pt-sans-it
+		font-size 14px
+		line-height 16px
+		text-align center
+	&__popup-li
+		font-size 14px
+	&__popup-a
+		color inherit
+		text-decoration underline
+		&:hover
+			text-decoration none
+	&__li_bottom
+		a
+			color inherit
+			font-family $pt-serif-bldit
+			font-size 14px
+			line-height 16px
+			text-decoration none
+
+	&__popup_active
+		display block
 	.tabs
 		display none
 		background-color #f1eeeb
 	.tabs__nav
 		margin-bottom 10px
+		padding-left 20px
+		padding-right 20px
+		font-size 0
+		clr()
 	.tabs__nav-item
 		display inline-block
 		vertical-align top
@@ -515,9 +586,12 @@
 	.tabs_active
 		position absolute
 		top 75px
-		left 15px
-		right 15px
+		left 0
+		right 0
 		z-index 10
+		margin-left 12px
+		margin-right 12px
+		padding-top 12px
 		display none
 		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad,4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec,10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
 		+below($tablet)
@@ -537,23 +611,35 @@
 		font-family $pt-serif-bldit
 		font-size 14px
 		color $text-color
-	&__input
-		position relative
+	&__input-w
+		position absolute
+		right 10%
 		z-index 1
-		border 1px solid $text-color
-		padding 10px
-		width 254px
-		background #fff
-		display none
-		opacity 0
-		transition opacity .3s ease
-	&__input_active
+		visibility hidden
+	&__input-w_active
 		position absolute
 		top 10px
-		right r-percent( 110, 1180 )
-		width 80%
+		right 10%
+		width 76%
+		visibility visible
 		display inline-block
-		opacity 1
+		overflow hidden
+	&__input
+		border 1px solid $text-color
+		padding 10px
+		width 100%
+		background #fff
+		color #564D3E
+		visibility hidden
+		transform-style preserve-3d
+		transform translateX(100%)
+		+placeholder()
+			color #564D3E
+	&__input-w_active
+		.header-search__input
+			visibility visible
+			transform translateX(0)
+			transition all .3s ease
 	&__button
 		margin-top 5px
 		border none

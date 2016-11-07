@@ -66,21 +66,23 @@ mixin basket-order(data)
 			.basket__count-delivery Стоимость доставки: 550 руб.
 			.basket__count-total Итоговая стоимость: 2 750 руб.
 
-		.basket__comment-checkbox
-			.checkbox.checkbox_style-second
-				input.checkbox__input#checkbox-input-5(type="checkbox", value="#-5")
-				//- label(for="checkbox-input-5")
-				a(href="#link" ) Я ознакомлен и согласен с Условиями предоставления услуг
+		.basket__bottom
 
-		.basket__buttons
-			a.basket__button(href="#button") Редактировать заказ
-			a.basket__button(href="#button") Оплатить заказ
+			.basket__comment-checkbox
+				.checkbox.checkbox_style-second
+					input.checkbox__input#checkbox-input-5(type="checkbox", value="#-5")
+					//- label(for="checkbox-input-5")
+					a(href="#link" ) Я ознакомлен и согласен с Условиями предоставления услуг
 
-		.basket__comment
-			.basket__comment-title Комментарий к заказу
-			.basket__comment-form
-				.basket__textarea
-					textarea(name="#") Текст комментария
+			.basket__buttons
+				a.basket__button(href="#button") Редактировать заказ
+				a.basket__button(href="#button") Оплатить заказ
+
+			.basket__comment
+				.basket__comment-title Комментарий к заказу
+				.basket__comment-form
+					.basket__textarea
+						textarea(name="#" placeholder="Текст комментария")
 
 
 

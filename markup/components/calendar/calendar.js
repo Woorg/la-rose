@@ -6,31 +6,27 @@ $(function() {
 
 	$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
 
-	if($(window).width() > 1180) {
+	if($(window).width() >= 1180) {
 		$calendar.datepicker({
 			altField: $deliverySelfInput
 		});
 	} else {
 		$deliverySelfInput.datepicker();
-	}
+	};
 
-	$(window).on('resize', function () {
+	// $(window).on('resize', function () {
 
-		if( $(this).width() > 1180 ) {
-			$calendar.datepicker({
-				altField: $deliverySelfInput
-			});
+	// 	if( $(this).width() >= 1180 ) {
+	// 		$calendar.datepicker({
+	// 			altField: $deliverySelfInput
+	// 		});
 
-		} else {
-			$deliverySelfInput.datepicker('getDate');
+	// 	} else {
+	// 		$deliverySelfInput.datepicker('getDate');
 
-		}
+	// 	};
 
-	});
-
-
-
-
+	// });
 
 });
 

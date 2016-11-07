@@ -13,6 +13,8 @@ html(class="no-js", lang="ru")
 
 	include ../components/footer/footer
 
+	- var pageTitle = "Самовывоз"
+
 	head
 		+head(head.defaults)
 	body.page
@@ -45,6 +47,7 @@ html(class="no-js", lang="ru")
 								+delivery-form_second()
 							.main__calendar
 								+calendar()
+
 						.main__row
 							.form__bottom
 								a.form__button.form__button_back(href="#link") Вернуться в корзину

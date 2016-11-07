@@ -348,6 +348,45 @@ mixin recipient-form_second()
 				a.form__button.form__button_back(href="#link") Вернуться на шаг назад
 				input.form__button.form__submit(type="submit", value="Следующий шаг")
 
+mixin recipient-form_third()
+	.form.form_recipient.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__title Получатель
+				.form__w
+					.form__row.form__row-checkbox
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Заказчик является получателем
+					.form__row
+						input.form__input(type="text", value="", placeholder="Ф.И.О Получателя*")
+					.form__row
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Звонить получателю
+					.form__row
+						.form__radio.radio
+							label.radio__label
+								input.radio__radio(type="radio", name="#", value="#")
+								span.radio__label-text Не звонить получателю (сделать сюрприз)
+
+					.form__row
+						input.form__input(type="text", value="", placeholder="Телефон 1")
+					.form__row.form__row-checkbox
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Не говорить от кого
+						.checkbox.checkbox_style-third
+							label
+								input.checkbox__input(type="checkbox", value="#")
+								span Можно назвать имя Заказчика
+					.form__row
+						input.form__input(type="text", value="", placeholder="Email получателя")
+
+
 mixin payment-form()
 	.form.form_payment.form_style-second
 		form.form__form(method='post' action='#')
@@ -385,3 +424,88 @@ mixin payment-form()
 								input.radio__radio(type="radio", name="#", value="#")
 								span.radio__label-text Оплата в салоне La-Rose
 
+
+mixin resume-form(data)
+	.form.form_resume.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__w
+					.form__title Форма отправки резюме
+					.form__row
+						input.form__input(type="text", value="", placeholder="ФИО*")
+					.form__row
+						textarea.form__textarea(name="#" placeholder="Комментарий")
+					.form__row
+						input.form__file(type="file", value="")
+
+			.form__bottom
+				input.form__submit(type="submit", value="Отправить")
+
+
+mixin review-form(data)
+	.form.form_review.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__w
+					.form__row.form__row_top
+						.form__row-title Я хочу
+						.form__radio-w
+							.form__radio.radio
+								label.radio__label
+									input.radio__radio(type="radio", name="#", value="#")
+									span.radio__label-text Спросить
+							.form__radio.radio
+								label.radio__label
+									input.radio__radio(type="radio", name="#", value="#")
+									span.radio__label-text Поблагодарить
+							.form__radio.radio
+								label.radio__label
+									input.radio__radio(type="radio", name="#", value="#")
+									span.radio__label-text Пожаловаться
+					.form__row
+						textarea.form__textarea(name="#" placeholder="Введите собщение*")
+					.form__row
+						.form__row-title.form__row-title_style-second Можете приложить фото с букетом
+						input.form__file(type="file", value="")
+					.form__row
+						input.form__input(type="text", value="", placeholder="Телефон эл.почта")
+					.form__row
+						input.form__input(type="text", value="", placeholder="Имя")
+
+					.form__row
+						.form__captcha
+							.form__captcha-img
+								img(src="assets/images/content/captcha.jpg", alt="")
+							.form__captcha-text Контрольный код*
+							input.form__captcha-input.form__input(type="text", value="", placeholder="Текст с картинки")
+
+			.form__bottom
+				input.form__submit(type="submit", value="Отправить сообщение")
+
+
+mixin personal-settings-form(data)
+	.form.form_settings.form_style-second
+		form.form__form(method='post' action='#')
+			.form__body
+				.form__w
+					.form__title Мои настройки
+					.form__row
+						input.form__input(type="text", value="Главный администратор сайта", placeholder="Главный администратор сайта")
+					.form__row
+						input.form__input(type="text", value="Иванов", placeholder="Иванов")
+					.form__row
+						input.form__input(type="text", value="Иванович", placeholder="Иванович")
+					.form__row
+						input.form__input(type="text", value="admin", placeholder="admin")
+					.form__row
+						input.form__input(type="text", value="akvarel@akvarel - tour.ru", placeholder="akvarel@akvarel - tour.ru")
+					.form__row
+						input.form__input(type="text", value="1231231212", placeholder="1231231212")
+					.form__row
+						input.form__input(type="text", value="", placeholder="Дополнительный телефон")
+					.form__row
+						input.form__input(type="text", value="intelsib", placeholder="intelsib")
+					.form__row
+						input.form__input(type="text", value="", placeholder="Новый пароль")
+					.form__row
+						input.form__input(type="text", value="", placeholder="Подтверждение нового пароля")

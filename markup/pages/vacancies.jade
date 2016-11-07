@@ -1,0 +1,79 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../components/head/head
+	include ../components/header/header
+	include ../components/search-form/search-form
+	include ../components/breadcrumbs/breadcrumbs
+	include ../components/vacancies/vacancies
+
+	include ../components/side/side
+
+	include ../components/footer/footer
+
+	- var pageTitle = "Вакансии"
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+		.page__w
+			.page__wrapper
+				+header()
+				main.main.main_inner
+					.main__content
+						.main__search-form
+							+search-form()
+						.main__breadcrumbs
+							+breadcrumbs()
+								ul.breadcrumbs__list
+									li.breadcrumbs__item
+										a.breadcrumbs__link(href="#link-1") Главная
+										| >
+									li.breadcrumbs__item
+										a.breadcrumbs__link(href="#link-2")  Работа в La-Rose
+										| >
+									li.breadcrumbs__item
+										a.breadcrumbs__link(href="#link-2") Вакансии
+
+						h1.main__title.main__title_style-second Вакансии
+
+						+vacancies()
+
+					.main__side
+						.side
+							.side__block
+								.side-nav.side-nav_style-fourth
+									.side-nav__title <a href='#link'>Каталог</a>
+									ul.side-nav__list
+										li.side-nav__item
+											a.side-nav__link(href="#link") Букеты
+										li.side-nav__item
+											a.side-nav__link(href="#link") Цветочные композиции
+										li.side-nav__item
+											a.side-nav__link(href="#link") Игрушки из живых цветов
+										li.side-nav__item
+											a.side-nav__link(href="#link") Горшечные растения
+										li.side-nav__item
+											a.side-nav__link(href="#link") Подарки
+							.side__block
+								.side__buttons
+									a.side__button(href="#link") Мы Вконтакте
+									a.side__button(href="#link") Отзывы
+
+							.side__block
+								.side__vk-widget
+									img(src="%=static=%/images/content/vk-widget.jpg", alt="vk widget")
+
+
+				.page__buffer
+
+			.page__footer
+				+footer()
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

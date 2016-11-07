@@ -18,6 +18,8 @@
 		float right
 		width r-percent(460, 825)
 		+below($tablet)
+			position relative
+			padding-top 90px
 			width auto
 	&__desc
 		color $text-color-2
@@ -34,6 +36,10 @@
 		background url('../images/general/dots.png') 100% 0 repeat-x , url('../images/general/dots.png') 100% 100% repeat-x
 		font-size 0
 		+below($tablet)
+			position absolute
+			top 10px
+			left 0
+			right 0
 			margin-bottom 30px
 			width auto
 	&__price-left,

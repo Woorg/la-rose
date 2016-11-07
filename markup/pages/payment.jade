@@ -1,0 +1,91 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../components/head/head
+	include ../components/header/header
+	include ../components/search-form/search-form
+	include ../components/breadcrumbs/breadcrumbs
+	include ../components/forms/forms
+	include ../components/calendar/calendar
+
+
+	include ../components/side/side
+
+	include ../components/footer/footer
+
+
+	- var pageTitle = "Оплата"
+
+	head
+		+head(head.defaults)
+	body.page
+		|%=symbols=%
+		.page__w
+			.page__wrapper
+				+header()
+				main.main.main_inner
+					.main__content
+						.main__search-form
+							+search-form()
+						.main__breadcrumbs
+							+breadcrumbs()
+								ul.breadcrumbs__list
+									li.breadcrumbs__item
+										a.breadcrumbs__link(href="#link-1") Главная
+										| >
+									li.breadcrumbs__item
+										a.breadcrumbs__link(href="#link-2") Мой кабинет
+										| >
+									li.breadcrumbs__item
+										a.breadcrumbs__link(href="#link-2") Моя корзина
+
+						h1.main__title.main__title_style-second Оформление заказа
+
+						.main__row
+							.main__form
+								+payment-form()
+
+						.main__row
+							.buttons-w
+								a.button.button_style-4.button_back(href="#link") Вернуться на шаг назад
+								input.button.button_style-4.button_next(type="submit", value="Следующий шаг")
+
+
+					.main__side
+						.side
+							.side__block
+								.side-nav.side-nav_style-third
+									.side-nav__title <a href='#link'>Каталог</a>
+									ul.side-nav__list
+										li.side-nav__item
+											a.side-nav__link(href="#link") Букеты
+										li.side-nav__item
+											a.side-nav__link(href="#link") Цветочные композиции
+										li.side-nav__item
+											a.side-nav__link(href="#link") Игрушки из живых цветов
+										li.side-nav__item
+											a.side-nav__link(href="#link") Горшечные растения
+										li.side-nav__item
+											a.side-nav__link(href="#link") Подарки
+							.side__block
+								.side__buttons
+									a.side__button(href="#link") Мы Вконтакте
+									a.side__button(href="#link") Отзывы
+
+							.side__block
+								.side__vk-widget
+									img(src="%=static=%/images/content/vk-widget.jpg", alt="vk widget")
+
+
+				.page__buffer
+
+			.page__footer
+				+footer()
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
+		script(src='%=static=%js/separate-js/i18n/datepicker-ru.js')
