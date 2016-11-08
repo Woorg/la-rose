@@ -3,6 +3,7 @@
 	border-radius 0 0 50px 50px
 	box-shadow 0 5px 10px rgba(0, 0, 0, 0.2)
 	background url('%=static=%/general/header-menu.jpg') 50% 100% no-repeat
+	max-height 50px
 	+below($tablet)
 		padding-top 0
 		padding-left 0
@@ -43,8 +44,6 @@
 			text-align left
 			text-align-last left
 		&:after
-			position absolute
-			left 0
 			content ""
 			display inline-block
 			width 100%
@@ -63,9 +62,11 @@
 		right 0
 		display block
 		background #f1eeeb
+		font-size 18px
 	&__item
 		display inline-block
 		vertical-align top
+		font-size 18px
 		text-align left
 		+below($tablet)
 			display block
@@ -79,7 +80,7 @@
 		&:hover
 			text-decoration underline
 		+below($tablet-l)
-			font-size 16px
+			font-size 15px
 		+below($tablet)
 			font-family $pt-sans-bld
 			font-size 18px
@@ -106,10 +107,9 @@
 	background none
 	box-shadow none
 	border-radius 0
-	white-space nowrap
-
+	// white-space nowrap
 	.menu__item
-		margin-right 26px
+		margin-right 25px
 		&:after
 			display none
 		&:last-child
