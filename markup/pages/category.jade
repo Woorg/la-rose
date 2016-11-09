@@ -13,6 +13,7 @@ html(class="no-js", lang="ru")
 	include ../components/spinner/spinner
 	include ../components/side/side
 	include ../components/side-filter/side-filter
+	include ../components/popup/popup
 
 	include ../components/footer/footer
 
@@ -128,7 +129,8 @@ html(class="no-js", lang="ru")
 
 			.page__footer
 				+footer()
-
+			+popup()
+			+popup-quick-order()
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();
 

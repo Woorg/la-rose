@@ -1,6 +1,7 @@
 .hero
 	position relative
 	z-index 0
+	overflow hidden
 	&__in
 		position relative
 		@extends .in
@@ -15,14 +16,14 @@
 		position absolute
 		top 0
 		right 0
-		width 290px
+		width 295px
 		z-index 1
 		+below($tablet-l)
 			display none
 	&__buttons
-		padding-top 120px
+		padding-top 112px
 		.button
-			margin-bottom 38px
+			margin-bottom 25px
 			&:last-child
 				margin-right 22px
 		+below($desktop)
@@ -31,8 +32,8 @@
 			padding-top 80px
 
 	&__slider
-		margin-top 39px
-		margin-left -22px
+		margin-top 46px
+		margin-left -14px
 		min-height 120px
 		+below($tablet-l)
 			margin-top 0
@@ -62,12 +63,12 @@
 		text-indent -9999px
 		z-index 10
 	.owl-prev
-		left -27px
+		left -36px
 		bg($slider-arrow-left)
 		+below($tablet-l)
 			left 0
 	.owl-next
-		right 110px
+		right 94px
 		bg($slider-arrow-right)
 		+below($tablet-l)
 			right 0

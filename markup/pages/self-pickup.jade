@@ -7,6 +7,7 @@ html(class="no-js", lang="ru")
 	include ../components/breadcrumbs/breadcrumbs
 	include ../components/forms/forms
 	include ../components/calendar/calendar
+	include ../components/popup/popup
 
 
 	include ../components/side/side
@@ -50,8 +51,8 @@ html(class="no-js", lang="ru")
 
 						.main__row
 							.form__bottom
-								a.form__button.form__button_back(href="#link") Вернуться в корзину
-								input.form__button.form__submit(type="submit", value="Следующий шаг")
+								a.button.button_style-4.button_back(href="#link") Вернуться в корзину
+								button.button.button_style-4.button_next(type="submit") Следующий шаг
 						.main__row
 							+recipient-form()
 
@@ -88,6 +89,8 @@ html(class="no-js", lang="ru")
 
 			.page__footer
 				+footer()
+			+popup()
+			+popup-quick-order()
 
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();

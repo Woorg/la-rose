@@ -1,24 +1,27 @@
 .form
 	margin-top 60px
-	// margin-right 12px
-	// margin-left 12px
-	// width 815px
 	font-family $pt-sans-it
 	font-size 14px
 	+below($desktop)
 		width auto
-	&__form
-		margin-left 12px
-		margin-right 12px
-		+below($tablet)
-			margin-left 0
-			margin-right 0
 	&__body
-		margin-bottom 50px
-		padding 26px 0 14px
-		background rgba(232, 230, 225, 0.7)
+		position relative
+		z-index 0
+		margin-bottom 30px
+		padding 26px 6px 14px
+		background transparent
 		color $text-color
-		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad,	4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec, 6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb, 12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
+		&:after
+			position absolute
+			top 12px
+			left 12px
+			right 12px
+			bottom 12px
+			content ""
+			opacity .5
+			z-index -1
+			background rgb(224, 222, 218)
+			box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,          2px 7px 0px #b9b3ad,-2px 7px 0px rgb(185, 179, 173),2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,     7px   2px 0px #b9b3ad,7px  -2px 0px #b9b3ad,-7px 2px  0px #b9b3ad,-7px -2px 0px #b9b3ad,      4px 10px 0px #efeeec,-4px 10px 0px rgb(239, 238, 236),4px -10px 0px #efeeec,-4px -10px 0px rgb(239, 238, 236),     10px   4px 0px #efeeec,10px  -4px 0px #efeeec,-10px 4px  0px #efeeec,-10px -4px 0px #efeeec,        6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,     12px  6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px  0px #c5c0bb,-12px -6px 0px #c5c0bb
 	&__w
 		margin auto
 		max-width 498px
@@ -41,6 +44,9 @@
 		line-height 16px
 		+placeholder()
 			color #9c9284
+		&.error
+			border 2px solid red
+
 	&__file
 		color #786854
 	&__select
@@ -51,7 +57,7 @@
 	.select
 		border none
 		padding 6px 8px 3px 3px
-		background transparent
+		background #f0eeea
 		width 110%
 		color #786854
 		font-family $pt-sans-it
@@ -63,29 +69,48 @@
 		// margin-right 15px
 		// margin-left 15px
 		text-align right
-	&__submit,
-	&__button_back
+		clr()
+	&__button-w
 		margin-left 50px
-		@extends .button
-		padding-left 24px
-		padding-right 38px
-		color #564d3e
-		font-family $pt-sans-bldit
-		font-size 16px
-		line-height 30px
-		text-decoration none
-		&:hover
-			text-decoration underline
 		+below($tablet)
 			margin-left 0
 			display block
 			width 100%
 			text-align center
-
-	&__button_back
+	&__button-w
+		.form__submit,
+		.form__button_back
+			@extends .button
+			padding-left 24px
+			padding-right 24px
+			color #564d3e
+			font-family $pt-sans-bldit
+			font-size 16px
+			line-height 30px
+			text-decoration none
+			z-index 0
+			&:hover
+				text-decoration underline
+	&__button-w
 		+below($tablet)
 			margin-left 0
 			margin-bottom 30px
+	.form__button-w
+		position relative
+		z-index 0
+		display inline-block
+		vertical-align top
+		&:after
+			position absolute
+			top 0
+			left 12px
+			right 12px
+			bottom 0
+			content ""
+			opacity .5
+			z-index -1
+			background rgb(224, 222, 218)
+			box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,          2px 7px 0px #b9b3ad,-2px 7px 0px rgb(185, 179, 173),2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,     7px   2px 0px #b9b3ad,7px  -2px 0px #b9b3ad,-7px 2px  0px #b9b3ad,-7px -2px 0px #b9b3ad,      4px 10px 0px #efeeec,-4px 10px 0px rgb(239, 238, 236),4px -10px 0px #efeeec,-4px -10px 0px rgb(239, 238, 236),     10px   4px 0px #efeeec,10px  -4px 0px #efeeec,-10px 4px  0px #efeeec,-10px -4px 0px #efeeec,        6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,     12px  6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px  0px #c5c0bb,-12px -6px 0px #c5c0bb
 
 	&__captcha
 		margin-bottom 26px
@@ -173,6 +198,7 @@
 	.form__submit
 		padding-right 20px
 		padding-left 20px
+		width 100%
 		font-family $pt-serif-bldit
 		text-align center
 	.form__title
@@ -185,27 +211,48 @@
 .form_style-second
 	margin-top 0
 	.form__title
-		margin-left 14px
+		// margin-left 26px
 		margin-bottom 24px
 		color #5c5039
 		font-family $pt-sans-bldit
 		font-size 16px
 		line-height 18px
+		+below($mobile-l)
+			margin-left 12px
 	.form__row-checkbox
 		margin-top 14px
 		margin-bottom 14px
-	.form__button
+	.form__button-w
+		position relative
+		z-index 0
 		margin-left 40px
-		padding-left 18px
-		padding-right 18px
+		&:after
+			position absolute
+			top 0
+			left 12px
+			right 12px
+			bottom 0
+			content ""
+			opacity .5
+			z-index -1
+			background rgb(224, 222, 218)
+			box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,          2px 7px 0px #b9b3ad,-2px 7px 0px rgb(185, 179, 173),2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,     7px   2px 0px #b9b3ad,7px  -2px 0px #b9b3ad,-7px 2px  0px #b9b3ad,-7px -2px 0px #b9b3ad,      4px 10px 0px #efeeec,-4px 10px 0px rgb(239, 238, 236),4px -10px 0px #efeeec,-4px -10px 0px rgb(239, 238, 236),     10px   4px 0px #efeeec,10px  -4px 0px #efeeec,-10px 4px  0px #efeeec,-10px -4px 0px #efeeec,        6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,     12px  6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px  0px #c5c0bb,-12px -6px 0px #c5c0bb
+		&:first-child
+			margin-left 0
+		+below($tablet)
+			// margin-left 0
+			margin-left 0
+			width 100%
+	.form__button
+		margin-left 20px
+		padding 12px 18px 10px
 		@extends .button
+		z-index 0
 		color #786b58
 		font-family $pt-sans-bldit
 		font-size 16px
 		line-height 30px
 		text-decoration none
-		&:first-child
-			margin-left 0
 		+below($tablet)
 			margin-left 0
 			width 100%
@@ -215,17 +262,22 @@
 	.form__radio
 		display inline-block
 		vertical-align top
-
 	.form__button_back
 		+below($tablet)
-			margin-bottom 30px
-
+			margin-bottom 10px
 .form_personal-data
-	margin-top 60px
+	// margin-top 60px
+	margin-top 0
 	.form__body
-		padding-top 13px
+	// 	padding-top 13px
+		padding-right 26px
+		padding-left 26px
+		+below($mobile-l)
+			padding-right 6px
+			padding-left 6px
 	.form__title
 		margin-bottom 16px
+		margin-left 12px
 
 .form_delivery
 	.form__body
@@ -236,8 +288,6 @@
 			padding-left 6px
 	.form__w
 		width auto
-	.form__title
-		margin-left 0
 	.form__select
 		position relative
 		border 2px solid #d5d1ca
@@ -260,7 +310,7 @@
 			&:last-child
 				margin-right 0
 			+below($desktop)
-				width 48.4%
+				width 48.3%
 			+below($tablet-l)
 				margin-bottom 11px
 				margin-right 0
@@ -302,8 +352,6 @@
 			padding-left 6px
 	.form__w
 		width auto
-	.form__title
-		margin-left 0
 	.checkbox
 		margin-right 24px
 		display inline-block
@@ -328,8 +376,6 @@
 	.form__w
 		margin 0
 		width auto
-	.form__title
-		margin-left 0
 	.form__row
 		margin-bottom 16px
 	.form__radio_visa,

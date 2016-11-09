@@ -6,8 +6,13 @@
   "directories": {},
   "dependencies": {},
   "devDependencies": {
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.8.0",
     "gulp": "^3.9.1",
-    "jeet": "^7.0.0"
+    "jeet": "^7.0.0",
+    "postcss-csso": "^1.1.2",
+    "postcss-em-media-query": "^1.0.1",
+    "postcss-fixes": "^1.4.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

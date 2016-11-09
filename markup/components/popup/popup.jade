@@ -1,0 +1,61 @@
+mixin popup(data)
+	.popup.popup_open.mfp-hide#director-email
+		form.popup__form.popup__form_register(action="#" method='post')
+			.popup__form-body
+				.popup__form-title Письмо директору
+				.popup__form-field
+					input.popup__input(type="text", value="", name="dir_name", placeholder="Ф.И.О.*")
+				.popup__form-field
+					input.popup__input(type="password", value="", name="dir_phone", placeholder="Телефон*")
+				.popup__form-field
+					textarea.popup__input(name="dir_message" placeholder="Ваш текст ...")
+				.popup__form-field
+					input.popup__input(type="text", value="", name="dir_captcha" placeholder="Защитный код")
+				.popup__form-field
+					.popup__captcha-image
+						img(src="assets/images/content/captcha.jpg", alt="captcha")
+			.popup__form-submit
+				input.popup__submit(type="submit", value="Перезвоните мне")
+
+
+mixin popup-quick-order()
+	| <div id="one_click" class="sv-modbox sv-modbox-hide">
+	|  <form method="POST" class="oneclickmainform">
+	|      <input type="hidden" name="NAME_ONE_CLICK"/>
+	|      <input type="hidden" name="PRICE_ONE_CLICK"/>
+	|      <input type="hidden" name="PRODUCTID_ONE_CLICK"/>
+	|      <div class="field">
+	|          <input type="text" name="name" placeholder="Ваше имя"/>
+	|      </div>
+	|      <div class="field">
+	|          <input type="text" name="phone" placeholder="Контактный телефон" class="required_field phone_field"/>
+	|      </div>
+	|      <div class="info-text">
+	|        Быстрый заказ доступен при оплате наличными курьеру, либо в салоне.
+	|      </div>
+	|      <button type="submit" class="">Купить в 1 клик</button>
+	|  </form>
+	|  <div class="afteroneclick" style="display:none;">
+	|	Ваша заявка успешно принята!
+	|  </div>
+	| </div>
+
+
+mixin popup_toolbox(data)
+	.popup.popup_open.mfp-hide#director-email
+		form.popup__form.popup__form_register(action="#" method='post')
+			.popup__form-body
+				.popup__form-title Письмо директору
+				.popup__form-field
+					input.popup__input(type="text", value="", placeholder="Ф.И.О.*")
+				.popup__form-field
+					input.popup__input(type="password", value="", placeholder="Телефон*")
+				.popup__form-field
+					textarea.popup__input(placeholder="Ваш текст ...")
+				.popup__form-field
+					input.popup__input(type="text", value="", placeholder="Защитный код")
+				.popup__form-field
+					.popup__captcha-image
+						img(src="assets/images/content/captcha.jpg", alt="captcha")
+			.popup__form-submit
+				input.popup__submit(type="submit", value="Перезвоните мне")

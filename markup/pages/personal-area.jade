@@ -7,6 +7,7 @@ html(class="no-js", lang="ru")
 	include ../components/forms/forms
 
 	include ../components/side/side
+	include ../components/popup/popup
 
 	include ../components/footer/footer
 
@@ -27,12 +28,10 @@ html(class="no-js", lang="ru")
 									+personal-settings-form()
 							.main__col.main__col_second
 								.main__row.main__row_buttons
-									.buttons-w
-										a.button.button_back.button_style-4(href="#link") Мои заказы
-										a.button.button_basket.button_style-4(href="#link") Моя корзина
+									a.button.button_orders.button_style-4(href="#link") Мои заказы
+									a.button.button_basket.button_style-4(href="#link") Моя корзина
 								.main__row
-									.buttons-w
-										a.button.button_save.button_style-4(href="#link") Сохранить изменения
+									a.button.button_save.button_style-4(href="#link") Сохранить изменения
 					.main__side
 						.side
 							.side__block
@@ -58,6 +57,8 @@ html(class="no-js", lang="ru")
 
 			.page__footer
 				+footer()
+			+popup()
+			+popup-quick-order()
 
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();

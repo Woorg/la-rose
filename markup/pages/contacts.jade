@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
 	include ../components/contacts/contacts
 	include ../components/side/side
 	include ../components/footer/footer
+	include ../components/popup/popup
 
 	- var pageTitle = "Контакты"
 
@@ -70,6 +71,9 @@ html(class="no-js", lang="ru")
 
 			.page__footer
 				+footer()
+
+			+popup()
+			+popup-quick-order()
 
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();

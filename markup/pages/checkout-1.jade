@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
 	include ../components/forms/forms
 	include ../components/calendar/calendar
 
+	include ../components/popup/popup
 
 	include ../components/side/side
 
@@ -73,6 +74,9 @@ html(class="no-js", lang="ru")
 
 			.page__footer
 				+footer()
+
+			+popup()
+			+popup-quick-order()
 
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();

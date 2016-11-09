@@ -19,7 +19,19 @@ mixin header(data)
 							.header-phones__w
 								.header-phones__phone <span>(383)</span> 292-16-25<i>,</i>
 								.header-phones__phone <span>(383)</span> 222-60-70
-						a.header-phones__button(href="#button") Мы Вам перезвоним
+						.header-phones__button-w
+							a.header-phones__button(href="#button") Мы Вам перезвоним
+
+							.head-user-auth__popup.head-popup.head-popup_callback
+								a.head-user-auth__popup-close(href='#close') Закрыть
+								form.head-user-auth__form.head-user-auth__form_register(action="#" method='post')
+									.head-user-auth__form-body
+										.head-user-auth__form-field
+											input.head-user-auth__input(type="text", value="",name="callback_name", placeholder="Ф.И.О.*")
+										.head-user-auth__form-field
+											input.head-user-auth__input(type="password", value="",name="callback_phone", placeholder="Телефон*")
+									.head-user-auth__form-submit
+										input.head-user-auth__submit(type="submit", value="Перезвоните мне")
 
 				.header__working-hours
 					.working-hours Работаем 24 часа
@@ -27,12 +39,16 @@ mixin header(data)
 				.header__basket
 					.head-basket
 						a.head-basket__button(href="#button")
-							//- <span>В корзине</span> пусто
 							<span>В корзине:</span> 1 шт. на сумму 25950 руб.
 							span.head-basket__quant 2
+					.header__pers-order-w
+						a.header__pers-order.button.button_style-1(href="#button") Индивидуальный заказ <span class='header__pers-order-faq'>&#63;</span>
 
-					a.header__pers-order.button.button_style-1(href="#button") Индивидуальный заказ <span class='header__pers-order-faq'>&#63;</span>
-
+						.popup.popup_pers-order
+							a.popup__close(href='#close') Закрыть
+							.popup__form-body
+								p Оформите индивидуальный заказ!
+								p Просто напишите ваши пожелания и мы воплотим их в жизнь.
 				.header__catalog
 					.head-catalog
 						a.head-catalog__button(href="#catalog") Каталог
@@ -56,100 +72,98 @@ mixin header(data)
 							li.head-user-auth__item
 								a.head-user-auth__link.head-user-auth__link-enter(href="#") Вход
 
-								.head-user-auth__popup
+								.head-user-auth__popup.head-popup
 									a.head-user-auth__popup-close(href='#close') Закрыть
 
 									form.head-user-auth__form.head-user-auth__form_login(action="#" method='post')
 										.head-user-auth__form-body
 											//- .head-user-auth__form-title Вход
 											.head-user-auth__form-field
-												input.head-user-auth__input(type="text", value="", placeholder="E-mail*")
+												input.head-user-auth__input(type="text", value="", name="hal_email", placeholder="E-mail*")
 											.head-user-auth__form-field
-												input.head-user-auth__input(type="password", value="", placeholder="Пароль*")
+												input.head-user-auth__input(type="password", value="",name="hal_pass", placeholder="Пароль*")
 											.head-user-auth__form-bottom
 												.head-user-auth__form-checkbox
 													input.head-user-auth__checkbox#check-remember-1(type="checkbox", value="some")
 													label.head-user-auth__checkbox-label(for="check-remember-1") Запомнить меня
 												a.head-user-auth__forget(href="#forget") Забыли свой пароль?
 										.head-user-auth__form-submit
-											input.head-user-auth__submit(type="submit", value="Войти")
+											input.head-user-auth__submit(type="submit" value='Войти')
 
 
 							li.head-user-auth__item
 								a.head-user-auth__link.head-user-auth__link-reg(href="#") Регистрация
 
-								.head-user-auth__popup
+								.head-user-auth__popup.head-popup
 									a.head-user-auth__popup-close(href='#close') Закрыть
-									form.head-user-auth__form.head-user-auth__form_register(action="#" method='post')
+									form.head-user-auth__form.head-user-auth__form_register#head-user-auth__form_register(action="#" method='post')
 										.head-user-auth__form-body
 											.head-user-auth__form-title Регистрация
 											.head-user-auth__form-field
-												input.head-user-auth__input(type="text", value="", placeholder="E-mail*")
+												input.head-user-auth__input(type="text", value="", name="har_email", placeholder="E-mail*")
 											.head-user-auth__form-field
-												input.head-user-auth__input(type="password", value="", placeholder="Пароль*")
+												input.head-user-auth__input(type="password", value="", name="har_pass", placeholder="Пароль*")
 											.head-user-auth__form-field
-												input.head-user-auth__input(type="password", value="", placeholder="Повторите пароль*")
+												input.head-user-auth__input#head-user-auth__input-repeat-pass(type="password", value="", name="har_pass_2" placeholder="Повторите пароль*")
 											.head-user-auth__form-field.head-user-auth__form-field_captcha
 												.head-user-auth__captcha-text Защита от автоматической регистрации
 												.head-user-auth__captcha-image
 													img(src="assets/images/content/captcha.jpg", alt="captcha")
 											.head-user-auth__form-field
-												input.head-user-auth__input(type="text", value="", placeholder="Введите слово на картинке:*")
+												input.head-user-auth__input(type="text", value="",name="har_captcha" placeholder="Введите слово на картинке:*")
 
 										.head-user-auth__form-submit
-											input.head-user-auth__submit(type="submit", value="Зарегистрироваться")
+											input.head-user-auth__submit(type="submit" value="Зарегистрироваться")
 
 
 
 
 						.tabs
-							ul.tabs__nav
-								li.tabs__nav-item.active(data-class='first')
-									a.tabs__nav-link(href="#link") Вход
-								li.tabs__nav-item(data-class='second')
-									a.tabs__nav-link(href="#link") Регистрация
+							.tabs__w-w
+								ul.tabs__nav
+									li.tabs__nav-item.active(data-class='first')
+										a.tabs__nav-link(href="#link") Вход
+									li.tabs__nav-item(data-class='second')
+										a.tabs__nav-link(href="#link") Регистрация
 
-							.tabs__w
-								.tabs__tab.tabs__tab_first.active
-
-									form.head-user-auth__form.head-user-auth__form_login(action="#" method='post')
-										.head-user-auth__form-body
-											.head-user-auth__form-field
-
-												input.head-user-auth__input(type="text", value="", placeholder="E-mail*")
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="password", value="", placeholder="Пароль*")
-											.head-user-auth__form-bottom
-												.head-user-auth__form-checkbox
-													input.head-user-auth__checkbox#check-remember-2(type="checkbox", value="some")
-													label.head-user-auth__checkbox-label(for="check-remember-2") Запомнить меня
-												a.head-user-auth__forget(href="#forget") Забыли свой пароль?
-
-										.head-user-auth__form-submit
-											input.head-user-auth__submit(type="submit", value="Войти")
-
-
-								.tabs__tab.tabs__tab_second
-
-									form.head-user-auth__form.head-user-auth__form_register(action="#" method='post')
-										.head-user-auth__form-body
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="text", value="", placeholder="E-mail*")
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="password", value="", placeholder="Пароль*")
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="password", value="", placeholder="Повторите пароль*")
-											.head-user-auth__form-field.head-user-auth__form-field_captcha
-												.head-user-auth__captcha-text Защита от автоматической регистрации
-												.head-user-auth__captcha-image
-													img(src="assets/images/content/captcha.jpg", alt="captcha")
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="text", value="", placeholder="Введите слово на картинке:*")
+								.tabs__w
+										.tabs__tab.tabs__tab_first.active
+											form.head-user-auth__form.head-user-auth__form_login#head-user-auth__form_login-tab(action="#" method='post')
+												.head-user-auth__form-body
+													//- .head-user-auth__form-title Вход
+													.head-user-auth__form-field
+														input.head-user-auth__input(type="text", value="", name="hal_email", placeholder="E-mail*")
+													.head-user-auth__form-field
+														input.head-user-auth__input(type="password", value="",name="hal_pass", placeholder="Пароль*")
+													.head-user-auth__form-bottom
+														.head-user-auth__form-checkbox
+															input.head-user-auth__checkbox#check-remember-1(type="checkbox", value="some")
+															label.head-user-auth__checkbox-label(for="check-remember-1") Запомнить меня
+														a.head-user-auth__forget(href="#forget") Забыли свой пароль?
+												.head-user-auth__form-submit
+													button.head-user-auth__submit(type="submit") Войти
 
 
+										.tabs__tab.tabs__tab_second
+											form.head-user-auth__form.head-user-auth__form_register#head-user-auth__form_register-tab(action="#" method='post')
+												.head-user-auth__form-body
+													.head-user-auth__form-title Регистрация
+													.head-user-auth__form-field
+														input.head-user-auth__input(type="text", value="", name="har_email", placeholder="E-mail*")
+													.head-user-auth__form-field
+														input.head-user-auth__input(type="password", value="", name="har_pass", placeholder="Пароль*")
+													.head-user-auth__form-field
+														input.head-user-auth__input#head-user-auth__input-repeat-pass(type="password", value="", name="har_pass_2" placeholder="Повторите пароль*")
+													.head-user-auth__form-field.head-user-auth__form-field_captcha
+														.head-user-auth__captcha-text Защита от автоматической регистрации
+														.head-user-auth__captcha-image
+															img(src="assets/images/content/captcha.jpg", alt="captcha")
+													.head-user-auth__form-field
+														input.head-user-auth__input(type="text", value="", name="har_captcha", placeholder="Введите слово на картинке:*")
 
-										.head-user-auth__form-submit
-											input.head-user-auth__submit(type="submit", value="Зарегистрироваться")
+												.head-user-auth__form-submit
+													button.head-user-auth__submit(type="submit") Зарегистрироваться
+
 
 
 				.header__search
@@ -210,7 +224,19 @@ mixin header-second(data)
 							.header-phones__w
 								.header-phones__phone <span>(383)</span> 292-16-25<i>,</i>
 								.header-phones__phone <span>(383)</span> 222-60-70
-						a.header-phones__button(href="#button") Мы Вам перезвоним
+						.header-phones__button-w
+							a.header-phones__button(href="#button") Мы Вам перезвоним
+
+							.head-user-auth__popup.head-popup.head-popup_callback
+								a.head-user-auth__popup-close(href='#close') Закрыть
+								form.head-user-auth__form.head-user-auth__form_register(action="#" method='post')
+									.head-user-auth__form-body
+										.head-user-auth__form-field
+											input.head-user-auth__input(type="text", value="", placeholder="Ф.И.О.*")
+										.head-user-auth__form-field
+											input.head-user-auth__input(type="password", value="", placeholder="Телефон*")
+									.head-user-auth__form-submit
+										input.head-user-auth__submit(type="submit", value="Перезвоните мне")
 
 				.header__working-hours
 					.working-hours Работаем 24 часа
@@ -222,7 +248,14 @@ mixin header-second(data)
 							<span>В корзине:</span> 1 шт. на сумму 25950 руб.
 							span.head-basket__quant 2
 
-					a.header__pers-order.button.button_style-1(href="#button") Индивидуальный заказ <span class='header__pers-order-faq'>&#63;</span>
+					.header__pers-order-w
+						a.header__pers-order.button.button_style-1(href="#button") Индивидуальный заказ <span class='header__pers-order-faq'>&#63;</span>
+						.popup.popup_pers-order
+							a.popup__close(href='#close') Закрыть
+							.popup__form-body
+								p Оформите индивидуальный заказ!
+								p Просто напишите ваши пожелания и мы воплотим их в жизнь.
+
 
 				.header__catalog
 					.head-catalog
@@ -247,7 +280,7 @@ mixin header-second(data)
 							li.head-user-auth__item
 								a.head-user-auth__link.head-user-auth__link-enter(href="#") Вход
 
-								.head-user-auth__popup
+								.head-user-auth__popup.head-popup
 									a.head-user-auth__popup-close(href='#close') Закрыть
 
 									ul.head-user-auth__popup-list
@@ -263,7 +296,7 @@ mixin header-second(data)
 							li.head-user-auth__item
 								a.head-user-auth__link.head-user-auth__link-reg(href="#") Регистрация
 
-								.head-user-auth__popup
+								.head-user-auth__popup.head-popup
 									a.head-user-auth__popup-close(href='#close') Закрыть
 									form.head-user-auth__form.head-user-auth__form_register(action="#" method='post')
 										.head-user-auth__form-body
@@ -288,53 +321,54 @@ mixin header-second(data)
 
 
 						.tabs
-							ul.tabs__nav
-								li.tabs__nav-item.active(data-class='first')
-									a.tabs__nav-link(href="#link") Вход
-								li.tabs__nav-item(data-class='second')
-									a.tabs__nav-link(href="#link") Регистрация
+							.tabs__w-w
+								ul.tabs__nav
+									li.tabs__nav-item.active(data-class='first')
+										a.tabs__nav-link(href="#link") Вход
+									li.tabs__nav-item(data-class='second')
+										a.tabs__nav-link(href="#link") Регистрация
 
-							.tabs__w
-								.tabs__tab.tabs__tab_first.active
+								.tabs__w
+									.tabs__tab.tabs__tab_first.active
 
-									form.head-user-auth__form.head-user-auth__form_login(action="#" method='post')
-										.head-user-auth__form-body
-											.head-user-auth__form-field
+										form.head-user-auth__form.head-user-auth__form_login(action="#" method='post')
+											.head-user-auth__form-body
+												.head-user-auth__form-field
 
-												input.head-user-auth__input(type="text", value="", placeholder="E-mail*")
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="password", value="", placeholder="Пароль*")
-											.head-user-auth__form-bottom
-												.head-user-auth__form-checkbox
-													input.head-user-auth__checkbox#check-remember-3(type="checkbox", value="some")
-													label.head-user-auth__checkbox-label(for="check-remember-3") Запомнить меня
-												a.head-user-auth__forget(href="#forget") Забыли свой пароль?
+													input.head-user-auth__input(type="text", value="", placeholder="E-mail*")
+												.head-user-auth__form-field
+													input.head-user-auth__input(type="password", value="", placeholder="Пароль*")
+												.head-user-auth__form-bottom
+													.head-user-auth__form-checkbox
+														input.head-user-auth__checkbox#check-remember-3(type="checkbox", value="some")
+														label.head-user-auth__checkbox-label(for="check-remember-3") Запомнить меня
+													a.head-user-auth__forget(href="#forget") Забыли свой пароль?
 
-										.head-user-auth__form-submit
-											input.head-user-auth__submit(type="submit", value="Войти")
-
-
-								.tabs__tab.tabs__tab_second
-
-									form.head-user-auth__form.head-user-auth__form_register(action="#" method='post')
-										.head-user-auth__form-body
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="text", value="", placeholder="E-mail*")
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="password", value="", placeholder="Пароль*")
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="password", value="", placeholder="Повторите пароль*")
-											.head-user-auth__form-field.head-user-auth__form-field_captcha
-												.head-user-auth__captcha-text Защита от автоматической регистрации
-												.head-user-auth__captcha-image
-													img(src="assets/images/content/captcha.jpg", alt="captcha")
-											.head-user-auth__form-field
-												input.head-user-auth__input(type="text", value="", placeholder="Введите слово на картинке:*")
+											.head-user-auth__form-submit
+												button.head-user-auth__submit(type="submit") Войти
 
 
+									.tabs__tab.tabs__tab_second
 
-										.head-user-auth__form-submit
-											input.head-user-auth__submit(type="submit", value="Зарегистрироваться")
+										form.head-user-auth__form.head-user-auth__form_register(action="#" method='post')
+											.head-user-auth__form-body
+												.head-user-auth__form-field
+													input.head-user-auth__input(type="text", value="", placeholder="E-mail*")
+												.head-user-auth__form-field
+													input.head-user-auth__input(type="password", value="", placeholder="Пароль*")
+												.head-user-auth__form-field
+													input.head-user-auth__input(type="password", value="", placeholder="Повторите пароль*")
+												.head-user-auth__form-field.head-user-auth__form-field_captcha
+													.head-user-auth__captcha-text Защита от автоматической регистрации
+													.head-user-auth__captcha-image
+														img(src="assets/images/content/captcha.jpg", alt="captcha")
+												.head-user-auth__form-field
+													input.head-user-auth__input(type="text", value="", placeholder="Введите слово на картинке:*")
+
+
+
+											.head-user-auth__form-submit
+												button.head-user-auth__submit(type="submit") Зарегистрироваться
 
 
 				.header__search

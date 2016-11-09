@@ -8,12 +8,12 @@
 	.header__in
 		position relative
 		padding-top 13px
-		padding-bottom 16px
+		padding-bottom 10px
 		min-height 120px
 		&:before
 			position absolute
-			right -40px
-			left -40px
+			right -30px
+			left -30px
 			bottom 0
 			content ""
 			width 1260px
@@ -22,6 +22,8 @@
 		+below($tablet)
 			padding-top 60px
 			min-height 180px
+		+below($mobile)
+			min-height 170px
 	&__logo,
 	&__phones,
 	&__working-hours,
@@ -72,16 +74,14 @@
 		+below($tablet)
 			display inline-block
 	&__cities
-		margin-top 11px
+		margin-top 22px
 		padding-left 3px
 		font-family $pt-serif-bldit
-		line-height 36px
+		line-height 1
 		+below($tablet-l)
+			margin-top 10px
+		+below($mobile-l)
 			margin-top 0
-		+below($tablet)
-			margin-top 2px
-		+below(570px)
-			margin-top 11px
 	&__cities-link
 		margin-left 42px
 		font-size 14px
@@ -99,7 +99,7 @@
 		position relative
 		// top 60px
 		padding-top 13px
-		margin-right r-percent(50px,880)
+		margin-right r-percent(60px,880)
 		width r-percent(225,880)
 		+below($tablet)
 			position absolute
@@ -119,10 +119,10 @@
 		padding-right  r-percent(36,880)
 		margin-top 6px
 		margin-bottom 14px
-		width r-percent(280,880)
+		width r-percent(274,880)
 		background url('%=static=%/general/header-basket-border.png') 100% 0 repeat-y
 		+below($desktop)
-			width r-percent(434,880)
+			width r-percent(428,880)
 			// padding-right 20px
 		+below($tablet)
 			margin-top 10px
@@ -130,13 +130,15 @@
 			padding 0
 			width 40px
 			background none
-
+	&__pers-order-w
+		position relative
 	&__pers-order
 		position relative
-		margin-left 14px
+		margin-left 0
 		+below($desktop)
 			margin-right 20px
 			display block
+			width 96%
 		+below($tablet-l)
 			display none
 		+below($tablet)
@@ -144,7 +146,7 @@
 
 	&__pers-order-faq
 		position absolute
-		top -22px
+		top -8px
 		right 11px
 		content ""
 		bg($question-icon)
@@ -178,6 +180,7 @@
 		position absolute
 		left 0
 		right 0
+		z-index 1
 		top 100%
 		margin auto
 		width 1180px
@@ -186,9 +189,10 @@
 			width auto
 		+below($tablet)
 			position static
-			z-index 0
+			// position absolute
 			top 0
 			right auto
+			right 0
 			left 0
 			padding 10px 8px
 			display inline-block
@@ -271,6 +275,8 @@
 			right -43px
 			content ""
 			bg($phone-icon)
+		+below($desktop)
+			margin-left 0
 		+below($tablet-l)
 			margin-left 0
 			display none
@@ -281,6 +287,14 @@
 			display block
 		+below($mobile)
 			font-size 12px
+	&__button-w
+		position relative
+		margin-right 48px
+		+below($tablet)
+			margin-right 0
+
+
+
 .working-hours
 	bg($working-hours)
 	text-indent -9999px
@@ -289,7 +303,7 @@
 	&__button
 		position relative
 		padding-top 18px
-		padding-bottom 31px
+		padding-bottom 12px
 		padding-left r-percent(58,280)
 		display block
 		color $text-color
@@ -356,15 +370,21 @@
 		&:hover
 			text-decoration underline
 	&__list-w
-		display none
-	&__list-w_active
 		position absolute
-		top 60px
+		top 0
 		left 0
 		right 0
 		padding 20px
 		display block
 		background #f1eeeb
+		visibility hidden
+		transform translateY(-100%)
+		transition transform .2s ease
+	&__list-w_active
+		top 60px
+		visibility visible
+		transform translateY(0%)
+
 	&__item
 		margin-bottom 10px
 	&__link
@@ -420,19 +440,20 @@
 			bg($reg-icon)
 
 	&__form-field
-		margin-bottom 15px
+		margin-bottom 10px
 	&__input
 		border 1px solid #d4d0cb
 		padding 10px
 		width 100%
 		height 36px
-		background #f1eeeb
+		background transparent
 		font-family $pt-sans-bldit
 		font-size 14px
 		color $text-color
 		+placeholder()
 			color $text-color
-
+		&.error
+			border 1px solid red
 	&__form-bottom
 		clr()
 
@@ -470,21 +491,33 @@
 	&__form-submit
 		position absolute
 		right 0
-		bottom -112px
+		bottom -60px
 		left 0
-		margin-left -15px
-		margin-right -15px
-		padding 30px 15px
-		background #f1eeeb
+		margin-left 0
+		margin-right 0
+		padding 10px 0
+		background rgba(245,240,237, 1)
 	&__submit
+		position relative
+		z-index 0
 		border none
 		padding 10px
 		width 100%
-		background #f1eeeb
+		background transparent
 		font-family $pt-sans-bldit
 		font-size 16px
 		color $text-color
-		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad, 4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
+		&:after
+			position absolute
+			top 12px
+			left 12px
+			right 12px
+			bottom 12px
+			content ""
+			opacity .5
+			z-index -1
+			background #e0deda
+			box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,          2px 7px 0px #b9b3ad,-2px 7px 0px rgb(185, 179, 173),2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,     7px   2px 0px #b9b3ad,7px  -2px 0px #b9b3ad,-7px 2px  0px #b9b3ad,-7px -2px 0px #b9b3ad,      4px 10px 0px #efeeec,-4px 10px 0px rgb(239, 238, 236),4px -10px 0px #efeeec,-4px -10px 0px rgb(239, 238, 236),     10px   4px 0px #efeeec,10px  -4px 0px #efeeec,-10px 4px  0px #efeeec,-10px -4px 0px #efeeec,        6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,     12px  6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px  0px #c5c0bb,-12px -6px 0px #c5c0bb
 
 	&__form-title
 		margin-bottom 20px
@@ -494,70 +527,31 @@
 		line-height 1
 		text-align center
 
-	&__popup
-		position absolute
-		top -4px
-		right 14px
-		z-index 1
-		padding 22px
-		display none
-		width 340px
-		background url('../images/general/header-popup-bg.jpg') 0 0 repeat-y
-		box-shadow 0 0 19px 1px rgba(0, 0, 0, 0.3)
-		+below($tablet)
-			display none
-		.head-user-auth__popup-close
-			position absolute
-			top 0
-			right -25px
-			display block
-			bg($close)
-			text-indent -9999px
 
-		.head-user-auth__form-body
-			margin-bottom 40px
-			padding 18px 18px 12px
-			background #F1EEEB
-			box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda, 2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad, 7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad, 4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec, 10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
-		.head-user-auth__captcha-text
-			padding-right 30px
-		.head-user-auth__form-submit
-			position static
-			bottom auto
-			padding-top 0
-			padding-bottom 0
-		.head-user-auth__submit
-			padding-top 5px
-			padding-bottom 5px
-
-	&__popup-list
-		padding-top 5px
-		padding-bottom 0
-		color #5c5039
-		font-family $pt-sans-it
-		font-size 14px
-		line-height 16px
-		text-align center
-	&__popup-li
-		font-size 14px
-	&__popup-a
-		color inherit
-		text-decoration underline
-		&:hover
-			text-decoration none
-	&__li_bottom
-		a
-			color inherit
-			font-family $pt-serif-bldit
-			font-size 14px
-			line-height 16px
-			text-decoration none
-
-	&__popup_active
-		display block
 	.tabs
-		display none
-		background-color #f1eeeb
+		position absolute
+		top 0
+		left 0
+		right 0
+		visibility hidden
+		transform translateY(-100%)
+		transition transform .3s ease
+	.tabs__w-w
+		position relative
+		z-index 0
+		padding-top 16px
+		&:after
+			position absolute
+			top 12px
+			left 12px
+			right 12px
+			bottom 12px
+			content ""
+			opacity .5
+			z-index -1
+			background #e0deda
+			box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,          2px 7px 0px #b9b3ad,-2px 7px 0px rgb(185, 179, 173),2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,     7px   2px 0px #b9b3ad,7px  -2px 0px #b9b3ad,-7px 2px  0px #b9b3ad,-7px -2px 0px #b9b3ad,      4px 10px 0px #efeeec,-4px 10px 0px rgb(239, 238, 236),4px -10px 0px #efeeec,-4px -10px 0px rgb(239, 238, 236),     10px   4px 0px #efeeec,10px  -4px 0px #efeeec,-10px 4px  0px #efeeec,-10px -4px 0px #efeeec,        6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,     12px  6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px  0px #c5c0bb,-12px -6px 0px #c5c0bb
+
 	.tabs__nav
 		margin-bottom 10px
 		padding-left 20px
@@ -571,7 +565,7 @@
 	.tabs__nav-link
 		padding 10px
 		display block
-		background rgba(0,0,0,0.1)
+		background #d7d1cd
 		font-family $pt-sans-bld
 		color $text-color
 		text-align center
@@ -581,25 +575,129 @@
 	.tabs__nav-item
 		&.active
 			.tabs__nav-link
-				background #f1eeeb
+				background transparent
 
 	.tabs_active
-		position absolute
-		top 75px
-		left 0
-		right 0
+		top 60px
 		z-index 10
-		margin-left 12px
-		margin-right 12px
-		padding-top 12px
-		display none
-		box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,2px 7px 0px #b9b3ad,-2px 7px 0px #b9b3ad,2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,7px 2px 0px #b9b3ad,7px -2px 0px #b9b3ad,-7px 2px 0px #b9b3ad,-7px -2px 0px #b9b3ad,4px 10px 0px #efeeec,-4px 10px 0px #efeeec,4px -10px 0px #efeeec,-4px -10px 0px #efeeec,10px 4px 0px #efeeec,10px -4px 0px #efeeec,-10px 4px 0px #efeeec,-10px -4px 0px #efeeec,6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,12px 6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px 0px #c5c0bb,-12px -6px 0px #c5c0bb
+		// padding-top 16px
+		// display none
+		visibility visible
+		background rgba(245,240,237, 1)
+		transform translateY(0)
 		+below($tablet)
 			display block
 	// .tabs__w
 	.tabs__tab
-		padding 20px 20px 0
+		padding 0 20px 0
 
+.head-popup
+	position absolute
+	top 20px
+	right 14px
+	z-index -1
+	padding 22px
+	width 340px
+	// height 0
+	// display none
+	opacity 0
+	background url('../images/general/header-popup-bg.jpg') 0 0 repeat-y
+	box-shadow 0 0 19px 1px rgba(0, 0, 0, 0.3)
+	will-change transform
+	transform translateX(1000%)
+	transition transform .2s ease
+	.head-user-auth__popup-close
+		position absolute
+		top 0
+		right -25px
+		display block
+		bg($close)
+		text-indent -9999px
+		text-align left
+		+below($tablet)
+			top -25px
+			right 0
+	.head-user-auth__form-body
+		position relative
+		z-index 0
+		margin-bottom 40px
+		padding 18px 18px 12px
+		&:after
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			content ""
+			opacity .5
+			z-index -1
+			background rgb(224, 222, 218)
+			box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,          2px 7px 0px #b9b3ad,-2px 7px 0px rgb(185, 179, 173),2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,     7px   2px 0px #b9b3ad,7px  -2px 0px #b9b3ad,-7px 2px  0px #b9b3ad,-7px -2px 0px #b9b3ad,      4px 10px 0px #efeeec,-4px 10px 0px rgb(239, 238, 236),4px -10px 0px #efeeec,-4px -10px 0px rgb(239, 238, 236),     10px   4px 0px #efeeec,10px  -4px 0px #efeeec,-10px 4px  0px #efeeec,-10px -4px 0px #efeeec,        6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,     12px  6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px  0px #c5c0bb,-12px -6px 0px #c5c0bb
+
+	.head-user-auth__captcha-text
+		padding-right 30px
+	.head-user-auth__form-submit
+		position relative
+		bottom auto
+		padding-top 0
+		padding-bottom 0
+		background transparent
+		&:after
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			content ""
+			opacity .5
+			z-index -1
+			background rgb(224, 222, 218)
+			box-shadow 0px 5px 0px #e0deda,0px -5px 0px #e0deda,-5px 0px 0px #e0deda,5px 0px 0px #e0deda,          2px 7px 0px #b9b3ad,-2px 7px 0px rgb(185, 179, 173),2px -7px 0px #b9b3ad,-2px -7px 0px #b9b3ad,     7px   2px 0px #b9b3ad,7px  -2px 0px #b9b3ad,-7px 2px  0px #b9b3ad,-7px -2px 0px #b9b3ad,      4px 10px 0px #efeeec,-4px 10px 0px rgb(239, 238, 236),4px -10px 0px #efeeec,-4px -10px 0px rgb(239, 238, 236),     10px   4px 0px #efeeec,10px  -4px 0px #efeeec,-10px 4px  0px #efeeec,-10px -4px 0px #efeeec,        6px 12px 0px #c5c0bb,-6px 12px 0px #c5c0bb,6px -12px 0px #c5c0bb,-6px -12px 0px #c5c0bb,     12px  6px 0px #c5c0bb,12px -6px 0px #c5c0bb,-12px 6px  0px #c5c0bb,-12px -6px 0px #c5c0bb
+
+
+	.head-user-auth__submit
+		padding-top 5px
+		padding-bottom 5px
+
+	.head-user-auth__popup-list
+		padding-top 5px
+		padding-bottom 0
+		color #5c5039
+		font-family $pt-sans-it
+		font-size 14px
+		line-height 16px
+		text-align center
+	.head-user-auth__popup-li
+		font-size 14px
+	.head-user-auth__popup-a
+		color inherit
+		text-decoration underline
+		&:hover
+			text-decoration none
+	.head-user-auth__li_bottom
+		a
+			color inherit
+			font-family $pt-serif-bldit
+			font-size 14px
+			line-height 16px
+			text-decoration none
+
+	&_active
+		z-index 2
+		// height auto
+		opacity 1
+		transform translateX(0)
+
+	&_callback
+		right -90%
+		+below($tablet-l)
+			display none
+		+below($tablet)
+			right 0
+			width 270px
+			display block
+		+below($mobile-m)
+			right 0
 .header-search
 	font-size 14px
 	&__form
@@ -670,10 +768,10 @@
 			padding-top 14px
 			min-height 150px
 		+below($tablet)
-			padding-top 60px
-			min-height 150px
+			padding-top 44px
+			min-height 50px
 		+below($mobile-l)
-			min-height 130px
+			min-height 50px
 	.header__logo
 		margin-top 20px
 		margin-right r-percent(0,1180)
@@ -682,6 +780,7 @@
 			margin-top 0
 			min-width 40%
 			height auto
+			display none
 		+below($mobile-l)
 			min-width 50%
 	.header__left
@@ -703,6 +802,7 @@
 			margin-top 10px
 			margin-right 0
 			width 50%
+			display none
 			text-align right
 		+below(660px)
 			margin-top 0
@@ -774,6 +874,7 @@
 			vertical-align top
 	.header__pers-order
 		margin-top 10px
+		margin-right 12px
 		float right
 		+below($desktop)
 			display none
@@ -802,3 +903,5 @@
 	.menu__link
 		font-family $pt-serif-bldit
 		font-size 16px
+		+below($tablet-l)
+			font-size 15px

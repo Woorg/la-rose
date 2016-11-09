@@ -42,6 +42,15 @@ $(function() {
 		});
 	});
 
+	$(window).on('resize', function() {
+		if( $(window).width() > 768 ) {
+
+			if ( headCatList.hasClass('head-catalog__list-w_active') ) {
+
+				headCatList.removeClass('head-catalog__list-w_active');
+			}
+		}
+	});
 
 
 	// head auth
@@ -60,6 +69,15 @@ $(function() {
 		});
 	});
 
+	$(window).on('resize', function() {
+		if( $(window).width() > 768 ) {
+
+			if ( headAuthTabs.hasClass('tabs_active') ) {
+
+				headAuthTabs.removeClass('tabs_active');
+			}
+		}
+	});
 
 	// head search
 
@@ -104,16 +122,37 @@ $(function() {
 	// head popup
 
 	var $headerPopupLink = $('.head-user-auth__link'),
-		$headerPopup = $('.head-user-auth__popup'),
+		$headerPopup = $('.head-popup'),
+		$headerPhonesButton = $('.header-phones__button');
 		$headerRegPopupClose = $('.head-user-auth__popup-close');
 
 	$headerPopupLink.on('click', function (e) {
 		e.stopPropagation();
-		$(this).next().toggleClass('head-user-auth__popup_active');
+		if($headerPopup.hasClass('head-popup_active')) {
+
+		} else {
+			$(this).next().toggleClass('head-popup_active');
+		};
 
 		$(document).on('click', function(e) {
 			if (!$(e.target).closest($headerPopup).length) {
-				$headerPopup.removeClass('head-user-auth__popup_active');
+				$headerPopup.removeClass('head-popup_active');
+			}
+		});
+
+	});
+
+	$headerPhonesButton.on('click', function (e) {
+		e.stopPropagation();
+		if($headerPopup.hasClass('head-popup_active')) {
+
+		} else {
+			$(this).next().toggleClass('head-popup_active');
+		};
+
+		$(document).on('click', function(e) {
+			if (!$(e.target).closest($headerPopup).length) {
+				$headerPopup.removeClass('head-popup_active');
 			}
 		});
 
@@ -121,9 +160,39 @@ $(function() {
 
 	$headerRegPopupClose.on('click', function (e) {
 		e.stopPropagation();
-		$headerPopup.removeClass('head-user-auth__popup_active');
+		$headerPopup.removeClass('head-popup_active');
 
-	})
+	});
+
+
+	// tooltip
+
+	var $tooltipTrigger = $('.header__pers-order-faq'),
+		$tooltip = $('.popup_pers-order'),
+		$tooltipClose = $('.popup_pers-order .popup__close');
+
+	$tooltipTrigger.on('click', function (e) {
+		console.log('click');
+		e.stopPropagation();
+		if($tooltip.hasClass('popup_pers-order-active')) {
+
+		} else {
+			$(this).parent().next().toggleClass('popup_pers-order-active');
+		};
+
+		$(document).on('click', function(e) {
+			if (!$(e.target).closest($tooltip).length) {
+				$tooltip.removeClass('popup_pers-order-active');
+			}
+		});
+
+	});
+
+	$tooltipClose.on('click', function (e) {
+		e.stopPropagation();
+		$tooltip.removeClass('popup_pers-order-active');
+
+	});
 
 
 });

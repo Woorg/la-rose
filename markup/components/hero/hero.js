@@ -10,7 +10,11 @@ $(function() {
 		center: false,
 		stagePadding: 0,
 		nav: true,
-		dots: false
+		dots: false,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplaySpeed: 800,
+		navSpeed: 800
 	});
 
 

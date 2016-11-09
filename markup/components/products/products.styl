@@ -53,7 +53,7 @@
 			bg($badge-new)
 	&__bottom
 		padding-top 6px
-		padding-bottom 6px
+		// padding-bottom 6px
 		background url('%=static=%/general/dots.png') 100% 0 repeat-x, url('%=static=%/general/dots.png') 100% 100% repeat-x
 		// width 233px
 		min-height 64px
@@ -84,12 +84,12 @@
 			line-height 20px
 	&__item-quant
 		position relative
-		padding-top 9px
-		padding-bottom 5px
+		padding-top 6px
+		padding-bottom 3px
 		z-index 10
 	&__item-order
 		position relative
-		padding-left 38px
+		margin-left 8px
 		display inline-block
 		color $text-color
 		font-family $pt-sans-reg
@@ -101,7 +101,7 @@
 		&:after
 			position absolute
 			top 0
-			left 12px
+			left -21px
 			content ""
 			bg($basket-small-icon)
 	&__quick-order
@@ -135,16 +135,16 @@
 			left 50%
 			content ""
 	.owl-next
-		right -27px
-		margin-top -11px
+		right -16px
+		margin-top -20px
 		background #EFEDE5 url('../images/general/carousel-border-right.png') 0 0 no-repeat
 		&:after
 			margin-top -10px
 			margin-left -10px
 			bg($carousel-right)
 	.owl-prev
-		left -27px
-		margin-top -11px
+		left -26px
+		margin-top -20px
 		background #EFEDE5 url('../images/general/carousel-border-left.png') 100% 0 no-repeat
 		&:after
 			margin-top -10px

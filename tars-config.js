@@ -1,5 +1,19 @@
 module.exports = {
-    "postcss": [],
+    "postcss": [
+                {
+                    "name": "postcss-em-media-query"
+                },
+                // {
+                //     "name": "postcss-fixes"
+                // },
+                {
+                    "name": "cssnano",
+                    "options": {
+                        "zindex": false
+                    }
+                }
+
+    ],
     "svg": {
         "active": true,
         "workflow": "sprite",

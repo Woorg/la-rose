@@ -1,5 +1,5 @@
 .main
-	padding-top 30px
+	padding-top 37px
 	padding-bottom 30px
 	@extends .in
 	// overflow hidden
@@ -25,14 +25,14 @@
 		clr()
 	&__search-form
 		// margin-bottom 18px
-		margin-bottom 44px
+		margin-bottom 30px
 		padding-top 3px
 		width 540px
 		+below($tablet)
 			display none
 
 	&__filter
-		margin-bottom 20px
+		margin-bottom 30px
 		+below($tablet)
 			display none
 	&__breadcrumbs
@@ -98,10 +98,6 @@
 		// width auto
 		+below($mobile-l)
 			width auto
-	.main__form
-		+below($tablet)
-			margin-left 12px
-			margin-right 12px
 	.main__col_first
 		margin-right 24px
 		width r-percent(400,815)
@@ -114,6 +110,9 @@
 		+below($tablet-l)
 			float none
 			width auto
+
+	.main__buttons
+		text-align right
 
 .main_inner
 	padding-top 80px

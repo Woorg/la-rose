@@ -15,6 +15,18 @@ $(function() {
 		});
 	});
 
+	$(window).on('resize', function() {
+		if( $(window).width() > 768 ) {
+
+			if ( menuList.hasClass('menu__list-w_active') ) {
+
+				console.log(menuList.hasClass('menu__list-w_active'));
+
+				menuList.removeClass('menu__list-w_active');
+			}
+		}
+	});
+
 
 });
 
