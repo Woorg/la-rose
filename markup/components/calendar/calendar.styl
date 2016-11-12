@@ -1,5 +1,5 @@
 .calendar
-	margin-top -12px
+	margin-top 0
 
 
 #ui-datepicker-div
@@ -8,18 +8,15 @@
 .ui-datepicker
 	position relative
 	z-index 0
-	margin-top 12px
-	margin-left 12px
-	margin-right 12px
 	padding 20px 15px 16px 16px
 	min-width 230px
 	color $text-color
 	&:after
 		position absolute
-		top 0
+		top 12px
 		left 12px
 		right 12px
-		bottom 0
+		bottom 12px
 		content ""
 		opacity .5
 		z-index -1
@@ -57,11 +54,11 @@
 			display block
 			text-indent -9999px
 	.ui-datepicker-prev
-		left 0
+		left 12px
 		span
 			bg($calendar-left)
 	.ui-datepicker-next
-		right 0
+		right 12px
 		span
 			bg($calendar-right)
 

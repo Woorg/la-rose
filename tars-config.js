@@ -1,18 +1,14 @@
 module.exports = {
     "postcss": [
-                {
-                    "name": "postcss-em-media-query"
-                },
-                // {
-                //     "name": "postcss-fixes"
-                // },
-                {
-                    "name": "cssnano",
-                    "options": {
-                        "zindex": false
-                    }
-                }
-
+        {
+            "name": "postcss-em-media-query"
+        },
+        {
+            "name": "cssnano",
+            "options": {
+                "zindex": false
+            }
+        }
     ],
     "svg": {
         "active": true,
@@ -61,7 +57,7 @@ module.exports = {
     "buildPath": "./builds/",
     "useBuildVersioning": true,
     "useArchiver": true,
-    "ulimit": 4096,
+    "ulimit": 14096,
     "templater": "jade",
     "cssPreprocessor": "stylus",
     "useImagesForDisplayWithDpi": [

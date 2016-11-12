@@ -5,7 +5,7 @@ $(function() {
 	var $sync1 = $(".product-image-big"),
 		$sync2 = $(".product-image-thumb"),
 		flag = false,
-		duration = 300;
+		duration = 100;
 
 	$sync1
 		.owlCarousel({
@@ -30,7 +30,8 @@ $(function() {
 			nav: false,
 			dots: false,
 			center: false,
-			mouseDrag: false,
+			loop: false,
+			mouseDrag: true,
 			touchDrag: false
 		})
 		.on('click', '.owl-item', function () {
@@ -48,10 +49,16 @@ $(function() {
 
 	// gallery
 
-	$('.product-image-big__link').magnificPopup({
+	$('.product-image-big__img a').magnificPopup({
 		type: 'image',
 		gallery:{
-		enabled:true
+			enabled:true,
+		},
+		callbacks: {
+			buildControls: function() {
+				// re-appends controls inside the main container
+				this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+			}
 		}
 	});
 

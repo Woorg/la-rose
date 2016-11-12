@@ -73,6 +73,7 @@
 		text-indent -9999px
 		+below($tablet)
 			display inline-block
+			background url('../images/general/burger-icon-mobile.png') 0 0 no-repeat
 	&__cities
 		margin-top 22px
 		padding-left 3px
@@ -127,6 +128,7 @@
 		+below($tablet)
 			margin-top 10px
 			margin-left r-percent(20,1180)
+			margin-left 0
 			padding 0
 			width 40px
 			background none
@@ -168,10 +170,12 @@
 			display inline-block
 			vertical-align top
 	&__search
-		margin-right -6px
+		margin-right 0
 		padding 10px 0 10px 0
 		display none
 		+below($tablet)
+			padding-top 18px
+			padding-bottom 0
 			width 30px
 			display inline-block
 			vertical-align top
@@ -292,8 +296,8 @@
 		margin-right 48px
 		+below($tablet)
 			margin-right 0
-
-
+		+below($mobile-l)
+			margin-top 3px
 
 .working-hours
 	bg($working-hours)
@@ -352,6 +356,8 @@
 			left 0
 			content ""
 			bg($basket-icon)
+			+below($tablet)
+				background url('../images/general/basket-icon-mobile.png') 50% 0 no-repeat
 
 
 .head-catalog
@@ -360,8 +366,9 @@
 		border 1px solid $text-color
 		display block
 		vertical-align top
-		border-radius 3px
-		padding 10px 15px 12px
+		border-radius 7px
+		margin-left 0
+		padding 10px 10px 10px 10px
 		color $text-color
 		font-family $pt-sans-bld
 		font-size 16px
@@ -406,6 +413,7 @@
 		display none
 		+below($tablet)
 			display block
+			background url('../images/general/user-icon-mobile.png') 50% 0 no-repeat
 	&__list
 		+below($tablet)
 			display none
@@ -744,6 +752,9 @@
 		display block
 		bg($search-icon)
 		text-indent -9999px
+		+below($tablet)
+			margin-top 0
+			float right
 
 .header_fixed
 	position fixed

@@ -31,6 +31,7 @@ $(function() {
 			box.find('input[name=PRODUCTID_ONE_CLICK]').val(productid);
 		 }
 		});
+
 		// $('#one_click form').sVformsValid({
 		// 	textErrorColor:'#ffffff',
 		// 	backgroundError:'#EC8D8D',

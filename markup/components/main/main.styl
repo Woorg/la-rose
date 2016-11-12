@@ -23,16 +23,18 @@
 		position relative
 		margin-bottom 50px
 		clr()
+		+below($tablet)
+			margin-bottom 10px
 	&__search-form
 		// margin-bottom 18px
-		margin-bottom 30px
-		padding-top 3px
+		margin-bottom 18px
+		padding-top 10px
 		width 540px
 		+below($tablet)
 			display none
 
 	&__filter
-		margin-bottom 30px
+		margin-bottom 20px
 		+below($tablet)
 			display none
 	&__breadcrumbs
@@ -61,9 +63,11 @@
 
 	&__prod-by-page
 		position absolute
-		top -58px
+		top -80px
 		right 0
-		width 400px
+		width 370px
+		+below($desktop)
+			right 0
 		+below($tablet-l)
 			display none
 	&__pagination
@@ -122,6 +126,19 @@
 		padding-right 65px
 		+below($desktop)
 			padding-right 0
+.main_product
+	padding-bottom 0
+.main_portfolio
+	.main__pagination
+		.button
+			display none
+		+below($tablet)
+			.pagination
+				display none
+			.button
+				display inline-block
+				width 100%
+
 .main_settings
 	.main__content
 		position relative
@@ -147,11 +164,31 @@
 			top 0
 
 	.main__products
+		// padding-right 50px
 		float right
 		width r-percent(880,1180)
+		+below($desktop)
+			padding-right 0
 		+below($tablet)
 			float none
 			width auto
+
+	.main__pagination
+		.button
+			display none
+		+below($tablet)
+			.pagination
+				display none
+			.button
+				display inline-block
+				width 100%
+
+.main__vk-widget
+	display none
+	text-align center
+	+below($tablet)
+		display block
+
 
 
 .page-news
@@ -260,15 +297,13 @@
 	&__text
 		@extends .wysiwyg
 	&__text
-		+below($tablet)
-			max-height 220px
-			overflow hidden
+		max-height 165px
+		overflow hidden
 	&__text_active
 		max-height 100%
-
 	&__more-w
-		display none
-		text-align center
+		padding 10px 50px 10px 0
+		text-align right
 		+below($tablet)
 			display block
 	&__more

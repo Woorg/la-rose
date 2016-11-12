@@ -46,7 +46,7 @@
 			height auto
 	&__item-badge
 		position absolute
-		top -24px
+		top -30px
 		right -5px
 		content ""
 		&_new
@@ -162,7 +162,10 @@
 		white-space normal
 
 .products.products_style-third
+	padding-top 16px
 	white-space normal
+	+below($tablet)
+		padding-bottom 0
 
 .products_style-second,
 .products_style-third
@@ -208,3 +211,4 @@
 		+below($tablet)
 			width 100%
 			margin-right 0
+

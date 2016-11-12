@@ -349,7 +349,8 @@ $(function() {
 				required: true
 			},
 			har_pass_2: {
-				equalTo: "#head-user-auth__input-repeat-pass"
+				equalTo: "#head-user-auth__input-repeat-pass",
+				required: true
 			},
 			har_captcha: {
 				required: true
@@ -364,6 +365,7 @@ $(function() {
 				required: ''
 			},
 			har_pass_2: {
+				required: '',
 				equalTo: ''
 			},
 			har_captcha: {
@@ -414,6 +416,7 @@ $(function() {
 				required: true
 			},
 			har_pass_2: {
+				required: true,
 				equalTo: "#head-user-auth__input-repeat-pass"
 			}
 		},
@@ -426,7 +429,8 @@ $(function() {
 				required: ''
 			},
 			har_pass_2: {
-				equalTo: ''
+				equalTo: '',
+				required: ''
 			}
 		}
 	});

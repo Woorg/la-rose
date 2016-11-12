@@ -57,7 +57,6 @@ $(function() {
 
 	var headAuthTrigger = $('.head-user-auth__icon'),
 		headAuthTabs = $('.head-user-auth .tabs');
-
 	headAuthTrigger.on('click', function (e) {
 		e.stopPropagation();
 		headAuthTabs.toggleClass('tabs_active');
@@ -123,16 +122,12 @@ $(function() {
 
 	var $headerPopupLink = $('.head-user-auth__link'),
 		$headerPopup = $('.head-popup'),
-		$headerPhonesButton = $('.header-phones__button');
+		$headAuthItem = $('.head-user-auth__item'),
+		$headerPhonesButton = $('.header-phones__button'),
 		$headerRegPopupClose = $('.head-user-auth__popup-close');
 
 	$headerPopupLink.on('click', function (e) {
 		e.stopPropagation();
-		if($headerPopup.hasClass('head-popup_active')) {
-
-		} else {
-			$(this).next().toggleClass('head-popup_active');
-		};
 
 		$(document).on('click', function(e) {
 			if (!$(e.target).closest($headerPopup).length) {
@@ -141,6 +136,48 @@ $(function() {
 		});
 
 	});
+
+	$headerPopupLink.on('click', function (e) {
+		if($headerPopup.hasClass('head-popup_active')) {
+
+		} else {
+			// $(this)
+			// 	.siblings()
+			// 	.next()
+			// 	.toggleClass('head-popup_active');
+		};
+	});
+
+	$headerPopupLink.on('click', function (e) {
+		console.log($(this).parent().siblings().children('.head-popup').hasClass('head-popup_active'));
+		if($(this).parent().siblings().children('.head-popup').hasClass('head-popup_active')) {
+			$(this)
+				.parent()
+				.siblings()
+				.children('.head-popup')
+				.removeClass('head-popup_active');
+			$(this)
+				.siblings()
+				.addClass('head-popup_active');
+		} else {
+			$(this)
+				.siblings()
+				.addClass('head-popup_active');
+		}
+	});
+
+	// if($(this).parent().siblings().children('.head-popup').hasClass('head-popup_active')) {
+	// 	$(this)
+	// 		.next()
+	// 		.removeClass('head-popup_active');
+	// } else {
+	// 	// $(this).siblings().next().removeClass('head-popup_active');
+	// 	$(this)
+	// 		.parent()
+	// 		.siblings()
+	// 		.children('.head-popup')
+	// 		.addClass('head-popup_active');
+	// };
 
 	$headerPhonesButton.on('click', function (e) {
 		e.stopPropagation();
@@ -163,7 +200,6 @@ $(function() {
 		$headerPopup.removeClass('head-popup_active');
 
 	});
-
 
 	// tooltip
 

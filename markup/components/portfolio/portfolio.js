@@ -37,6 +37,12 @@ $(function() {
 		type: 'image',
 		gallery:{
 			enabled:true
+		},
+		callbacks: {
+			buildControls: function() {
+				// re-appends controls inside the main container
+				this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+			}
 		}
 	});
 

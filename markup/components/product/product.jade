@@ -7,15 +7,33 @@ mixin product(data)
 		.product__row
 			.product__image
 				.product-image-big.owl-carousel
-					a.product-image-big__link(href="assets/images/content/product-big-img.jpg")
-						img.product-image-big__image(src="assets/images/content/product-big-img.jpg", alt="product big image")
-					a.product-image-big__link(href="assets/images/content/product-big-img.jpg")
-						img.product-image-big__image(src="assets/images/content/product-big-img.jpg", alt="product big image")
+					.product-image-big__img
+						a(href="assets/images/content/product-big-img.jpg")
+							img(src="assets/images/content/product-big-img.jpg", alt="product big image")
+					.product-image-big__img
+						a(href="assets/images/content/product-img-2.png")
+							img(src="assets/images/content/product-img-2.png", alt="product big image")
+					.product-image-big__img
+						a(href="assets/images/content/product-img-3.png")
+							img(src="assets/images/content/product-img-3.png", alt="product big image")
+					.product-image-big__img
+						a(href="assets/images/content/product-img-4.png")
+							img(src="assets/images/content/product-img-4.png", alt="product big image")
+
 				.product-image-thumb.owl-carousel
-					a.product-image-thumb__link(href="#link")
-						img.product-image-thumb__image(src="assets/images/content/product-thumb-1.jpg", alt="product thumb 1")
-					a.product-image-thumb__link(href="#link")
-						img.product-image-thumb__image(src="assets/images/content/product-thumb-2.jpg", alt="product thumb 2")
+					.product-image-thumb__link
+						a(href="#link")
+							img.product-image-thumb__image(src="assets/images/content/product-thumb-1.jpg", alt="product thumb 1")
+					.product-image-thumb__link
+						a(href="#link")
+							img.product-image-thumb__image(src="assets/images/content/product-thumb-2.jpg", alt="product thumb 2")
+					.product-image-thumb__link
+						a(href="#link")
+							img.product-image-thumb__image(src="assets/images/content/product-thumb-1.jpg", alt="product thumb 1")
+					.product-image-thumb__link
+						a(href="#link")
+							img.product-image-thumb__image(src="assets/images/content/product-thumb-2.jpg", alt="product thumb 2")
+
 
 			.product__right
 				.product__desc
